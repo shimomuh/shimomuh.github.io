@@ -1,0 +1,17 @@
+/* scss にしたいが css-loader とか必要そう*/
+.calendar th:nth-child(1),
+.calendar td:nth-child(1) {
+  color: #eb3228;
+}
+
+.calendar th:nth-child(7),
+.calendar td:nth-child(7) {
+  color: #007bff;
+}
+
+.calendar td {
+  text-align: right;
+}
+.calendar td:not(.is-active) {
+  color: #d8d6d5;
+}
