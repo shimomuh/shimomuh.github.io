@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './components/index';
-import './index.css';
+import './index.scss';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Index />, document.querySelector('[data-react-site]'));

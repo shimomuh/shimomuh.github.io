@@ -1,5 +1,5 @@
 import React from 'react';
-import './calendar.css';
+import './calendar.scss';
 import { CalendarModel } from 'models/calendar';
 
 export const Calendar: React.FC = () => {

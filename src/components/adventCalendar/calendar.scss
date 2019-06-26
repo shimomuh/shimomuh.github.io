@@ -1,0 +1,19 @@
+$sunday: #eb3228;
+$saturday: #007bff;
+$disable: #d8d6d5;
+.calendar {
+  th, td {
+    &:nth-child(1) {
+      color: $sunday;
+    }
+    &:nth-child(7) {
+      color: $saturday;
+    }
+  }
+  td {
+    text-align: right;
+    &:not(.is-active) {
+      color: $disable;
+    }
+  }
+}
