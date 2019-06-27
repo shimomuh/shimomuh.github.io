@@ -33,7 +33,7 @@ class Calendar {
     const recursiveCalcDate = (index: number) => {
       if (index === 0) { return; }
       index -= 1;
-      this.dates[0][index] = new DateCell(lastMonthDateCount, false);
+      this.dates[0][index] = new DateCell(new Date(this.year, this.month - 2, lastMonthDateCount), false);
       lastMonthDateCount -= 1;
       if (index > 0) { recursiveCalcDate(index); }
       return;
@@ -46,7 +46,7 @@ class Calendar {
         // 第1週
         if (i === 0) {
           if (j >= thisMonth1stDay) {
-            this.dates[i][j] = new DateCell(thisMonthDateCount, true);
+            this.dates[i][j] = new DateCell(new Date(this.year, this.month - 1, thisMonthDateCount), true);
             thisMonthDateCount += 1;
             if (j === thisMonth1stDay) {
               recursiveCalcDate(j);
@@ -54,10 +54,10 @@ class Calendar {
           }
         } else {
           if (thisMonthDateCount > thisMonthLastDate) {
-            this.dates[i][j] = new DateCell(nextMonthDateCount, false);
+            this.dates[i][j] = new DateCell(new Date(this.year, this.month, nextMonthDateCount), false);
             nextMonthDateCount += 1;
           } else {
-            this.dates[i][j] = new DateCell(thisMonthDateCount, true);
+            this.dates[i][j] = new DateCell(new Date(this.year, this.month - 1, thisMonthDateCount), true);
             thisMonthDateCount += 1;
           }
         }
@@ -67,12 +67,24 @@ class Calendar {
 }
 
 class DateCell {
-  public date: string;
+  public day: number;
+  public month: number;
+  public year: number;
   public isActive: boolean;
 
-  constructor(date: number, isActive: boolean) {
-    this.date = `${date}`;
+  constructor(date: any, isActive: boolean) {
+    this.day = date.getDate();
+    this.month = date.getMonth();
+    this.year = date.getFullYear();
     this.isActive = isActive;
+  }
+
+  public getZeroPaddingMonth(): string {
+    return ('00' + this.month).slice(-2);
+  }
+
+  public getZeroPaddingDay(): string {
+    return ('00' + this.day).slice(-2);
   }
 }
 

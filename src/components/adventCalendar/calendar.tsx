@@ -1,6 +1,7 @@
 import React from 'react';
 import './calendar.scss';
 import { CalendarModel } from 'models/calendar';
+import { Link } from 'react-router-dom';
 
 export const Calendar: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const TableData: React.FC = () => {
   return (
     <tbody>
      {calendar.dates.map((week: object[], key: number) => {
-       return <tr key={key}>{week.map((d: any, key: number) => <td key={key} className={d.isActive ? 'is-active' : ''}>{d.date}</td>)}</tr>
+       return <tr key={key}>{week.map((d: any, key: number) => <td key={key} className={d.isActive ? 'is-active' : ''}><Link to={`/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDay()}`}>{d.day}</Link></td>)}</tr>
      })}
     </tbody>
   );
