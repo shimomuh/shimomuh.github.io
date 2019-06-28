@@ -1,30 +1,34 @@
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
 
 const Diary20190626: React.FC = () => {
   return (
-    <div>
-<h1>Javascript&nbsp;でカレンダーを作ろう<br /></h1>
+    <div className='diary'>
+<h1>Javascript&nbsp;でカレンダーを作ろう</h1>
 
-<h2>対象者<br /></h2>
+<h2>対象者</h2>
 
 <ul><li>車輪の再発明大好き！</li>
 <li>Typescript&nbsp;で何か作りたい！</li>
-
-</ul>人向け。<br />
+</ul>
+人向け。<br />
 
 プログラミング言語触りたて、Javascript&nbsp;はじめたての人向けではない。<br />
 
-<h2>背景<br /></h2>
+<h2>背景</h2>
 
 アドベントカレンダー作るからにはカレンダー作らないとね<br />
 
 せっかくなら汎用的に作りたいよね<br />
 
-<h2>結果<br /></h2>
+<h2>結果</h2>
 
-<a href={"https://qiita.com/kan_dai/items/b1850750b883f83b9bee"} target="_blank">JavaScriptでカレンダーを自作したら勉強になった</a><br />
+<a href={"https://qiita.com/kan_dai/items/b1850750b883f83b9bee"}>JavaScriptでカレンダーを自作したら勉強になった</a><br />
 
 以上<br />
 
@@ -32,11 +36,11 @@ const Diary20190626: React.FC = () => {
 
 成果物以上の効果として、勘を取り戻しつつ課題がみつかるので進捗感が得られた<br />
 
-<h2>過程<br /></h2>
+<h2>過程</h2>
 
 &quot;どんなコードを書いたか&quot;&nbsp;は&nbsp;commit&nbsp;をみてもらえばわかるのでここでは考え方を共有する<br />
 
-<h3>責務の所在をはっきりする<br /></h3>
+<h3>責務の所在をはっきりする</h3>
 
 僕はスーパーマンじゃないのでなんでもは知らない、知ってることだけ<br />
 
@@ -44,7 +48,7 @@ const Diary20190626: React.FC = () => {
 
 そこで、&nbsp;<span className="inline-code">models/calendar.tsx</span>&nbsp;が爆誕した<br />
 
-<h3>パスを絶対参照で書く<br /></h3>
+<h3>パスを絶対参照で書く</h3>
 
 配置したはいいが、ロジックを読み込むのに相対パスだと場所が変わったら崩壊してしまう<br />
 
@@ -72,9 +76,9 @@ const Diary20190626: React.FC = () => {
 
 参考にしたのはこのあたり<br />
 
-<a href={"https://qiita.com/nju33/items/cf924f7b6bb513bef8a2"} target="_blank">TypeScriptでaliasなパスでmoduleをimportできるように</a><br />
+<a href={"https://qiita.com/nju33/items/cf924f7b6bb513bef8a2"}>TypeScriptでaliasなパスでmoduleをimportできるように</a><br />
 
-<h3>ロジックを書く<br /></h3>
+<h3>ロジックを書く</h3>
 
 まずは&nbsp;function&nbsp;でカレンダーロジックを作った<br />
 
@@ -105,7 +109,7 @@ const&nbsp;getCalendar&nbsp;=&nbsp;(year:&nbsp;number,&nbsp;month:&nbsp;number):
 
 そこでクラス構造にすることにした<br />
 
-<h3>function&nbsp;を&nbsp;class&nbsp;に置き換える<br /></h3>
+<h3>function&nbsp;を&nbsp;class&nbsp;に置き換える</h3>
 
 一番意識したのは命名とコンテキストマッピング<br />
 
@@ -142,7 +146,7 @@ export&nbsp;const&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#
 
 こんな風にして設計・実装した<br />
 
-<h2>おまけ<br /></h2>
+<h2>おまけ</h2>
 
 実装していて、&nbsp;scss&nbsp;で書きたかったので次回はそれをやっていきたい<br />
 

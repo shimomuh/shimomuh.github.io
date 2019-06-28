@@ -16,26 +16,31 @@ EMOJI_TABLE = {
   ':bow:'  => '&#x1f647;',
 }
 
-$is = false
-$li = false
+# 次の行に影響を与える系
+$code = false # code タグ中は true
+$li = false # ul タグ中は true
 
 def convert(line)
-  return if line.size.zero?
+  if line.size.zero?
+    if $li
+      $li = false
+      return "</ul>"
+    end
+    return;
+  end
   # markdown 解析
   l = line.gsub(/[&<>"'{} ]/, ESCAPE_TABLE)
-  l.gsub!(/:(tada|bow):/, EMOJI_TABLE) unless $is
-  l.gsub!(/!\[([^\]]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />') unless $is
-  l.gsub!(/\[([^\]]*)\]\(([^\)]*)\)/, '<a href={"\2"} target="_blank">\1</a>') unless $is
-  l.gsub!(/\*\*([^\*]+)\*\*/, '<b>\1</b>') unless $is
-  l.gsub!(/_([^_])_/, '<i>\1</i>') unless $is
-  l.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>') unless $is
+  l.gsub!(/:(tada|bow):/, EMOJI_TABLE) unless $code
+  l.gsub!(/!\[([^\]]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />') unless $code
+  l.gsub!(/\[([^\]]*)\]\(([^\)]*)\)/, '<a href={"\2"}>\1</a>') unless $code
+  l.gsub!(/\*\*([^\*]+)\*\*/, '<b>\1</b>') unless $code
+  l.gsub!(/_([^_]+)_/, '<i>\1</i>') unless $code
+  l.gsub!(/\~([^\~]+)\~/, '<s>\1</s>') unless $code
+  l.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>') unless $code
 
   if $li
     if (l =~ /^\*&nbsp;/)
       return "<li>#{l.gsub(/^\*&nbsp;/, '')}</li>"
-    else
-      l = "</ul>#{l}"
-      $li = false
     end
   else
     if (l =~ /^\*&nbsp;/)
@@ -44,36 +49,39 @@ def convert(line)
     end
   end
 
+  return "<h4>#{l.gsub(/^####&nbsp;/, '')}</h4>" if l =~ /^####/ && !$code
+  return "<h3>#{l.gsub!(/^###&nbsp;/, '')}</h3>" if l =~ /^###/ && !$code
+  return "<h2>#{l.gsub!(/^##&nbsp;/, '')}</h2>" if l =~ /^##/ && !$code
+  return "<h1>#{l.gsub!(/^#&nbsp;/, '')}</h1>" if l =~ /^#/ && !$code
+
   l = "#{l}<br />"
 
-  return "<h4>#{l.gsub(/^####&nbsp;/, '')}</h4>" if (l =~ /^####/)
-  return "<h3>#{l.gsub(/^###&nbsp;/, '')}</h3>" if (l =~ /^###/)
-  return "<h2>#{l.gsub(/^##&nbsp;/, '')}</h2>" if (l =~ /^##/)
-  return "<h1>#{l.gsub(/^#&nbsp;/, '')}</h1>" if (l =~ /^#/)
-
   if (l =~ /^```/)
-    if $is
-      $is = false
-      return '</code></p>'
+    if $code
+      $code = false
+      return "</code></p>"
     else
-      $is = true
+      $code = true
       return '<p className="code"><code>'
     end
   end
-
 
   l
 end
 
 def content(date_no_hyphen, lines)
   template =<<EOS
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
 
 const Diary<%= date_no_hyphen %>: React.FC = () => {
   return (
-    <div>
+    <div className='diary'>
 <%- lines.each do |line| -%>
 <%= convert line %>
 <%- end -%>
@@ -105,9 +113,14 @@ diary_paths.each do |path|
 end
 
 template_router = <<EOS
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Index from 'components/index';
+import 'components/root.scss';
 <%- dates_no_hyphen.each do |date| -%>
 import Diary<%= date %> from 'components/diary/diary<%= date %>'
 <%- end -%>
@@ -115,10 +128,12 @@ import Diary<%= date %> from 'components/diary/diary<%= date %>'
 const Router: React.FC = () => {
   return (
     <BrowserRouter>
-      <Route exact path ='/' component={Index} />
-      <%- dates_with_hyphen.each_with_index do |date, index| -%>
-      <Route path='/<%= date %>' component={Diary<%= dates_no_hyphen[index] %>} />
-      <%- end -%>
+      <div className='root'>
+        <Route exact path ='/' component={Index} />
+        <%- dates_with_hyphen.each_with_index do |date, index| -%>
+        <Route path='/<%= date %>' component={Diary<%= dates_no_hyphen[index] %>} />
+        <%- end -%>
+      </div>
     </BrowserRouter>
   )
 }

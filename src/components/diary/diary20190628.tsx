@@ -1,21 +1,25 @@
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
 
 const Diary20190628: React.FC = () => {
   return (
-    <div>
-<h1>react-router-dom&nbsp;でルーティングする<br /></h1>
+    <div className='diary'>
+<h1>react-router-dom&nbsp;でルーティングする</h1>
 
-<h2>対象者<br /></h2>
+<h2>対象者</h2>
 
 react-router-dom&nbsp;何ソレ美味しいの？という人向け<br />
 
-<h2>背景<br /></h2>
+<h2>背景</h2>
 
 今書いてるこの&nbsp;markdown&nbsp;ファイルを&nbsp;tsx&nbsp;に置換するスクリプトを書いて、それをルーティングすれば&nbsp;github&nbsp;のページに飛ばさなくてもあたかも自分のページのように表現できるんじゃね？と思ったのがきっかけ<br />
 
-<h2>結果<br /></h2>
+<h2>結果</h2>
 
 <p className="code"><code>
 npm&nbsp;i&nbsp;--save&nbsp;react-douter-dom&nbsp;@types/react-router-dom<br />
@@ -23,7 +27,7 @@ npm&nbsp;i&nbsp;--save&nbsp;react-douter-dom&nbsp;@types/react-router-dom<br />
 
 をインスコ<br />
 
-あとは&nbsp;<a href={"https://numb86-tech.hatenablog.com/entry/2017/05/06/125333"} target="_blank">React&nbsp;Router&nbsp;v4&nbsp;の基本的な考え方と使い方</a>&nbsp;のママ<br />
+あとは&nbsp;<a href={"https://numb86-tech.hatenablog.com/entry/2017/05/06/125333"}>React&nbsp;Router&nbsp;v4&nbsp;の基本的な考え方と使い方</a>&nbsp;のママ<br />
 
 <b>呼び出し側</b><br />
 

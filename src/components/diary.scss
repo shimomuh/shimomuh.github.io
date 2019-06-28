@@ -1,17 +1,36 @@
-$code-bg: #dff;
-$code-bd: #2c7cff;
+$code-bg: #233;
+$code-txt: #d1edff;
 
-.code {
-  background-color: $code-bg;
-  border: 1px solid $code-bd;
-  border-radius: 4px;
-  padding: 5px;
-}
+$inline-code-bd: #9cf;
+$inline-code-bg: #dff;
 
-.inline-code {
-  display: inline-block;
-  background-color: $code-bg;
-  border: 1px solid $code-bd;
-  border-radius: 4px;
-  padding: 0 5px;
+/* Qiita */
+$link: #4aac00;
+
+.diary {
+  .code {
+    color: $code-txt;
+    background-color: $code-bg;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+
+  .inline-code {
+    display: inline-block;
+    background-color: $inline-code-bg;
+    border: 1px solid $inline-code-bd;
+    border-radius: 4px;
+    padding: 0 5px;
+  }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1rem; }
+  a {
+    color: $link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
