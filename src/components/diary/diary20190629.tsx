@@ -44,41 +44,41 @@ shell&nbsp;で頑張ろうとすると、文字を埋め込みたい場合にす
 たとえば、出力後が以下のファイルを作りたいとする<br />
 
 <p className="code"><code>
-import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;<br />
-import&nbsp;Index1&nbsp;from&nbsp;&#39;./index1&#39;;<br />
-import&nbsp;Index2&nbsp;from&nbsp;&#39;./index2&#39;;<br />
+<span className='code__with-order'>import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+<span className='code__with-order'>import&nbsp;Index1&nbsp;from&nbsp;&#39;./index1&#39;;</span><br />
+<span className='code__with-order'>import&nbsp;Index2&nbsp;from&nbsp;&#39;./index2&#39;;</span><br />
 
-const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index1&nbsp;/&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index2&nbsp;/&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
-&nbsp;&nbsp;);<br />
-&#125;<br />
+<span className='code__with-order'>const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;(</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index1&nbsp;/&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index2&nbsp;/&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;);</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-export&nbsp;default&nbsp;Root;<br />
+<span className='code__with-order'>export&nbsp;default&nbsp;Root;</span><br />
 </code></p>
 
 僕が頑張った時はこう<br />
 
 <p className="code"><code>
-cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&nbsp;src/root.tsx<br />
-import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;<br />
-EOS<br />
+<span className='code__with-order'>cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&nbsp;src/root.tsx</span><br />
+<span className='code__with-order'>import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+<span className='code__with-order'>EOS</span><br />
 
-for&nbsp;i&nbsp;in&nbsp;(1&nbsp;2)<br />
-do<br />
-&nbsp;&nbsp;echo&nbsp;&quot;import&nbsp;Index$&#123;i&#125;&nbsp;from&nbsp;&#39;./index$&#123;i&#125;&#39;;&quot;&nbsp;&gt;&gt;&nbsp;src/root.tsx<br />
-done<br />
+<span className='code__with-order'>for&nbsp;i&nbsp;in&nbsp;(1&nbsp;2)</span><br />
+<span className='code__with-order'>do</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;echo&nbsp;&quot;import&nbsp;Index$&#123;i&#125;&nbsp;from&nbsp;&#39;./index$&#123;i&#125;&#39;;&quot;&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
+<span className='code__with-order'>done</span><br />
 
-cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&gt;&nbsp;src/root.tsx<br />
-const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
-EOS<br />
+<span className='code__with-order'>cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
+<span className='code__with-order'>const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;(</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
+<span className='code__with-order'>EOS</span><br />
 
-#&nbsp;...<br />
+<span className='code__with-order'>#&nbsp;...</span><br />
 </code></p>
 
 <i>これはひどい</i><br />
@@ -94,29 +94,29 @@ rails&nbsp;だと置換したい後のファイル拡張子をつけたりする
 ファイル読み込みにしてるかどうかの差だけなので今は気にしないで（そのうち直す）<br />
 
 <p className="code"><code>
-template&nbsp;=&nbsp;&lt;&lt;EOS<br />
-import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;<br />
-&lt;%-&nbsp;[1,&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;<br />
-import&nbsp;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;from&nbsp;&#39;./index&lt;%=&nbsp;i&nbsp;%&gt;&#39;;<br />
-&lt;%-&nbsp;end&nbsp;-%&gt;<br />
+<span className='code__with-order'>template&nbsp;=&nbsp;&lt;&lt;EOS</span><br />
+<span className='code__with-order'>import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+<span className='code__with-order'>&lt;%-&nbsp;[1,&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;</span><br />
+<span className='code__with-order'>import&nbsp;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;from&nbsp;&#39;./index&lt;%=&nbsp;i&nbsp;%&gt;&#39;;</span><br />
+<span className='code__with-order'>&lt;%-&nbsp;end&nbsp;-%&gt;</span><br />
 
-const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;[1,&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;/&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;end&nbsp;-%&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
-&nbsp;&nbsp;);<br />
-&#125;<br />
+<span className='code__with-order'>const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;(</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;[1,&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;/&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;end&nbsp;-%&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;);</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-export&nbsp;default&nbsp;Root;<br />
-EOS<br />
+<span className='code__with-order'>export&nbsp;default&nbsp;Root;</span><br />
+<span className='code__with-order'>EOS</span><br />
 
-erb&nbsp;=&nbsp;ERB.new(template,&nbsp;nil,&nbsp;&#39;-&#39;)<br />
-File.open(&#39;src/root.tsx&#39;,&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|<br />
-&nbsp;&nbsp;f.write&nbsp;erb.result(binding)<br />
-end<br />
+<span className='code__with-order'>erb&nbsp;=&nbsp;ERB.new(template,&nbsp;nil,&nbsp;&#39;-&#39;)</span><br />
+<span className='code__with-order'>File.open(&#39;src/root.tsx&#39;,&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;f.write&nbsp;erb.result(binding)</span><br />
+<span className='code__with-order'>end</span><br />
 </code></p>
 
 これで元のテンプレートがどんなのだったかもわからなくなるくらい壊滅的な書き方にならなくてハッピー！<br />
@@ -152,8 +152,8 @@ end<br />
 sub/sub!&nbsp;や&nbsp;gsub/gsub!&nbsp;を使えば&nbsp;OK!&nbsp;(gsub!&nbsp;は破壊的なので注意)<br />
 
 <p className="code"><code>
--&nbsp;echo&nbsp;&quot;*&nbsp;hoge&quot;&nbsp;|&nbsp;sed&nbsp;s/^\*\&nbsp;/\&lt;li\&gt;/g<br />
-+&nbsp;&quot;*&nbsp;hoge&quot;.gsub(/^\*\&nbsp;/,&nbsp;&#39;&lt;li&gt;&#39;)<br />
+<span className='code__with-order'>-&nbsp;echo&nbsp;&quot;*&nbsp;hoge&quot;&nbsp;|&nbsp;sed&nbsp;s/^\*\&nbsp;/\&lt;li\&gt;/g</span><br />
+<span className='code__with-order'>+&nbsp;&quot;*&nbsp;hoge&quot;.gsub(/^\*\&nbsp;/,&nbsp;&#39;&lt;li&gt;&#39;)</span><br />
 </code></p>
 
 <i>まぁこの書き方だと他にも競合するのだがそれはご自身で考察ください</i><br />
@@ -167,7 +167,7 @@ sub/sub!&nbsp;や&nbsp;gsub/gsub!&nbsp;を使えば&nbsp;OK!&nbsp;(gsub!&nbsp;�
 ちなみに一番書き方で悩んだのは<br />
 
 <p className="code"><code>
-&quot;**強調！**&quot;.gsub!(/\*\*([^\*]+)\*\*/,&nbsp;&#39;&lt;b&gt;\1&lt;/b&gt;&#39;)<br />
+<span className='code__with-order'>&quot;**強調！**&quot;.gsub!(/\*\*([^\*]+)\*\*/,&nbsp;&#39;&lt;b&gt;\1&lt;/b&gt;&#39;)</span><br />
 </code></p>
 
 こういうやつ<br />
@@ -179,11 +179,11 @@ sub/sub!&nbsp;や&nbsp;gsub/gsub!&nbsp;を使えば&nbsp;OK!&nbsp;(gsub!&nbsp;�
 そこで先程自前で書いたのが活きてくる<br />
 
 <p className="code"><code>
-EMOJI_TABLE&nbsp;=&nbsp;&#123;<br />
-&nbsp;&nbsp;&#39;:tada:&#39;&nbsp;=&gt;&nbsp;&#39;&amp;#x1f389;&#39;<br />
-&#125;<br />
+<span className='code__with-order'>EMOJI_TABLE&nbsp;=&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&#39;:tada:&#39;&nbsp;=&gt;&nbsp;&#39;&amp;#x1f389;&#39;</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-&quot;おめでとう&nbsp;:tada:&quot;.gsub(/:tada:/,&nbsp;EMOJI_TABLE)<br />
+<span className='code__with-order'>&quot;おめでとう&nbsp;:tada:&quot;.gsub(/:tada:/,&nbsp;EMOJI_TABLE)</span><br />
 </code></p>
 
 絵文字のコードは&nbsp;<a href={"http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html"}>主な特殊文字の文字コード&nbsp;-&nbsp;Guppy</a>&nbsp;を参考に。<br />

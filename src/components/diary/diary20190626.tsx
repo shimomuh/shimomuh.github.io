@@ -59,15 +59,15 @@ const Diary20190626: React.FC = () => {
 もしかしたらこれが一番時間かかったかもしれない<br />
 
 <p className="code"><code>
-&#123;<br />
-&nbsp;&nbsp;&quot;compilerOptions&quot;:&nbsp;&#123;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&quot;baseUrl&quot;:&nbsp;&quot;src&quot;,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&quot;paths&quot;:&nbsp;&#123;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;components/*&quot;:&nbsp;[&quot;components/*&quot;],<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;models/*&quot;:&nbsp;[&quot;models/*&quot;]<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&#125;<br />
-&nbsp;&nbsp;&#125;<br />
-&#125;<br />
+<span className='code__with-order'>&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&quot;compilerOptions&quot;:&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;baseUrl&quot;:&nbsp;&quot;src&quot;,</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;paths&quot;:&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;components/*&quot;:&nbsp;[&quot;components/*&quot;],</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;models/*&quot;:&nbsp;[&quot;models/*&quot;]</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&#125;</span><br />
+<span className='code__with-order'>&#125;</span><br />
 </code></p>
 
 はじめ&nbsp;<span className="inline-code">&quot;~*&quot;:&nbsp;[&quot;*&quot;]</span>&nbsp;みたいな形で&nbsp;<span className="inline-code">src</span>&nbsp;を&nbsp;root&nbsp;に参照しようと思ったがうまくいかなかった<br />
@@ -85,16 +85,16 @@ const Diary20190626: React.FC = () => {
 イメージ的には以下を返すような関数<br />
 
 <p className="code"><code>
-const&nbsp;getCalendar&nbsp;=&nbsp;(year:&nbsp;number,&nbsp;month:&nbsp;number):&nbsp;any&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;[<br />
-&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;1],<br />
-&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;2,&nbsp;&nbsp;3,&nbsp;&nbsp;4,&nbsp;&nbsp;5,&nbsp;&nbsp;6,&nbsp;&nbsp;7,&nbsp;&nbsp;8],<br />
-&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;9,&nbsp;10,&nbsp;11,&nbsp;12,&nbsp;13,&nbsp;14,&nbsp;15],<br />
-&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;16,&nbsp;17,&nbsp;18,&nbsp;19,&nbsp;20,&nbsp;21,&nbsp;22],<br />
-&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;23,&nbsp;24,&nbsp;25,&nbsp;26,&nbsp;27,&nbsp;28,&nbsp;29],<br />
-&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;30,&nbsp;31,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;]<br />
-&nbsp;&nbsp;]<br />
-&#125;<br />
+<span className='code__with-order'>const&nbsp;getCalendar&nbsp;=&nbsp;(year:&nbsp;number,&nbsp;month:&nbsp;number):&nbsp;any&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;[</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;1],</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;2,&nbsp;&nbsp;3,&nbsp;&nbsp;4,&nbsp;&nbsp;5,&nbsp;&nbsp;6,&nbsp;&nbsp;7,&nbsp;&nbsp;8],</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;9,&nbsp;10,&nbsp;11,&nbsp;12,&nbsp;13,&nbsp;14,&nbsp;15],</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;16,&nbsp;17,&nbsp;18,&nbsp;19,&nbsp;20,&nbsp;21,&nbsp;22],</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;23,&nbsp;24,&nbsp;25,&nbsp;26,&nbsp;27,&nbsp;28,&nbsp;29],</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;30,&nbsp;31,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;]</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;]</span><br />
+<span className='code__with-order'>&#125;</span><br />
 </code></p>
 
 あとはロジックを考えて中身を埋めるだけ<br />
@@ -120,25 +120,25 @@ const&nbsp;getCalendar&nbsp;=&nbsp;(year:&nbsp;number,&nbsp;month:&nbsp;number):
 そこで、前者はどうしようもないので&nbsp;DateCell&nbsp;という名前にして&nbsp;Calendar&nbsp;はコンテキストマッピングとして処理することでクラス実装時は&nbsp;Calendar&nbsp;として実装すればよいので助かった<br />
 
 <p className="code"><code>
-class&nbsp;Calendar&nbsp;&#123;<br />
-&#125;<br />
+<span className='code__with-order'>class&nbsp;Calendar&nbsp;&#123;</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-export&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;CalendarModel&nbsp;&#125;;<br />
+<span className='code__with-order'>export&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;CalendarModel&nbsp;&#125;;</span><br />
 </code></p>
 
 これで衝突を避けられる。本音を言うと<br />
 
 <p className="code"><code>
-//&nbsp;src/models/calendar.tsx<br />
-export&nbsp;class&nbsp;Calendar&nbsp;&#123;&#125;<br />
+<span className='code__with-order'>//&nbsp;src/models/calendar.tsx</span><br />
+<span className='code__with-order'>export&nbsp;class&nbsp;Calendar&nbsp;&#123;&#125;</span><br />
 
-//&nbsp;src/components/adventCalendar/calendar.tsx<br />
-import&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;Model&nbsp;&#125;&nbsp;from&nbsp;&#39;models/calendar&#39;;<br />
+<span className='code__with-order'>//&nbsp;src/components/adventCalendar/calendar.tsx</span><br />
+<span className='code__with-order'>import&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;Model&nbsp;&#125;&nbsp;from&nbsp;&#39;models/calendar&#39;;</span><br />
 
-export&nbsp;const&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;var&nbsp;model&nbsp;=&nbsp;new&nbsp;Model();<br />
-&nbsp;&nbsp;//&nbsp;...(略)...<br />
-&#125;<br />
+<span className='code__with-order'>export&nbsp;const&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;var&nbsp;model&nbsp;=&nbsp;new&nbsp;Model();</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;//&nbsp;...(略)...</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
 </code></p>
 
@@ -154,9 +154,9 @@ export&nbsp;const&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#
 （以下の&nbsp;key&nbsp;の部分）<br />
 
 <p className="code"><code>
-&lt;ul&gt;<br />
-&nbsp;&nbsp;&#123;[1,&nbsp;2,&nbsp;3].map((num:&nbsp;number,&nbsp;key:&nbsp;number)&nbsp;=&gt;&nbsp;&lt;li&nbsp;key=&#123;key&#125;&gt;&#123;num&#125;&lt;/li&gt;)&#125;<br />
-&lt;/ul&gt;<br />
+<span className='code__with-order'>&lt;ul&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&#123;[1,&nbsp;2,&nbsp;3].map((num:&nbsp;number,&nbsp;key:&nbsp;number)&nbsp;=&gt;&nbsp;&lt;li&nbsp;key=&#123;key&#125;&gt;&#123;num&#125;&lt;/li&gt;)&#125;</span><br />
+<span className='code__with-order'>&lt;/ul&gt;</span><br />
 </code></p>
       <div>
         <Link to='/'>戻る</Link>
