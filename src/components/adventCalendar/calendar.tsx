@@ -4,11 +4,15 @@ import { CalendarModel } from 'models/calendar';
 import { Link } from 'react-router-dom';
 
 export const Calendar: React.FC = () => {
+  const today = new Date();
   return (
-    <table className='calendar'>
-      <TableHeader />
-      <TableData />
-    </table>
+    <div>
+      <h2>{today.getFullYear()}年{today.getMonth() + 1}月</h2>
+      <table className='calendar'>
+        <TableHeader />
+        <TableData />
+      </table>
+    </div>
   );
 }
 

@@ -28,7 +28,7 @@ class Calendar {
     const thisMonth1stDay = new Date(this.year, this.month - 1, 1).getDay();
     const thisMonthLastDate = new Date(this.year, this.month, 0).getDate();
 
-    const lastMonthLastDate = new Date(this.year, this.month - 2, 0).getDate();
+    const lastMonthLastDate = new Date(this.year, this.month - 1, 0).getDate();
     let lastMonthDateCount = lastMonthLastDate;
     const recursiveCalcDate = (index: number) => {
       if (index === 0) { return; }
@@ -74,7 +74,7 @@ class DateCell {
 
   constructor(date: any, isActive: boolean) {
     this.day = date.getDate();
-    this.month = date.getMonth();
+    this.month = date.getMonth() + 1;
     this.year = date.getFullYear();
     this.isActive = isActive;
   }
