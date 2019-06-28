@@ -1,0 +1,17 @@
+$code-bg: #dff;
+$code-bd: #2c7cff;
+
+.code {
+  background-color: $code-bg;
+  border: 1px solid $code-bd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.inline-code {
+  display: inline-block;
+  background-color: $code-bg;
+  border: 1px solid $code-bd;
+  border-radius: 4px;
+  padding: 0 5px;
+}
