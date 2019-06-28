@@ -12,7 +12,8 @@ ESCAPE_TABLE = {
 }
 
 EMOJI_TABLE = {
-  ':tada:' => '&#x1f389;'
+  ':tada:' => '&#x1f389;',
+  ':bow:'  => '&#x1f647;',
 }
 
 $is = false
@@ -22,23 +23,24 @@ def convert(line)
   return if line.size.zero?
   # markdown 解析
   l = line.gsub(/[&<>"'{} ]/, ESCAPE_TABLE)
-  l.gsub!(/:tada:/, EMOJI_TABLE)
-  l.gsub!(/!\[([^\]]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />')
-  l.gsub!(/\[([^\]]*)\]\(([^\)]*)\)/, '<a href={"\2"} target="_blank">\1</a>')
-  l.gsub!(/\*\*([^\*]+)\*\*/, '<b>\1</b>')
-  l.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>')
+  l.gsub!(/:(tada|bow):/, EMOJI_TABLE) unless $is
+  l.gsub!(/!\[([^\]]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />') unless $is
+  l.gsub!(/\[([^\]]*)\]\(([^\)]*)\)/, '<a href={"\2"} target="_blank">\1</a>') unless $is
+  l.gsub!(/\*\*([^\*]+)\*\*/, '<b>\1</b>') unless $is
+  l.gsub!(/_([^_])_/, '<i>\1</i>') unless $is
+  l.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>') unless $is
 
   if $li
-    if (l =~ /\*&nbsp;/)
-      return "<li>#{l.gsub(/\*&nbsp;/, '')}</li>"
+    if (l =~ /^\*&nbsp;/)
+      return "<li>#{l.gsub(/^\*&nbsp;/, '')}</li>"
     else
       l = "</ul>#{l}"
       $li = false
     end
   else
-    if (l =~ /\*&nbsp;/)
+    if (l =~ /^\*&nbsp;/)
       $li = true
-      return "<ul><li>#{l.gsub(/\*&nbsp;/, '')}</li>"
+      return "<ul><li>#{l.gsub(/^\*&nbsp;/, '')}</li>"
     end
   end
 
