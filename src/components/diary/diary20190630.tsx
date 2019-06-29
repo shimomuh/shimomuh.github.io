@@ -78,7 +78,7 @@ table&nbsp;レイアウトの参考は&nbsp;<a href={"http://carrinova.com/markd
 
 以下のように分けて考えてもらうとよい<br />
 
-<img src="./description.png" alt="" /><br />
+<img src="/diary/2019-06-30/description.png" alt="" /><br />
 
 <p className="code"><code>
 <span className='code__with-order'>/*&nbsp;ナンバリングの部分は含まない右側&nbsp;*/</span><br />
