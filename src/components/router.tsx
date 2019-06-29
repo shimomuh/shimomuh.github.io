@@ -6,6 +6,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Index from 'components/index';
 import 'components/root.scss';
+import Diary20190630 from 'components/diary/diary20190630'
 import Diary20190625 from 'components/diary/diary20190625'
 import Diary20190626 from 'components/diary/diary20190626'
 import Diary20190628 from 'components/diary/diary20190628'
@@ -17,6 +18,7 @@ const Router: React.FC = () => {
     <BrowserRouter>
       <div className='root'>
         <Route exact path ='/' component={Index} />
+        <Route path='/2019-06-30' component={Diary20190630} />
         <Route path='/2019-06-25' component={Diary20190625} />
         <Route path='/2019-06-26' component={Diary20190626} />
         <Route path='/2019-06-28' component={Diary20190628} />

@@ -26,13 +26,13 @@ const Diary20190625: React.FC = () => {
 アドベントカレンダー的なものをやりたくて最初の一歩として<br />
 
 <p className="code"><code>
-既存のアドベントカレンダーだと個人でやる魅力がない<br />
-↓<br />
-なら、Github&nbsp;Pages&nbsp;でアドベントカレンダーすれば&nbsp;Github&nbsp;の&nbsp;commit&nbsp;も積んでハッピーになれそうじゃね？<br />
-↓<br />
-久々に&nbsp;JS&nbsp;書こう！せっかくなら流行りの&nbsp;Typescript&nbsp;で書こう！<br />
-↓<br />
-ｲﾏｺｺ!<br />
+<span className='code__with-order'>既存のアドベントカレンダーだと個人でやる魅力がない</span><br />
+<span className='code__with-order'>↓</span><br />
+<span className='code__with-order'>なら、Github&nbsp;Pages&nbsp;でアドベントカレンダーすれば&nbsp;Github&nbsp;の&nbsp;commit&nbsp;も積んでハッピーになれそうじゃね？</span><br />
+<span className='code__with-order'>↓</span><br />
+<span className='code__with-order'>久々に&nbsp;JS&nbsp;書こう！せっかくなら流行りの&nbsp;Typescript&nbsp;で書こう！</span><br />
+<span className='code__with-order'>↓</span><br />
+<span className='code__with-order'>ｲﾏｺｺ!</span><br />
 </code></p>
 
 というわけである<br />

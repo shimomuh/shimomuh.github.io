@@ -22,7 +22,7 @@ react-router-dom&nbsp;何ソレ美味しいの？という人向け<br />
 <h2>結果</h2>
 
 <p className="code"><code>
-npm&nbsp;i&nbsp;--save&nbsp;react-douter-dom&nbsp;@types/react-router-dom<br />
+<span className='code__with-order'>npm&nbsp;i&nbsp;--save&nbsp;react-douter-dom&nbsp;@types/react-router-dom</span><br />
 </code></p>
 
 をインスコ<br />
@@ -32,38 +32,38 @@ npm&nbsp;i&nbsp;--save&nbsp;react-douter-dom&nbsp;@types/react-router-dom<br />
 <b>呼び出し側</b><br />
 
 <p className="code"><code>
-import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;<br />
-import&nbsp;ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;<br />
-import&nbsp;&#123;&nbsp;BrowserRouter,&nbsp;Route&nbsp;&#125;&nbsp;from&nbsp;&#39;react-router-dom&#39;;<br />
+<span className='code__with-order'>import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+<span className='code__with-order'>import&nbsp;ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
+<span className='code__with-order'>import&nbsp;&#123;&nbsp;BrowserRouter,&nbsp;Route&nbsp;&#125;&nbsp;from&nbsp;&#39;react-router-dom&#39;;</span><br />
 
-const&nbsp;Router:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;BrowserRouter&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Route&nbsp;exact&nbsp;path=&#39;/&#39;&nbsp;component=&#123;Index&#125;&nbsp;/&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Route&nbsp;path=&#39;/home&#39;&nbsp;component=&#123;Home&#125;&nbsp;/&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/BrowserRouter&gt;<br />
-&nbsp;&nbsp;);<br />
-&#125;<br />
+<span className='code__with-order'>const&nbsp;Router:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;(</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;BrowserRouter&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Route&nbsp;exact&nbsp;path=&#39;/&#39;&nbsp;component=&#123;Index&#125;&nbsp;/&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Route&nbsp;path=&#39;/home&#39;&nbsp;component=&#123;Home&#125;&nbsp;/&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/BrowserRouter&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;);</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-const&nbsp;Index:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Index&lt;/h1&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
-&nbsp;&nbsp;);<br />
-&#125;<br />
+<span className='code__with-order'>const&nbsp;Index:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;(</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Index&lt;/h1&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;);</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-const&nbsp;Home:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;<br />
-&nbsp;&nbsp;return&nbsp;(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Home&lt;/h1&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
-&nbsp;&nbsp;);<br />
-&#125;<br />
+<span className='code__with-order'>const&nbsp;Home:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;return&nbsp;(</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Home&lt;/h1&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
+<span className='code__with-order'>&nbsp;&nbsp;);</span><br />
+<span className='code__with-order'>&#125;</span><br />
 
-ReactDOM.render(&lt;Router&nbsp;/&gt;,&nbsp;document.getElementById(&#39;#app&#39;));<br />
+<span className='code__with-order'>ReactDOM.render(&lt;Router&nbsp;/&gt;,&nbsp;document.getElementById(&#39;#app&#39;));</span><br />
 </code></p>
 
 本当は他にも&nbsp;History&nbsp;対応だったり&nbsp;state&nbsp;を使ってページまたぎでデータを使ったりできるのだが、それはこの&nbsp;Web&nbsp;サイトではﾀﾌﾞﾝやらない<br />

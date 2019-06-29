@@ -54,7 +54,7 @@ def convert(line)
   return "<h2>#{l.gsub!(/^##&nbsp;/, '')}</h2>" if l =~ /^##/ && !$code
   return "<h1>#{l.gsub!(/^#&nbsp;/, '')}</h1>" if l =~ /^#/ && !$code
 
-  l = "#{l}<br />"
+  l = "#{l}<br />" unless $code
 
   if (l =~ /^```/)
     if $code
@@ -64,6 +64,10 @@ def convert(line)
       $code = true
       return '<p className="code"><code>'
     end
+  end
+
+  if $code
+    l = "<span className='code__with-order'>#{l}</span><br />"
   end
 
   l

@@ -22,7 +22,7 @@ create-react-app&nbsp;の導入に倣って入れたはいいけど、&nbsp;css&
 <h2>結果</h2>
 
 <p className="code"><code>
-npm&nbsp;i&nbsp;--save-dev&nbsp;node-sass<br />
+<span className='code__with-order'>npm&nbsp;i&nbsp;--save-dev&nbsp;node-sass</span><br />
 </code></p>
 
 以上！<br />
@@ -32,19 +32,19 @@ npm&nbsp;i&nbsp;--save-dev&nbsp;node-sass<br />
 <b>階層</b><br />
 
 <p className="code"><code>
-src<br />
-├──&nbsp;components<br />
-│  &nbsp;├──&nbsp;adventCalendar<br />
-│  &nbsp;│  &nbsp;├──&nbsp;calendar.css&nbsp;-&gt;&nbsp;calendar.scss<br />
-│  &nbsp;│  &nbsp;├──&nbsp;calendar.tsx<br />
-│  &nbsp;│  &nbsp;└──&nbsp;root.tsx<br />
-│  &nbsp;└──&nbsp;index.tsx<br />
-├──&nbsp;index.css&nbsp;-&gt;&nbsp;index.scss<br />
-├──&nbsp;index.tsx<br />
-├──&nbsp;models<br />
-│  &nbsp;└──&nbsp;calendar.tsx<br />
-├──&nbsp;react-app-env.d.ts<br />
-└──&nbsp;serviceWorker.ts<br />
+<span className='code__with-order'>src</span><br />
+<span className='code__with-order'>├──&nbsp;components</span><br />
+<span className='code__with-order'>│  &nbsp;├──&nbsp;adventCalendar</span><br />
+<span className='code__with-order'>│  &nbsp;│  &nbsp;├──&nbsp;calendar.css&nbsp;-&gt;&nbsp;calendar.scss</span><br />
+<span className='code__with-order'>│  &nbsp;│  &nbsp;├──&nbsp;calendar.tsx</span><br />
+<span className='code__with-order'>│  &nbsp;│  &nbsp;└──&nbsp;root.tsx</span><br />
+<span className='code__with-order'>│  &nbsp;└──&nbsp;index.tsx</span><br />
+<span className='code__with-order'>├──&nbsp;index.css&nbsp;-&gt;&nbsp;index.scss</span><br />
+<span className='code__with-order'>├──&nbsp;index.tsx</span><br />
+<span className='code__with-order'>├──&nbsp;models</span><br />
+<span className='code__with-order'>│  &nbsp;└──&nbsp;calendar.tsx</span><br />
+<span className='code__with-order'>├──&nbsp;react-app-env.d.ts</span><br />
+<span className='code__with-order'>└──&nbsp;serviceWorker.ts</span><br />
 </code></p>
 
 <b>ファイル内置換</b><br />
@@ -52,8 +52,8 @@ src<br />
 例えば、&nbsp;index.tsx&nbsp;で以下を置換してあげるだけ<br />
 
 <p className="code"><code>
--&nbsp;import&nbsp;&#39;./index.css&#39;<br />
-+&nbsp;import&nbsp;&#39;./index.scss&#39;<br />
+<span className='code__with-order'>-&nbsp;import&nbsp;&#39;./index.css&#39;</span><br />
+<span className='code__with-order'>+&nbsp;import&nbsp;&#39;./index.scss&#39;</span><br />
 </code></p>
 
 あとはいつも通りの&nbsp;scss&nbsp;ライフが送れます&nbsp;&#x1f389;<br />
