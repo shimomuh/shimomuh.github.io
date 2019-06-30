@@ -31,6 +31,8 @@ markdown&nbsp;で日記書いてるんだから、&nbsp;xxx.github.io&nbsp;の�
 
 でも基盤を作ってしまえばあとは&nbsp;bugfix&nbsp;なりリファクタして汎用的に作ったりするだけなので後悔はしていない<br />
 
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/5/files"}>→成果</a><br />
+
 <h2>過程</h2>
 
 はじめ&nbsp;shell&nbsp;で書いてたけど、&nbsp;ruby&nbsp;で&nbsp;import&nbsp;する方が圧倒的に楽そうだったので&nbsp;ruby&nbsp;に切り替えた<br />

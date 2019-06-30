@@ -31,6 +31,8 @@ CSS&nbsp;を扱っていてそれなりに知見がある<br />
 </ul>
 試しにブラウザの幅を変更してもらえるとわかるはずだ<br />
 
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/6/files"}>→成果</a><br />
+
 <h2>過程</h2>
 
 <h3>いろんなサイトをみてデザインを検討</h3>

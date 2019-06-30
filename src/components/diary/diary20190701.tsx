@@ -42,6 +42,8 @@ React.FC&nbsp;にうまいこと型宣言してあげる<br />
 <span className='code__with-order'>ReactDOM.render(&lt;Component&nbsp;value=&quot;hoge&quot;&nbsp;/&gt;,&nbsp;document.getElementById(&#39;#app&#39;));</span><br />
 </code></p>
 
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/7/files"}>→成果</a><br />
+
 <h2>過程</h2>
 
 typescript&nbsp;で書く前まで（babelで）は&nbsp;stateless&nbsp;function&nbsp;での&nbsp;props&nbsp;の受け渡しは以下のようにやっていた<br />

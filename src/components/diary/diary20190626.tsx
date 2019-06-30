@@ -36,6 +36,8 @@ const Diary20190626: React.FC = () => {
 
 成果物以上の効果として、勘を取り戻しつつ課題がみつかるので進捗感が得られた<br />
 
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/2/files"}>→成果</a><br />
+
 <h2>過程</h2>
 
 &quot;どんなコードを書いたか&quot;&nbsp;は&nbsp;commit&nbsp;をみてもらえばわかるのでここでは考え方を共有する<br />

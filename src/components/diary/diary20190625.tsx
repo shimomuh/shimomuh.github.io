@@ -47,6 +47,8 @@ const Diary20190625: React.FC = () => {
 
 とはいえ、これで終わると何も伝わらないので、やったことを書く<br />
 
+<a href={"https://github.com/shimomuh/shimomuh.github.io/commit/701ff943a1bada641bf941af404ba9e1551852bc"}>→成果</a><br />
+
 <h2>過程</h2>
 
 <h3>Github&nbsp;Pages</h3>
