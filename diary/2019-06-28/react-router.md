@@ -60,3 +60,5 @@ ReactDOM.render(<Router />, document.getElementById('#app'));
 他にホームページを作っているのでそちらで実践についてお話する機会があれば寄稿しようと思ふ
 
 明日は途中まで書いてる md を tsx に変えるスクリプトについてでも書きたいなぁ
+
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/4/files)

@@ -47,6 +47,8 @@ src
 
 あとはいつも通りの scss ライフが送れます :tada:
 
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/3/files)
+
 ## 参考
 
 * [create-react-appでSassやCSS-moduleを使う方法](https://qiita.com/yikeda6616/items/0e31a920d533d70c0bd9)

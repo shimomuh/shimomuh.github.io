@@ -31,6 +31,8 @@ const Component: React.FC<Props> = (props) => {
 ReactDOM.render(<Component value="hoge" />, document.getElementById('#app'));
 ```
 
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/7/files)
+
 ## 過程
 
 typescript で書く前まで（babelで）は stateless function での props の受け渡しは以下のようにやっていた

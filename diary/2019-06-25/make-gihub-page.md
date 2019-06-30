@@ -36,6 +36,8 @@
 
 とはいえ、これで終わると何も伝わらないので、やったことを書く
 
+[→成果](https://github.com/shimomuh/shimomuh.github.io/commit/701ff943a1bada641bf941af404ba9e1551852bc)
+
 ## 過程
 
 ### Github Pages

@@ -20,6 +20,8 @@ markdown で日記書いてるんだから、 xxx.github.io の上で自分の�
 
 でも基盤を作ってしまえばあとは bugfix なりリファクタして汎用的に作ったりするだけなので後悔はしていない
 
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/5/files)
+
 ## 過程
 
 はじめ shell で書いてたけど、 ruby で import する方が圧倒的に楽そうだったので ruby に切り替えた

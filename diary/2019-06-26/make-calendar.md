@@ -25,6 +25,8 @@
 
 成果物以上の効果として、勘を取り戻しつつ課題がみつかるので進捗感が得られた
 
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/2/files)
+
 ## 過程
 
 "どんなコードを書いたか" は commit をみてもらえばわかるのでここでは考え方を共有する

@@ -20,6 +20,8 @@ CSS を扱っていてそれなりに知見がある
 
 試しにブラウザの幅を変更してもらえるとわかるはずだ
 
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/6/files)
+
 ## 過程
 
 ### いろんなサイトをみてデザインを検討
