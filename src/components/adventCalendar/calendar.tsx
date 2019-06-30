@@ -3,14 +3,17 @@ import './calendar.scss';
 import { CalendarModel } from 'models/calendar';
 import { Link } from 'react-router-dom';
 
-export const Calendar: React.FC = () => {
-  const today: Date = new Date();
+type CalendarProps = {
+  calendar: CalendarModel;
+}
+
+export const Calendar: React.FC<CalendarProps> = (props) => {
+  const { calendar } = props;
   return (
     <div>
-      <h2>{today.getFullYear()}年{today.getMonth() + 1}月</h2>
       <table className='calendar'>
         <TableHeader />
-        <TableData today={today} />
+        <TableData calendar={calendar} />
       </table>
     </div>
   );
@@ -28,12 +31,11 @@ const TableHeader: React.FC = () => {
 }
 
 type TableDataProps = {
-  today: Date;
+  calendar: CalendarModel;
 }
 
 const TableData: React.FC<TableDataProps> = (props) => {
-  const { today } = props;
-  const calendar = new CalendarModel(today.getFullYear(), today.getMonth() + 1);
+  const { calendar } = props;
   return (
     <tbody>
      {calendar.dates.map((week: object[], key: number) => {

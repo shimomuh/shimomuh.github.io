@@ -10,13 +10,15 @@
 // ]
 //
 class Calendar {
-  private year: number;
-  private month: number;
+  private today: Date;
+  public year: number;
+  public month: number;
   public dates: any;
 
-  constructor(year: number, month: number) {
-    this.year = year;
-    this.month = month;
+  constructor() {
+    this.today = new Date();
+    this.year = this.today.getFullYear();
+    this.month = this.today.getMonth() + 1;
     this.dates = [];
     this.make();
   }
