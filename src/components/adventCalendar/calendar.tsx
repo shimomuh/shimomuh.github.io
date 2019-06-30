@@ -4,13 +4,13 @@ import { CalendarModel } from 'models/calendar';
 import { Link } from 'react-router-dom';
 
 export const Calendar: React.FC = () => {
-  const today = new Date();
+  const today: Date = new Date();
   return (
     <div>
       <h2>{today.getFullYear()}年{today.getMonth() + 1}月</h2>
       <table className='calendar'>
         <TableHeader />
-        <TableData />
+        <TableData today={today} />
       </table>
     </div>
   );
@@ -27,8 +27,12 @@ const TableHeader: React.FC = () => {
   );
 }
 
-const TableData: React.FC = () => {
-  const today = new Date();
+type TableDataProps = {
+  today: Date;
+}
+
+const TableData: React.FC<TableDataProps> = (props) => {
+  const { today } = props;
   const calendar = new CalendarModel(today.getFullYear(), today.getMonth() + 1);
   return (
     <tbody>
