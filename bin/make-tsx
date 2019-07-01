@@ -1,3 +1,0 @@
-#!/bin/sh
-
-ruby bin/make-tsx.rb

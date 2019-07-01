@@ -1,0 +1,26 @@
+#!/bin/sh
+
+GREEN="\e[32m"
+END="\e[m"
+
+function stdout() {
+  echo ""
+  printf "${GREEN}"
+  printf "# --------------\n"
+  printf "#               \n"
+  printf "# $1            \n"
+  printf "#               \n"
+  printf "# --------------\n"
+  printf "${END}"
+  echo ""
+}
+
+
+stdout "make-tsx"
+ruby bin/make-tsx.rb
+
+stdout "npm run build"
+npm run build
+
+stdout "remove old file"
+ruby bin/remove-old-file.rb
