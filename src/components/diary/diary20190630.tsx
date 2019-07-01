@@ -11,7 +11,7 @@ const Diary20190630: React.FC = () => {
     <div className='diary'>
 <h1>コードブロックを&nbsp;counter&nbsp;プロパティを使ってオシャレにしてみた</h1>
 
-タグ&nbsp;<span className="inline-code">CSS</span>&nbsp;<span className="inline-code">Scss</span>&nbsp;<span className="inline-code">UI/UX</span>&nbsp;<span className="inline-code">Design</span><br />
+タグ&nbsp;<span className="inline-code">CSS</span>&nbsp;<span className="inline-code">Scss</span>&nbsp;<span className="inline-code">UI/UX</span>&nbsp;<span className="inline-code">デザイン</span><br />
 
 <h2>対象者</h2>
 

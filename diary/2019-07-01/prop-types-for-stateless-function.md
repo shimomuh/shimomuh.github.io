@@ -1,6 +1,6 @@
 # React + Typescript の Stateless Function で props を利用する
 
-タグ `React` `TypeScript` 
+タグ `React` `TypeScript`
 
 ## 対象者
 

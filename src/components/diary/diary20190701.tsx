@@ -11,7 +11,7 @@ const Diary20190701: React.FC = () => {
     <div className='diary'>
 <h1>React&nbsp;+&nbsp;Typescript&nbsp;の&nbsp;Stateless&nbsp;Function&nbsp;で&nbsp;props&nbsp;を利用する</h1>
 
-タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span>&nbsp;<br />
+タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
 
 <h2>対象者</h2>
 

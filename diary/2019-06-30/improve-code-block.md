@@ -1,6 +1,6 @@
 # コードブロックを counter プロパティを使ってオシャレにしてみた
 
-タグ `CSS` `Scss` `UI/UX` `Design`
+タグ `CSS` `Scss` `UI/UX` `デザイン`
 
 ## 対象者
 
