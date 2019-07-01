@@ -43,7 +43,6 @@ $link: #4aac00;
       }
     }
   }
-
   .inline-code {
     display: inline-block;
     background-color: $inline-code-bg;
@@ -60,6 +59,27 @@ $link: #4aac00;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+/* safari css hack */
+_::-webkit-full-page-media, _:future, :root .diary .code code:before {
+  padding-top: 20px;
+}
+
+/* firefox css hack */
+@-moz-document url-prefix() {
+  .diary .code {
+    border-radius: 4px;
+    &__with-order {
+      &:before {
+        color: $code-bg;
+      }
+    }
+    code:before {
+      height: 0;
+      padding: 0;
     }
   }
 }
