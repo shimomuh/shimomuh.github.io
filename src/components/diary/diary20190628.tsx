@@ -11,6 +11,8 @@ const Diary20190628: React.FC = () => {
     <div className='diary'>
 <h1>react-router-dom&nbsp;でルーティングする</h1>
 
+タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
+
 <h2>対象者</h2>
 
 react-router-dom&nbsp;何ソレ美味しいの？という人向け<br />
@@ -28,6 +30,8 @@ react-router-dom&nbsp;何ソレ美味しいの？という人向け<br />
 をインスコ<br />
 
 あとは&nbsp;<a href={"https://numb86-tech.hatenablog.com/entry/2017/05/06/125333"}>React&nbsp;Router&nbsp;v4&nbsp;の基本的な考え方と使い方</a>&nbsp;のママ<br />
+
+&nbsp;<br />
 
 <b>呼び出し側</b><br />
 
@@ -72,7 +76,10 @@ react-router-dom&nbsp;何ソレ美味しいの？という人向け<br />
 
 明日は途中まで書いてる&nbsp;md&nbsp;を&nbsp;tsx&nbsp;に変えるスクリプトについてでも書きたいなぁ<br />
 
-<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/4/files"}>→成果</a><br />
+&nbsp;<br />
+
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/4/commits/ebb1789f743089f95f9746d45da7890c80ac839b"}>→成果</a><br />
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

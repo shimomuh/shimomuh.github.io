@@ -1,5 +1,7 @@
 # react-router-dom でルーティングする
 
+タグ `React` `TypeScript`
+
 ## 対象者
 
 react-router-dom 何ソレ美味しいの？という人向け
@@ -17,6 +19,8 @@ npm i --save react-douter-dom @types/react-router-dom
 をインスコ
 
 あとは [React Router v4 の基本的な考え方と使い方](https://numb86-tech.hatenablog.com/entry/2017/05/06/125333) のママ
+
+ 
 
 **呼び出し側**
 
@@ -61,4 +65,6 @@ ReactDOM.render(<Router />, document.getElementById('#app'));
 
 明日は途中まで書いてる md を tsx に変えるスクリプトについてでも書きたいなぁ
 
-[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/4/files)
+ 
+
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/4/commits/ebb1789f743089f95f9746d45da7890c80ac839b)

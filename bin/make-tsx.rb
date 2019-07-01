@@ -92,6 +92,7 @@ const Diary<%= date_no_hyphen %>: React.FC = () => {
 <%- if $li -%>
 </ul>
 <%- end -%>
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

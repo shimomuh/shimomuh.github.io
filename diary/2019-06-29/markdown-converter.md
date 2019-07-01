@@ -1,5 +1,7 @@
 # 【暫定版】ruby で React に載せるための Markdown コンバーターを実装する
 
+タグ `Ruby` `Shell`
+
 ## 対象者
 
 markdown (.md) ファイルを react で表示させたいなぁと考えていて自分で ruby かけるよ！って方
@@ -20,7 +22,7 @@ markdown で日記書いてるんだから、 xxx.github.io の上で自分の�
 
 でも基盤を作ってしまえばあとは bugfix なりリファクタして汎用的に作ったりするだけなので後悔はしていない
 
-[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/5/files)
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/5/commits/b8218234437c1d3da57ace0b253deb8318cc1740)
 
 ## 過程
 
@@ -151,7 +153,7 @@ _まぁこの書き方だと他にも競合するのだがそれはご自身で�
 
 ちなみに一番時間を食ったのがこの正規表現かもしれない
 
-[[正規表現] .*?は最短マッチではない](https://qiita.com/anqooqie/items/191ad215e93237c77811)
+[正規表現 .*?は最短マッチではない](https://qiita.com/anqooqie/items/191ad215e93237c77811)
 
 こういうのまじ助かりました :bow:
 

@@ -11,6 +11,8 @@ const Diary20190630: React.FC = () => {
     <div className='diary'>
 <h1>コードブロックを&nbsp;counter&nbsp;プロパティを使ってオシャレにしてみた</h1>
 
+タグ&nbsp;<span className="inline-code">CSS</span>&nbsp;<span className="inline-code">Scss</span>&nbsp;<span className="inline-code">UI/UX</span>&nbsp;<span className="inline-code">Design</span><br />
+
 <h2>対象者</h2>
 
 CSS&nbsp;を扱っていてそれなりに知見がある<br />
@@ -31,7 +33,7 @@ CSS&nbsp;を扱っていてそれなりに知見がある<br />
 </ul>
 試しにブラウザの幅を変更してもらえるとわかるはずだ<br />
 
-<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/6/files"}>→成果</a><br />
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/6/commits/97b9cb15da919f4ee9cff2dcc49cc4c1a6f4dac1"}>→成果</a><br />
 
 <h2>過程</h2>
 
@@ -117,6 +119,7 @@ table&nbsp;レイアウトの参考は&nbsp;<a href={"http://carrinova.com/markd
 <span className='code__with-order'>&nbsp;&nbsp;&#125;</span><br />
 <span className='code__with-order'>&#125;</span><br />
 </code></p>
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

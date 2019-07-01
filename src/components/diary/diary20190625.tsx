@@ -11,6 +11,8 @@ const Diary20190625: React.FC = () => {
     <div className='diary'>
 <h1>祝&nbsp;Github&nbsp;Pages&nbsp;設立</h1>
 
+タグ&nbsp;<span className="inline-code">Javascript</span>&nbsp;<span className="inline-code">Github</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
+
 <h2>対象者</h2>
 
 <ul><li>毎日何かしら投稿したい！</li>
@@ -65,7 +67,7 @@ stable&nbsp;でなくてもよかったので&nbsp;<a href={"https://nodejs.org/
 
 <h3>Typescript&nbsp;/&nbsp;create-react-app</h3>
 
-Typescript&nbsp;を触ってみたかった&nbsp;+&nbsp;Github&nbsp;Pages&nbsp;上で&nbsp;React&nbsp;を動かしてみたかったので、&nbsp;https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter&nbsp;に倣って、ローカルに&nbsp;test-react-sample&nbsp;的な名前で&nbsp;create-react-app&nbsp;を実行して一通り動作を確認。<br />
+Typescript&nbsp;を触ってみたかった&nbsp;+&nbsp;Github&nbsp;Pages&nbsp;上で&nbsp;React&nbsp;を動かしてみたかったので、&nbsp;<a href={"https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter"}>TypeScript-React-Starter</a>&nbsp;に倣って、ローカルに&nbsp;test-react-sample&nbsp;的な名前で&nbsp;create-react-app&nbsp;を実行して一通り動作を確認。<br />
 
 <span className="inline-code">npm&nbsp;-g</span>&nbsp;を&nbsp;<span className="inline-code">npm&nbsp;--save-dev</span>&nbsp;にしたりディレクトリを調整しながら必要なものだけつまんで導入。<br />
 
@@ -101,11 +103,12 @@ test-react-sample&nbsp;もといオリジナルの&nbsp;create-react-app&nbsp;�
 
 次に、過去に業務レベルで&nbsp;ReactJS&nbsp;をバリバリ触っていた<br />
 
-さらには、ついこの前まで隣の席で一緒にお仕事をしていた&nbsp;<a href={"https://github.com/Takepepe"}>@Takepepe</a>&nbsp;さんが<a href={"https://www.amazon.co.jp/dp/483996937X?fbclid=IwAR2f8NdtIH6YFiojk-dgtCWEg-dibkggPCTVtEqR73DEdSRiM1Q6iotC0c8"}>実践TypeScript&nbsp;<s>	BFFとNext.js&amp;Nuxt.jsの型定義</s></a>&nbsp;という本を出すと聞いて、久々に書こうと触発されたのもあるかもしれない（謝謝）<br />
+さらには、ついこの前まで隣の席で一緒にお仕事をしていた&nbsp;<a href={"https://github.com/Takepepe"}>@Takepepe</a>&nbsp;さんが<a href={"https://www.amazon.co.jp/dp/483996937X?fbclid=IwAR2f8NdtIH6YFiojk-dgtCWEg-dibkggPCTVtEqR73DEdSRiM1Q6iotC0c8"}>実践TypeScript&nbsp;-&nbsp;BFFとNext.js&amp;Nuxt.jsの型定義</a>&nbsp;という本を出すと聞いて、久々に書こうと触発されたのもあるかもしれない（謝謝）<br />
 
 いろんな因果があって、今ここに&nbsp;commit&nbsp;しているが、どれか一つでも欠けていたらはじめなかっただろう<br />
 
 世の中のいろんな事象に感謝感激雨あられ<br />
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

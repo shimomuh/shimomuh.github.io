@@ -1,5 +1,7 @@
 # React + Typescript の Stateless Function で props を利用する
 
+タグ `React` `TypeScript` 
+
 ## 対象者
 
 * Stateless Function を使っていて props の渡し方がわからない方
@@ -31,7 +33,7 @@ const Component: React.FC<Props> = (props) => {
 ReactDOM.render(<Component value="hoge" />, document.getElementById('#app'));
 ```
 
-[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/7/files)
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/7/commits/b635bb97bd4ccbad0c56bd9766dc907d2d18775f)
 
 ## 過程
 

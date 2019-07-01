@@ -1,9 +1,11 @@
 # Javascript でカレンダーを作ろう
 
+タグ `Javascript` `TypeScript` `React`
+
 ## 対象者
 
 * 車輪の再発明大好き！
-* Typescript で何か作りたい！
+* Javascript で何か作りたい！
 
 人向け。
 
@@ -19,13 +21,15 @@
 
 [JavaScriptでカレンダーを自作したら勉強になった](https://qiita.com/kan_dai/items/b1850750b883f83b9bee)
 
+
 以上
+
 
 だとあまりにもそっけないので過程を説明する
 
 成果物以上の効果として、勘を取り戻しつつ課題がみつかるので進捗感が得られた
 
-[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/2/files)
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/2/commits/3e483e1c8ace75af061ee36fb071d0507b01f08a)
 
 ## 過程
 

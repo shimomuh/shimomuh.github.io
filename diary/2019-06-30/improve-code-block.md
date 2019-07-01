@@ -1,5 +1,7 @@
 # コードブロックを counter プロパティを使ってオシャレにしてみた
 
+タグ `CSS` `Scss` `UI/UX` `Design`
+
 ## 対象者
 
 CSS を扱っていてそれなりに知見がある
@@ -20,7 +22,7 @@ CSS を扱っていてそれなりに知見がある
 
 試しにブラウザの幅を変更してもらえるとわかるはずだ
 
-[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/6/files)
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/6/commits/97b9cb15da919f4ee9cff2dcc49cc4c1a6f4dac1)
 
 ## 過程
 

@@ -11,6 +11,8 @@ const Diary20190701: React.FC = () => {
     <div className='diary'>
 <h1>React&nbsp;+&nbsp;Typescript&nbsp;の&nbsp;Stateless&nbsp;Function&nbsp;で&nbsp;props&nbsp;を利用する</h1>
 
+タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span>&nbsp;<br />
+
 <h2>対象者</h2>
 
 <ul><li>Stateless&nbsp;Function&nbsp;を使っていて&nbsp;props&nbsp;の渡し方がわからない方</li>
@@ -42,7 +44,7 @@ React.FC&nbsp;にうまいこと型宣言してあげる<br />
 <span className='code__with-order'>ReactDOM.render(&lt;Component&nbsp;value=&quot;hoge&quot;&nbsp;/&gt;,&nbsp;document.getElementById(&#39;#app&#39;));</span><br />
 </code></p>
 
-<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/7/files"}>→成果</a><br />
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/7/commits/b635bb97bd4ccbad0c56bd9766dc907d2d18775f"}>→成果</a><br />
 
 <h2>過程</h2>
 
@@ -105,6 +107,7 @@ babel&nbsp;でうまくいってたのは&nbsp;function&nbsp;Component&nbsp;の�
 <span className='code__with-order'>&#125;</span><br />
 </code></p>
 
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

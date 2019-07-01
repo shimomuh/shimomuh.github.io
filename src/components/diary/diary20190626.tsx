@@ -11,10 +11,12 @@ const Diary20190626: React.FC = () => {
     <div className='diary'>
 <h1>Javascript&nbsp;でカレンダーを作ろう</h1>
 
+タグ&nbsp;<span className="inline-code">Javascript</span>&nbsp;<span className="inline-code">TypeScript</span>&nbsp;<span className="inline-code">React</span><br />
+
 <h2>対象者</h2>
 
 <ul><li>車輪の再発明大好き！</li>
-<li>Typescript&nbsp;で何か作りたい！</li>
+<li>Javascript&nbsp;で何か作りたい！</li>
 </ul>
 人向け。<br />
 
@@ -30,13 +32,15 @@ const Diary20190626: React.FC = () => {
 
 <a href={"https://qiita.com/kan_dai/items/b1850750b883f83b9bee"}>JavaScriptでカレンダーを自作したら勉強になった</a><br />
 
+
 以上<br />
+
 
 だとあまりにもそっけないので過程を説明する<br />
 
 成果物以上の効果として、勘を取り戻しつつ課題がみつかるので進捗感が得られた<br />
 
-<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/2/files"}>→成果</a><br />
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/2/commits/3e483e1c8ace75af061ee36fb071d0507b01f08a"}>→成果</a><br />
 
 <h2>過程</h2>
 
@@ -160,6 +164,7 @@ const Diary20190626: React.FC = () => {
 <span className='code__with-order'>&nbsp;&nbsp;&#123;[1,&nbsp;2,&nbsp;3].map((num:&nbsp;number,&nbsp;key:&nbsp;number)&nbsp;=&gt;&nbsp;&lt;li&nbsp;key=&#123;key&#125;&gt;&#123;num&#125;&lt;/li&gt;)&#125;</span><br />
 <span className='code__with-order'>&lt;/ul&gt;</span><br />
 </code></p>
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

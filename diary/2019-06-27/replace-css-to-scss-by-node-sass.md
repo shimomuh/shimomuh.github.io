@@ -1,5 +1,7 @@
 # create-react-app でも scss が使いたい！
 
+タグ `React` `TypeScript` `Scss`
+
 ## 対象者
 
 create-react-app の導入に倣って入れたはいいけど、 css しか使えないの！？って人向け
@@ -17,6 +19,8 @@ npm i --save-dev node-sass
 以上！
 
 あとは、 import しているファイルの拡張子なんかを変えてあげれば OK
+
+ 
 
 **階層**
 
@@ -47,7 +51,7 @@ src
 
 あとはいつも通りの scss ライフが送れます :tada:
 
-[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/3/files)
+[→成果](https://github.com/shimomuh/shimomuh.github.io/pull/3/commits/0c66d7360925c15c9cdea7d51a33cf0d01695cae)
 
 ## 参考
 
