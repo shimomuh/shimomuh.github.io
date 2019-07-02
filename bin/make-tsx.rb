@@ -11,9 +11,12 @@ ESCAPE_TABLE = {
   ' ' => '&nbsp;'
 }
 
+# see: http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html
 EMOJI_TABLE = {
   ':tada:' => '&#x1f389;',
   ':bow:'  => '&#x1f647;',
+  ':scream:' => '&#x1f631;',
+  ':pray:' => '&#x1f64f;',
 }
 
 # 次の行に影響を与える系
@@ -30,7 +33,7 @@ def convert(line)
   end
   # markdown 解析
   l = line.gsub(/[&<>"'{} ]/, ESCAPE_TABLE)
-  l.gsub!(/:(tada|bow):/, EMOJI_TABLE) unless $code
+  l.gsub!(/:(tada|bow|scream|pray):/, EMOJI_TABLE) unless $code
   l.gsub!(/!\[([^\]]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />') unless $code
   l.gsub!(/\[([^\]]*)\]\(([^\)]*)\)/, '<a href={"\2"}>\1</a>') unless $code
   l.gsub!(/\*\*([^\*]+)\*\*/, '<b>\1</b>') unless $code
@@ -123,8 +126,9 @@ template_router = <<EOS
 // 変更したい場合は bin/make-tsx.rb を更新してください。
 //
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Index from 'components/index';
+import NotFound from 'components/notFound'
 import 'components/root.scss';
 <%- dates_no_hyphen.each do |date| -%>
 import Diary<%= date %> from 'components/diary/diary<%= date %>'
@@ -134,10 +138,13 @@ const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <div className='root'>
-        <Route exact path ='/' component={Index} />
-        <%- dates_with_hyphen.each_with_index do |date, index| -%>
-        <Route path='/<%= date %>' component={Diary<%= dates_no_hyphen[index] %>} />
-        <%- end -%>
+        <Switch>
+          <Route exact path ='/' component={Index} />
+          <%- dates_with_hyphen.each_with_index do |date, index| -%>
+          <Route path='/<%= date %>' component={Diary<%= dates_no_hyphen[index] %>} />
+          <%- end -%>
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </BrowserRouter>
   )
