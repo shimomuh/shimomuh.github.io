@@ -1,5 +1,7 @@
 # 祝 Github Pages 設立
 
+タグ `Javascript` `Github` `React` `TypeScript`
+
 ## 対象者
 
 * 毎日何かしら投稿したい！
@@ -54,7 +56,7 @@ stable でなくてもよかったので [nodejs](https://nodejs.org/ja/) から
 
 ### Typescript / create-react-app
 
-Typescript を触ってみたかった + Github Pages 上で React を動かしてみたかったので、 https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter に倣って、ローカルに test-react-sample 的な名前で create-react-app を実行して一通り動作を確認。
+Typescript を触ってみたかった + Github Pages 上で React を動かしてみたかったので、 [TypeScript-React-Starter](https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter) に倣って、ローカルに test-react-sample 的な名前で create-react-app を実行して一通り動作を確認。
 
 `npm -g` を `npm --save-dev` にしたりディレクトリを調整しながら必要なものだけつまんで導入。
 
@@ -90,7 +92,7 @@ test-react-sample もといオリジナルの create-react-app で build を試�
 
 次に、過去に業務レベルで ReactJS をバリバリ触っていた
 
-さらには、ついこの前まで隣の席で一緒にお仕事をしていた [@Takepepe](https://github.com/Takepepe) さんが[実践TypeScript ~	BFFとNext.js&Nuxt.jsの型定義~](https://www.amazon.co.jp/dp/483996937X?fbclid=IwAR2f8NdtIH6YFiojk-dgtCWEg-dibkggPCTVtEqR73DEdSRiM1Q6iotC0c8) という本を出すと聞いて、久々に書こうと触発されたのもあるかもしれない（謝謝）
+さらには、ついこの前まで隣の席で一緒にお仕事をしていた [@Takepepe](https://github.com/Takepepe) さんが[実践TypeScript - BFFとNext.js&Nuxt.jsの型定義](https://www.amazon.co.jp/dp/483996937X?fbclid=IwAR2f8NdtIH6YFiojk-dgtCWEg-dibkggPCTVtEqR73DEdSRiM1Q6iotC0c8) という本を出すと聞いて、久々に書こうと触発されたのもあるかもしれない（謝謝）
 
 いろんな因果があって、今ここに commit しているが、どれか一つでも欠けていたらはじめなかっただろう
 

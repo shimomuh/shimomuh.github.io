@@ -11,6 +11,8 @@ const Diary20190629: React.FC = () => {
     <div className='diary'>
 <h1>【暫定版】ruby&nbsp;で&nbsp;React&nbsp;に載せるための&nbsp;Markdown&nbsp;コンバーターを実装する</h1>
 
+タグ&nbsp;<span className="inline-code">Ruby</span>&nbsp;<span className="inline-code">Shell</span><br />
+
 <h2>対象者</h2>
 
 markdown&nbsp;(.md)&nbsp;ファイルを&nbsp;react&nbsp;で表示させたいなぁと考えていて自分で&nbsp;ruby&nbsp;かけるよ！って方<br />
@@ -31,7 +33,7 @@ markdown&nbsp;で日記書いてるんだから、&nbsp;xxx.github.io&nbsp;の�
 
 でも基盤を作ってしまえばあとは&nbsp;bugfix&nbsp;なりリファクタして汎用的に作ったりするだけなので後悔はしていない<br />
 
-<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/5/files"}>→成果</a><br />
+<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/5/commits/b8218234437c1d3da57ace0b253deb8318cc1740"}>→成果</a><br />
 
 <h2>過程</h2>
 
@@ -162,7 +164,7 @@ sub/sub!&nbsp;や&nbsp;gsub/gsub!&nbsp;を使えば&nbsp;OK!&nbsp;(gsub!&nbsp;�
 
 ちなみに一番時間を食ったのがこの正規表現かもしれない<br />
 
-[[正規表現]&nbsp;.*?は最短マッチではない](https://qiita.com/anqooqie/items/191ad215e93237c77811)<br />
+<a href={"https://qiita.com/anqooqie/items/191ad215e93237c77811"}>正規表現&nbsp;.*?は最短マッチではない</a><br />
 
 こういうのまじ助かりました&nbsp;&#x1f647;<br />
 
@@ -189,6 +191,7 @@ sub/sub!&nbsp;や&nbsp;gsub/gsub!&nbsp;を使えば&nbsp;OK!&nbsp;(gsub!&nbsp;�
 </code></p>
 
 絵文字のコードは&nbsp;<a href={"http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html"}>主な特殊文字の文字コード&nbsp;-&nbsp;Guppy</a>&nbsp;を参考に。<br />
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>

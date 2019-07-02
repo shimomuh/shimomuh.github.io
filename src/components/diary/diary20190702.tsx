@@ -11,6 +11,8 @@ const Diary20190702: React.FC = () => {
     <div className='diary'>
 <h1>npm&nbsp;run&nbsp;build&nbsp;によってできる不要ファイルの削除</h1>
 
+タグ&nbsp;<span className="inline-code">Ruby</span><br />
+
 <h2>対象者</h2>
 
 npm&nbsp;run&nbsp;build&nbsp;で不要ファイルが出るがたまりすぎると困るので対応したい人<br />
@@ -23,7 +25,7 @@ npm&nbsp;run&nbsp;build&nbsp;のたびに削除されないファイルが溜ま
 
 <span className="inline-code">bin/remove-old-file.rb</span>&nbsp;に書いた<br />
 
-<a href={"https://github.com/shimomuh/shimomuh.github.io/pull/8/files"}>→成果</a><br />
+<a href={"https://github.com/shimomuh/shimomuh.github.io/commit/f192cd3c07421b48fea622633da4fe092a71c40b"}>→成果</a><br />
 
 愚直にパターンマッチングして対象のものを消すという処理<br />
 
@@ -32,6 +34,7 @@ npm&nbsp;run&nbsp;build&nbsp;のたびに削除されないファイルが溜ま
 今はこれで辛抱。<br />
 
 もしかしたら&nbsp;tsconfig.json&nbsp;とかにいいオプションがあるのかもしれないが今はこれで行く方向で。<br />
+      <br />
       <div>
         <Link to='/'>戻る</Link>
       </div>
