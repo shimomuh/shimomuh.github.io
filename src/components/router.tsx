@@ -12,6 +12,7 @@ import Diary20190701 from 'components/diary/diary20190701'
 import Diary20190625 from 'components/diary/diary20190625'
 import Diary20190703 from 'components/diary/diary20190703'
 import Diary20190704 from 'components/diary/diary20190704'
+import Diary20190705 from 'components/diary/diary20190705'
 import Diary20190702 from 'components/diary/diary20190702'
 import Diary20190626 from 'components/diary/diary20190626'
 import Diary20190628 from 'components/diary/diary20190628'
@@ -29,6 +30,7 @@ const Router: React.FC = () => {
           <Route path='/2019-06-25' component={Diary20190625} />
           <Route path='/2019-07-03' component={Diary20190703} />
           <Route path='/2019-07-04' component={Diary20190704} />
+          <Route path='/2019-07-05' component={Diary20190705} />
           <Route path='/2019-07-02' component={Diary20190702} />
           <Route path='/2019-06-26' component={Diary20190626} />
           <Route path='/2019-06-28' component={Diary20190628} />
