@@ -35,6 +35,14 @@
 
 名称、URL
 
+## コードリンク
+
+`[成果→](https://github.com/shimomuh/shimomuh.github.io/commit/xxx)` で書く
+
+## 画像パス
+
+`![](/diary/YYYY-MM-DD/xxx.png)` で書く
+
 ## タグ
 
 なるべく広義なグルーピングをしてあとで見返した時にどういうものに多く触れている人かを明確にするためのもの
