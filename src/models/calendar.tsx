@@ -23,6 +23,33 @@ class Calendar {
     this.make();
   }
 
+  public returnToday(): Calendar {
+    this.today = new Date();
+    this.year = this.today.getFullYear();
+    this.month = this.today.getMonth() + 1;
+    this.dates = [];
+    this.make();
+    return this;
+  }
+
+  public nextMonth(): Calendar {
+    const date = new Date(this.year, this.month, 1);
+    this.year = date.getFullYear();
+    this.month = date.getMonth() + 1;
+    this.dates = [];
+    this.make();
+    return this;
+  }
+
+  public previousMonth(): Calendar {
+    const date = new Date(this.year, this.month - 2, 1);
+    this.year = date.getFullYear();
+    this.month = date.getMonth() + 1;
+    this.dates = [];
+    this.make();
+    return this;
+  }
+
   private make(): void {
     const WEEK = 7;
 

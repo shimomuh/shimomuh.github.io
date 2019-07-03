@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import Store from 'states/store';
 import Router from 'components/router';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Router />, document.querySelector('[data-react-site]'));
+ReactDOM.render(
+  <Provider store={Store}>
+    <Router />
+  </Provider>,
+  document.querySelector('[data-react-site]')
+);
 
 // my-app から引用
 // If you want your app to work offline and load faster, you can change

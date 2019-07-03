@@ -1,5 +1,5 @@
 import React from 'react';
-import AdventCalendar from './adventCalendar/root';
+import AdventCalendar from 'containers/adventCalendar/root';
 
 const Index: React.FC = () => {
   return (
