@@ -1,6 +1,6 @@
 # create-react-app でも scss が使いたい！
 
-タグ `React` `TypeScript` `Scss`
+タグ `このサイトの生い立ち` `React` `TypeScript` `Scss`
 
 ## 対象者
 

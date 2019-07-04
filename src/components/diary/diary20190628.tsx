@@ -11,7 +11,7 @@ const Diary20190628: React.FC = () => {
     <div className='diary'>
 <h1>react-router-dom&nbsp;でルーティングする</h1>
 
-タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
 
 <h2>対象者</h2>
 

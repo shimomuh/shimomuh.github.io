@@ -1,6 +1,6 @@
 # 祝 Github Pages 設立
 
-タグ `Javascript` `Github` `React` `TypeScript`
+タグ `このサイトの生い立ち` `Javascript` `Github` `React` `TypeScript`
 
 ## 対象者
 

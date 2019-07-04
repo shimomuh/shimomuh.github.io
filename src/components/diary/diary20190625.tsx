@@ -11,7 +11,7 @@ const Diary20190625: React.FC = () => {
     <div className='diary'>
 <h1>祝&nbsp;Github&nbsp;Pages&nbsp;設立</h1>
 
-タグ&nbsp;<span className="inline-code">Javascript</span>&nbsp;<span className="inline-code">Github</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">Javascript</span>&nbsp;<span className="inline-code">Github</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span><br />
 
 <h2>対象者</h2>
 

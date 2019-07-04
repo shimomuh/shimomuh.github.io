@@ -11,7 +11,7 @@ const Diary20190704: React.FC = () => {
     <div className='diary'>
 <h1>CSS&nbsp;ハックを使って以前実装した&nbsp;<span className="inline-code">&lt;code&gt;</span>&nbsp;タグのデザイン崩れに対応する</h1>
 
-タグ&nbsp;<span className="inline-code">CSS</span>&nbsp;<span className="inline-code">Scss</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">CSS</span>&nbsp;<span className="inline-code">Scss</span><br />
 
 <h2>対象者</h2>
 

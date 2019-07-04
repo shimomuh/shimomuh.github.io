@@ -11,7 +11,7 @@ const Diary20190629: React.FC = () => {
     <div className='diary'>
 <h1>【暫定版】ruby&nbsp;で&nbsp;React&nbsp;に載せるための&nbsp;Markdown&nbsp;コンバーターを実装する</h1>
 
-タグ&nbsp;<span className="inline-code">Ruby</span>&nbsp;<span className="inline-code">Shell</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">Ruby</span>&nbsp;<span className="inline-code">Shell</span><br />
 
 <h2>対象者</h2>
 

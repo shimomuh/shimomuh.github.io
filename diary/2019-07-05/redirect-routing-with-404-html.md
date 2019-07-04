@@ -1,6 +1,6 @@
 # React on Github Pages でも 404 を返さずに遷移したい！
 
-タグ `Github` `React` `Javascript`
+タグ `このサイトの生い立ち` `Github` `React` `Javascript`
 
 ## 対象者
 

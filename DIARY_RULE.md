@@ -53,6 +53,7 @@
 
 |タグ名|分類されるべき記事|
 |---|---|
+|このサイトの生い立ち|このサイトを作った時の話|
 |Javascript|React や TypeScript に依らない Javascript を書く人なら誰にでも価値がありうるもの|
 |TypeScript|TypeScript にまつわるもの|
 |React|React にまつわるもの|
