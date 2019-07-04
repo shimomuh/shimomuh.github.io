@@ -111,16 +111,21 @@ EOS
   end
 end
 
-diary_paths = Dir.glob("diary/**/*.md")
-dates_with_hyphen = []
-dates_no_hyphen = []
-diary_paths.each do |path|
-  with_hyphen = /\d{4}-\d{2}-\d{2}/.match(path).to_s
-  dates_with_hyphen.push with_hyphen
-  dates_no_hyphen.push with_hyphen.gsub('-', '')
+def dump_title_to_json(date, title, hash)
+  hash[date] = title.gsub(/^# /, '')
 end
 
-template_router = <<EOS
+def main
+  diary_paths = Dir.glob("diary/**/*.md")
+  dates_with_hyphen = []
+  dates_no_hyphen = []
+  diary_paths.each do |path|
+    with_hyphen = /\d{4}-\d{2}-\d{2}/.match(path).to_s
+    dates_with_hyphen.push with_hyphen
+    dates_no_hyphen.push with_hyphen.gsub('-', '')
+  end
+
+  template_router = <<EOS
 //
 // このファイルは自動生成です。
 // 変更したい場合は bin/make-tsx.rb を更新してください。
@@ -153,19 +158,23 @@ const Router: React.FC = () => {
 export default Router
 EOS
 
-erb = ERB.new(template_router, nil, '-')
-File.open('src/components/router.tsx', 'w') do |f|
-  f.write erb.result(binding)
-end
-
-diary_paths.each_with_index do |path, index|
-  lines = []
-  File.open(path, 'r') do |f|
-    f.each_line do |line|
-      lines.push line.chomp
-    end
+  erb = ERB.new(template_router, nil, '-')
+  File.open('src/components/router.tsx', 'w') do |f|
+    f.write erb.result(binding)
   end
-  content dates_no_hyphen[index], lines
-  puts "#{dates_with_hyphen[index]} ... done [#{index + 1}/#{dates_with_hyphen.size}]"
+
+  title_json_hash = {}
+  diary_paths.each_with_index do |path, index|
+    lines = []
+    File.open(path, 'r') do |f|
+      f.each_line do |line|
+        lines.push line.chomp
+      end
+    end
+    dump_title_to_json(dates_with_hyphen[index], lines[0], title_json_hash)
+    content dates_no_hyphen[index], lines
+    puts "#{dates_with_hyphen[index]} ... done [#{index + 1}/#{dates_with_hyphen.size}]"
+  end
 end
 
+main
