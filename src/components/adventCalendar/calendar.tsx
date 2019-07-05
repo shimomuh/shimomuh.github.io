@@ -11,27 +11,23 @@ type CalendarProps = {
 const Calendar: React.FC<CalendarProps> = (props) => {
   const { calendar } = props;
   return (
-    <div>
-      <table className='calendar'>
-        <TableHeader />
-        <TableData calendar={calendar} />
-      </table>
+    <div className='calendar'>
+      <CalendarHeader />
+      <CalendarBody calendar={calendar} />
     </div>
   );
 }
 
-const TableHeader: React.FC = () => {
+const CalendarHeader: React.FC = () => {
   const day = ['日', '月', '火', '水', '木', '金', '土'];
   return (
-    <thead>
-      <tr>
-        {day.map((d: string, key: number) => <th key={key}>{d}</th>)}
-      </tr>
-    </thead>
+    <ul className='calendar__header'>
+      {day.map((d: string, key: number) => <li className='calendar__cell' key={key}>{d}</li>)}
+    </ul>
   );
 }
 
-type TableDataProps = {
+type CalendarBodyProps = {
   calendar: CalendarModel;
 }
 
@@ -39,15 +35,32 @@ type ConfigProps = {
   [key: string]: string;
 }
 
-const TableData: React.FC<TableDataProps> = (props) => {
+const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
   const { calendar } = props;
   const title: ConfigProps = config;
+  const cellClassName: any = (isActive: any) => {
+    const klassName = 'calendar__cell'
+    if (isActive) { return klassName.concat(' ', 'is-active') }
+    return klassName
+  }
   return (
-    <tbody>
-     {calendar.dates.map((week: object[], key: number) => {
-       return <tr key={key}>{week.map((d: any, key: number) => <td key={key} className={d.isActive ? 'is-active' : ''}><Link to={`/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDay()}`}><span className='date'>{d.day}</span><span className='title'>{title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDay()}`]}</span></Link></td>)}</tr>
-     })}
-    </tbody>
+    <ul className='calendar__body'>
+      {
+        calendar.dates.map((week: object[], key: number) => {
+          return week.map((d: any, key: number) => {
+            return (
+              <li key={key} className={cellClassName(d.isActive)}>
+                <Link to={`/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`}>
+                  <span className='calendar__cell--date'>{d.date}</span>
+                  <span className='calendar__cell--day'>({d.day})</span>
+                  <span className='calendar__cell--title'>{title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`]}</span>
+                </Link>
+              </li>
+            );
+          })
+        })
+      }
+    </ul>
   );
 }
 
