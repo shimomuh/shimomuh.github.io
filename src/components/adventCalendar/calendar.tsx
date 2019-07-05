@@ -7,7 +7,7 @@ type CalendarProps = {
   calendar: CalendarModel;
 }
 
-export const Calendar: React.FC<CalendarProps> = (props) => {
+const Calendar: React.FC<CalendarProps> = (props) => {
   const { calendar } = props;
   return (
     <div>
@@ -44,3 +44,5 @@ const TableData: React.FC<TableDataProps> = (props) => {
     </tbody>
   );
 }
+
+export default Calendar;
