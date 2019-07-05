@@ -171,6 +171,8 @@ EOS
         lines.push line.chomp
       end
     end
+    $li = false
+    $code = false
     dump_title_to_json(dates_with_hyphen[index], lines[0], title_json_hash)
     content dates_no_hyphen[index], lines
     puts "#{dates_with_hyphen[index]} ... done [#{index + 1}/#{dates_with_hyphen.size}]"
