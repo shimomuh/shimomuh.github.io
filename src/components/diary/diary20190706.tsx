@@ -11,7 +11,7 @@ const Diary20190706: React.FC = () => {
     <div className='diary'>
 <h1>Redux&nbsp;を使って&nbsp;URL&nbsp;が変わらない&nbsp;VirtualDOM&nbsp;特有の遷移&nbsp;(厳密には再描画)&nbsp;を実現する</h1>
 
-タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">Redux</span>&nbsp;<span className="inline-code">UI/UX</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">Redux</span>&nbsp;<span className="inline-code">UI/UX</span><br />
 
 <h2>対象者</h2>
 

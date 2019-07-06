@@ -25,7 +25,8 @@
       "models/*": ["models/*"],
       "actions/*": ["actions/*"],
       "states/*": ["states/*"],
-      "containers/*": ["containers/*"]
+      "containers/*": ["containers/*"],
+      "config/*": ["config/*"]
     }
   },
   "include": [

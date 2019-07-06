@@ -11,7 +11,7 @@ const Diary20190705: React.FC = () => {
     <div className='diary'>
 <h1>React&nbsp;on&nbsp;Github&nbsp;Pages&nbsp;でも&nbsp;404&nbsp;を返さずに遷移したい！</h1>
 
-タグ&nbsp;<span className="inline-code">Github</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">Javascript</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">Github</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">Javascript</span><br />
 
 <h2>対象者</h2>
 

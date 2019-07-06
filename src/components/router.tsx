@@ -8,6 +8,7 @@ import Index from 'components/index';
 import NotFound from 'components/notFound'
 import 'components/root.scss';
 import Diary20190630 from 'components/diary/diary20190630'
+import Diary20190707 from 'components/diary/diary20190707'
 import Diary20190701 from 'components/diary/diary20190701'
 import Diary20190706 from 'components/diary/diary20190706'
 import Diary20190625 from 'components/diary/diary20190625'
@@ -27,6 +28,7 @@ const Router: React.FC = () => {
         <Switch>
           <Route exact path ='/' component={Index} />
           <Route path='/2019-06-30' component={Diary20190630} />
+          <Route path='/2019-07-07' component={Diary20190707} />
           <Route path='/2019-07-01' component={Diary20190701} />
           <Route path='/2019-07-06' component={Diary20190706} />
           <Route path='/2019-06-25' component={Diary20190625} />

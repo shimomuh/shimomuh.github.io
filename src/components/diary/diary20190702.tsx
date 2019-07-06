@@ -11,7 +11,7 @@ const Diary20190702: React.FC = () => {
     <div className='diary'>
 <h1>npm&nbsp;run&nbsp;build&nbsp;によってできる不要ファイルの削除</h1>
 
-タグ&nbsp;<span className="inline-code">Ruby</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">Ruby</span><br />
 
 <h2>対象者</h2>
 

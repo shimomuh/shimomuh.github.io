@@ -11,6 +11,8 @@ const Diary20190703: React.FC = () => {
     <div className='diary'>
 <h1>タグを楽に仕込む方法を今のうちに考える</h1>
 
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">UI/UX</span>&nbsp;<span className="inline-code">設計</span><br />
+
 <h2>対象者</h2>
 
 <ul><li>ここまで記事を一から読んできた</li>

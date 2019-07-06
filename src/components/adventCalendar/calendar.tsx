@@ -2,6 +2,7 @@ import React from 'react';
 import './calendar.scss';
 import { CalendarModel } from 'models/calendar';
 import { Link } from 'react-router-dom';
+import config from 'config/diary_title.json';
 
 type CalendarProps = {
   calendar: CalendarModel;
@@ -34,12 +35,17 @@ type TableDataProps = {
   calendar: CalendarModel;
 }
 
+type ConfigProps = {
+  [key: string]: string;
+}
+
 const TableData: React.FC<TableDataProps> = (props) => {
   const { calendar } = props;
+  const title: ConfigProps = config;
   return (
     <tbody>
      {calendar.dates.map((week: object[], key: number) => {
-       return <tr key={key}>{week.map((d: any, key: number) => <td key={key} className={d.isActive ? 'is-active' : ''}><Link to={`/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDay()}`}>{d.day}</Link></td>)}</tr>
+       return <tr key={key}>{week.map((d: any, key: number) => <td key={key} className={d.isActive ? 'is-active' : ''}><Link to={`/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDay()}`}><span className='date'>{d.day}</span><span className='title'>{title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDay()}`]}</span></Link></td>)}</tr>
      })}
     </tbody>
   );

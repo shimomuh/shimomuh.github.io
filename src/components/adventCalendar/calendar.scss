@@ -4,6 +4,7 @@ $disable: #d8d6d5;
 $hover: #ffe4b5;
 .calendar {
   th, td {
+    width: 10%;
     &:nth-child(1) {
       color: $sunday;
     }
@@ -17,10 +18,18 @@ $hover: #ffe4b5;
       &:hover {
         background-color: $hover;
       }
+
+      .date {
+        display: block;
+        min-height: 1rem;
+      }
+      .title {
+        display: block;
+        min-height: 8rem;
+      }
     }
   }
   td {
-    text-align: right;
     &:not(.is-active) {
       color: $disable;
     }

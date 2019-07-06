@@ -11,7 +11,7 @@ const Diary20190627: React.FC = () => {
     <div className='diary'>
 <h1>create-react-app&nbsp;でも&nbsp;scss&nbsp;が使いたい！</h1>
 
-タグ&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span>&nbsp;<span className="inline-code">Scss</span><br />
+タグ&nbsp;<span className="inline-code">このサイトの生い立ち</span>&nbsp;<span className="inline-code">React</span>&nbsp;<span className="inline-code">TypeScript</span>&nbsp;<span className="inline-code">Scss</span><br />
 
 <h2>対象者</h2>
 

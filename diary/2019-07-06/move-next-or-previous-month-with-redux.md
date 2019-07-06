@@ -1,6 +1,6 @@
 # Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する
 
-タグ `React` `Redux` `UI/UX`
+タグ `このサイトの生い立ち` `React` `Redux` `UI/UX`
 
 ## 対象者
 

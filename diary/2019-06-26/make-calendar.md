@@ -1,6 +1,6 @@
 # Javascript でカレンダーを作ろう
 
-タグ `Javascript` `TypeScript` `React`
+タグ `このサイトの生い立ち` `Javascript` `TypeScript` `React`
 
 ## 対象者
 
