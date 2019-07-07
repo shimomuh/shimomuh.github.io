@@ -2,36 +2,122 @@ $sunday: #eb3228;
 $saturday: #007bff;
 $disable: #d8d6d5;
 $hover: #ffe4b5;
-.calendar {
-  th, td {
-    width: 10%;
-    &:nth-child(1) {
-      color: $sunday;
+@media screen and (min-width: 1024px) {
+  .calendar {
+    $n: &;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
     }
-    &:nth-child(7) {
-      color: $saturday;
+    &__header {
+      #{$n}__cell {
+        &:nth-child(7n + 1) {
+          color: $sunday;
+        }
+        &:nth-child(7n) {
+          color: $saturday;
+        }
+      }
     }
-    a {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-      &:hover {
-        background-color: $hover;
+    &__body {
+      #{$n}__cell {
+        &:nth-child(7n + 1) {
+          .calendar__cell--date {
+            color: $sunday;
+          }
+        }
+        &:nth-child(7n) {
+          .calendar__cell--date {
+            color: $saturday;
+          }
+        }
+        &:not(.is-active) {
+          color: $disable;
+          .calendar__cell--date {
+            color: $disable;
+          }
+        }
       }
-
-      .date {
+    }
+    &__cell {
+      $o: &;
+      display: flex;
+      flex-direction: row;
+      flex-basis: 14%;
+      a {
+        width: 100%;
         display: block;
-        min-height: 1rem;
-      }
-      .title {
-        display: block;
-        min-height: 8rem;
+        text-decoration: none;
+        &:hover {
+          background-color: $hover;
+        }
+        #{$o}--date {
+          display: block;
+          min-height: 1rem;
+        }
+        #{$o}--day {
+          display: none;
+        }
+        #{$o}--title {
+          margin: 2px;
+          display: block;
+          min-height: 8rem;
+          font-size: 0.9rem;
+        }
       }
     }
   }
-  td {
-    &:not(.is-active) {
-      color: $disable;
+}
+
+@media screen and (max-width: 1024px) {
+  .calendar {
+    $p: &;
+    &__header {
+      display: none;
+    }
+    &__body {
+      #{$p}__cell {
+        &:nth-child(7n + 1) {
+          .calendar__cell--date,
+          .calendar__cell--day {
+            color: $sunday;
+          }
+        }
+        &:nth-child(7n) {
+          .calendar__cell--date,
+          .calendar__cell--day {
+            color: $saturday;
+          }
+        }
+      }
+    }
+    &__cell {
+      display: block;
+      &:not(.is-active) {
+        display: none;
+      }
+    }
+    a {
+      min-height: 3rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: $hover;
+      }
+      #{$p}__cell--date {
+        display: block;
+        width: 1.5rem;
+        text-align: right;
+        flex: 0 0 auto;
+      }
+      #{$p}__cell--day {
+        display: block;
+        margin-right: 0.5rem;
+      }
+      #{$p}__cell--title {
+        display: block;
+      }
     }
   }
 }

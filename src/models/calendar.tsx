@@ -96,15 +96,17 @@ class Calendar {
 }
 
 class DateCell {
-  public day: number;
+  public date: number;
   public month: number;
   public year: number;
   public isActive: boolean;
+  public day: string;
 
   constructor(date: any, isActive: boolean) {
-    this.day = date.getDate();
+    this.date = date.getDate();
     this.month = date.getMonth() + 1;
     this.year = date.getFullYear();
+    this.day = '日月火水木金土'.charAt(date.getDay())
     this.isActive = isActive;
   }
 
@@ -112,8 +114,8 @@ class DateCell {
     return ('00' + this.month).slice(-2);
   }
 
-  public getZeroPaddingDay(): string {
-    return ('00' + this.day).slice(-2);
+  public getZeroPaddingDate(): string {
+    return ('00' + this.date).slice(-2);
   }
 }
 
