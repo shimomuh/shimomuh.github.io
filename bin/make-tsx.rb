@@ -1,80 +1,5 @@
 require 'erb'
-
-ESCAPE_TABLE = {
-  '&' => '&amp;',
-  '<' => '&lt;',
-  '>' => '&gt;',
-  '"' => '&quot;',
-  "'" => '&#39;',
-  '{' => '&#123;',
-  '}' => '&#125;',
-  ' ' => '&nbsp;'
-}
-
-# see: http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html
-EMOJI_TABLE = {
-  ':tada:' => '&#x1f389;',
-  ':bow:'  => '&#x1f647;',
-  ':scream:' => '&#x1f631;',
-  ':pray:' => '&#x1f64f;',
-}
-
-# 次の行に影響を与える系
-$code = false # code タグ中は true
-$li = false # ul タグ中は true
-
-def convert(line)
-  if line.size.zero?
-    if $li
-      $li = false
-      return "</ul>"
-    end
-    return;
-  end
-  # markdown 解析
-  l = line.gsub(/[&<>"'{} ]/, ESCAPE_TABLE)
-  l.gsub!(/:(tada|bow|scream|pray):/, EMOJI_TABLE) unless $code
-  l.gsub!(/!\[([^\]]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />') unless $code
-  l.gsub!(/\[([^\]]*)\]\(([^\)]*)\)/, '<a href={"\2"}>\1</a>') unless $code
-  l.gsub!(/\*\*([^\*]+)\*\*/, '<b>\1</b>') unless $code
-  l.gsub!(/_([^_]+)_/, '<i>\1</i>') unless $code
-  l.gsub!(/\~([^\~]+)\~/, '<s>\1</s>') unless $code
-  l.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>') unless $code
-
-  if $li
-    if (l =~ /^\*&nbsp;/)
-      return "<li>#{l.gsub(/^\*&nbsp;/, '')}</li>"
-    end
-  else
-    if (l =~ /^\*&nbsp;/)
-      $li = true
-      return "<ul><li>#{l.gsub(/^\*&nbsp;/, '')}</li>"
-    end
-  end
-
-  return "<h4>#{l.gsub(/^####&nbsp;/, '')}</h4>" if l =~ /^####/ && !$code
-  return "<h3>#{l.gsub!(/^###&nbsp;/, '')}</h3>" if l =~ /^###/ && !$code
-  return "<h2>#{l.gsub!(/^##&nbsp;/, '')}</h2>" if l =~ /^##/ && !$code
-  return "<h1>#{l.gsub!(/^#&nbsp;/, '')}</h1>" if l =~ /^#/ && !$code
-
-  l = "#{l}<br />" unless $code
-
-  if (l =~ /^```/)
-    if $code
-      $code = false
-      return "</code></p>"
-    else
-      $code = true
-      return '<p className="code"><code>'
-    end
-  end
-
-  if $code
-    l = "<span className='code__with-order'>#{l}</span><br />"
-  end
-
-  l
-end
+require_relative '../ruby_scripts/sub_domain/general_domain/string_array_parser'
 
 def content(date_no_hyphen, lines)
   template =<<EOS
@@ -89,12 +14,7 @@ import 'components/diary.scss';
 const Diary<%= date_no_hyphen %>: React.FC = () => {
   return (
     <div className='diary'>
-<%- lines.each do |line| -%>
-<%= convert line %>
-<%- end -%>
-<%- if $li -%>
-</ul>
-<%- end -%>
+      <%= SubDomain::GeneralDomain::StringArrayParser.parse(lines).values.join('') %>
       <br />
       <div>
         <Link to='/'>戻る</Link>
