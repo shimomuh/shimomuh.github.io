@@ -1,4 +1,5 @@
 require 'erb'
+require 'json'
 require_relative '../ruby_scripts/sub_domain/general_domain/string_array_parser'
 
 def content(date_no_hyphen, lines)
@@ -91,11 +92,12 @@ EOS
         lines.push line.chomp
       end
     end
-    $li = false
-    $code = false
     dump_title_to_json(dates_with_hyphen[index], lines[0], title_json_hash)
     content dates_no_hyphen[index], lines
     puts "#{dates_with_hyphen[index]} ... done [#{index + 1}/#{dates_with_hyphen.size}]"
+  end
+  File.open('src/config/diary_title.json', 'w') do |f|
+    f.write title_json_hash.to_json
   end
 end
 
