@@ -36,20 +36,33 @@ DDD については [実践DDD本 第2章「ドメイン」「サブドメイン
 
 ともあれ設計した結果は以下の通り
 
-* 複数記事を読み込む
-* 1記事を文字列配列にする
+* 1記事を文字列配列として渡し
 * 文字列配列に対して複数行にまたがるマークダウン記法処理をする
-* 文字列に対して単業に関するマークダウン処理をする
+* 文字列に対して1行に関するマークダウン処理をする
 * 文字をエスケープする
 
 このように粒度を下げていくことを意識した
 
-今回はこのうち、下3つを実装した
+処理の大枠は以下のようなイメージ
 
-詳しくは成果を参照
+```ruby
+class StringArrayParser
+  def self.parse(str_array)
+    string_array.each do |str|
+      multi_line_parse str
+      StringParser.parse str
+    end
+  end
 
- 
+  class StringParser
+    def self.parse(str)
+      escape str
+      one_line_parse str
+    end
+  end
+end
 
-まだ荒削りだが一旦これで、続きは明日
+StringArrayParser.parse articles
+```
 
-複数行にまたがる処理が想像以上に難しい
+明日はテンプレートを読み込むところを実装しようかな
