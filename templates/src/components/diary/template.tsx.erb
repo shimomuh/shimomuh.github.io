@@ -1,0 +1,21 @@
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
+import React from 'react';
+import { Link } from 'react-router-dom';
+import 'components/diary.scss';
+
+const Diary<%= value[:date_no_hyphen] %>: React.FC = () => {
+  return (
+    <div className='diary'>
+      <%= value[:content] %>
+      <br /><br />
+      <div>
+        <Link to='/'>戻る</Link>
+      </div>
+    </div>
+  )
+}
+
+export default Diary<%= value[:date_no_hyphen] %>

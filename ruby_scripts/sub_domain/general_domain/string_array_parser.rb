@@ -104,7 +104,7 @@ module SubDomain
 
         if @end_ul
           @end_ul = false
-          value.gsub!(/^(.*)$/, '</ul>\1')
+          value.gsub!(/^(.*)$/, '</ul>')
         end
       end
 

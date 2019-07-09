@@ -39,16 +39,16 @@ module SubDomain
       end
 
       def parse_along_flow
-        @return_code = false
         escape_about_html unless option[:escape_about_html]
         escape_about_emoji unless option[:escape_about_emoji]
         return if option[:ignore_tag]
+        replace_inline_code
+        return if @ignore_tag
         replace_img_tag
         replace_a_tag
         replace_b_tag
         replace_i_tag
         replace_s_tag
-        replace_inline_code
         replace_h_tag
         replace_br_tag
       end
@@ -59,6 +59,11 @@ module SubDomain
 
       def escape_about_emoji
         @value.gsub!(/(#{EMOJI_TABLE.keys.join('|')})/, EMOJI_TABLE)
+      end
+
+      def replace_inline_code
+        @ignore_tag = true if @value =~ /`([^`]+)`/
+        @value.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>')
       end
 
       def replace_img_tag
@@ -82,10 +87,6 @@ module SubDomain
       def replace_s_tag
         @value.gsub!(/\~\~([^\~][^\~]+)\~\~/, '<s>\1</s>')
         @value.gsub!(/\~([^\~]+)\~/, '<s>\1</s>')
-      end
-
-      def replace_inline_code
-        @value.gsub!(/`([^`]+)`/, '<span className="inline-code">\1</span>')
       end
 
       def replace_br_tag
