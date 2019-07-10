@@ -37,7 +37,7 @@
 
 ## コードリンク
 
-`[成果→](https://github.com/shimomuh/shimomuh.github.io/commit/xxx)` で書く
+`[→成果](https://github.com/shimomuh/shimomuh.github.io/commit/xxx)` で書く
 
 ## 画像パス
 

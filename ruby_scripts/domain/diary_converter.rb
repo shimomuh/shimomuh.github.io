@@ -18,10 +18,6 @@ module Domain
       convert
     end
 
-    def self.convert
-      new
-    end
-
     def convert
       set_variables
       render_router_template
@@ -34,7 +30,7 @@ module Domain
         end
         @title_json_hash[@dates_with_hyphen[index]] = lines[0].gsub(/^# /, '')
         render_diary(@dates_no_hyphen[index], lines)
-        puts "#{@dates_with_hyphen[index]} ... done [#{index + 1}/#{@dates_with_hyphen.size}]"
+        yield "#{@dates_with_hyphen[index]} ... done [#{index + 1}/#{@dates_with_hyphen.size}]" if block_given?
       end
       render_title_json
     end
