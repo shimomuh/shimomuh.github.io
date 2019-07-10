@@ -50,7 +50,7 @@ const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
           return week.map((d: any, key: number) => {
             return (
               <li key={key} className={cellClassName(d.isActive)}>
-                <Link to={`/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`}>
+                <Link to={`/diary/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`}>
                   <span className='calendar__cell--date'>{d.date}</span>
                   <span className='calendar__cell--day'>({d.day})</span>
                   <span className='calendar__cell--title'>{title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`]}</span>

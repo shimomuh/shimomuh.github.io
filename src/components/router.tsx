@@ -31,23 +31,23 @@ const Router: React.FC = () => {
       <div className='root'>
         <Switch>
           <Route exact path ='/' component={Index} />
-          <Route path='/2019-06-25' component={Diary20190625} />
-          <Route path='/2019-06-26' component={Diary20190626} />
-          <Route path='/2019-06-27' component={Diary20190627} />
-          <Route path='/2019-06-28' component={Diary20190628} />
-          <Route path='/2019-06-29' component={Diary20190629} />
-          <Route path='/2019-06-30' component={Diary20190630} />
-          <Route path='/2019-07-01' component={Diary20190701} />
-          <Route path='/2019-07-02' component={Diary20190702} />
-          <Route path='/2019-07-03' component={Diary20190703} />
-          <Route path='/2019-07-04' component={Diary20190704} />
-          <Route path='/2019-07-05' component={Diary20190705} />
-          <Route path='/2019-07-06' component={Diary20190706} />
-          <Route path='/2019-07-07' component={Diary20190707} />
-          <Route path='/2019-07-08' component={Diary20190708} />
-          <Route path='/2019-07-09' component={Diary20190709} />
-          <Route path='/2019-07-10' component={Diary20190710} />
-          <Route path='/2019-07-11' component={Diary20190711} />
+          <Route path='/diary/2019-06-25' component={Diary20190625} />
+          <Route path='/diary/2019-06-26' component={Diary20190626} />
+          <Route path='/diary/2019-06-27' component={Diary20190627} />
+          <Route path='/diary/2019-06-28' component={Diary20190628} />
+          <Route path='/diary/2019-06-29' component={Diary20190629} />
+          <Route path='/diary/2019-06-30' component={Diary20190630} />
+          <Route path='/diary/2019-07-01' component={Diary20190701} />
+          <Route path='/diary/2019-07-02' component={Diary20190702} />
+          <Route path='/diary/2019-07-03' component={Diary20190703} />
+          <Route path='/diary/2019-07-04' component={Diary20190704} />
+          <Route path='/diary/2019-07-05' component={Diary20190705} />
+          <Route path='/diary/2019-07-06' component={Diary20190706} />
+          <Route path='/diary/2019-07-07' component={Diary20190707} />
+          <Route path='/diary/2019-07-08' component={Diary20190708} />
+          <Route path='/diary/2019-07-09' component={Diary20190709} />
+          <Route path='/diary/2019-07-10' component={Diary20190710} />
+          <Route path='/diary/2019-07-11' component={Diary20190711} />
           <Route component={NotFound} />
         </Switch>
       </div>
