@@ -43,13 +43,13 @@ module SubDomain
         escape_about_emoji unless option[:escape_about_emoji]
         return if option[:ignore_tag]
         replace_inline_code
+        replace_h_tag
         return if @ignore_tag
         replace_img_tag
         replace_a_tag
         replace_b_tag
         replace_i_tag
         replace_s_tag
-        replace_h_tag
         replace_br_tag
       end
 
@@ -68,6 +68,7 @@ module SubDomain
 
       def replace_img_tag
         @value.gsub!(/!\[([^\]][^\(]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />')
+        @value.gsub!(/!\[\]\(([^\)]*)\)/, '<img src="\1" />')
       end
 
       def replace_a_tag

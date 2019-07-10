@@ -26,7 +26,7 @@
 * Safari は微調整
 * IE は... 色々ありそうなので別途
 
-[成果→](https://github.com/shimomuh/shimomuh.github.io/commit/ff334744a9283e290e7dff3baaa539ee8a21f6b3)
+[→成果](https://github.com/shimomuh/shimomuh.github.io/commit/ff334744a9283e290e7dff3baaa539ee8a21f6b3)
 
 ```scss
 /* Safari のみ */
