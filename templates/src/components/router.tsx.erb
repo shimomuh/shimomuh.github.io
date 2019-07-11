@@ -18,7 +18,7 @@ const Router: React.FC = () => {
         <Switch>
           <Route exact path ='/' component={Index} />
           <%- @value[:dates_with_hyphen].each_with_index do |date, index| -%>
-          <Route path='/<%= date %>' component={Diary<%= @value[:dates_no_hyphen][index] %>} />
+          <Route path='/diary/<%= date %>' component={Diary<%= @value[:dates_no_hyphen][index] %>} />
           <%- end -%>
           <Route component={NotFound} />
         </Switch>
