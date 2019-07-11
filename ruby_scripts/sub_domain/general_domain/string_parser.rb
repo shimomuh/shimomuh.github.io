@@ -24,6 +24,8 @@ module SubDomain
         ':bow:'     => '&#x1f647;',
         ':scream:'  => '&#x1f631;',
         ':pray:'    => '&#x1f64f;',
+        ':\+1:'      => '&#x1f44d;',
+        ':+1:'      => '&#x1f44d;'
       }
 
       attr_reader :value, :option
