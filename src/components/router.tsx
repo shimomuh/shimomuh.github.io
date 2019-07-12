@@ -25,6 +25,7 @@ import Diary20190709 from 'components/diary/diary20190709'
 import Diary20190710 from 'components/diary/diary20190710'
 import Diary20190711 from 'components/diary/diary20190711'
 import Diary20190712 from 'components/diary/diary20190712'
+import Diary20190713 from 'components/diary/diary20190713'
 
 const Router: React.FC = () => {
   return (
@@ -50,6 +51,7 @@ const Router: React.FC = () => {
           <Route path='/diary/2019-07-10' component={Diary20190710} />
           <Route path='/diary/2019-07-11' component={Diary20190711} />
           <Route path='/diary/2019-07-12' component={Diary20190712} />
+          <Route path='/diary/2019-07-13' component={Diary20190713} />
           <Route component={NotFound} />
         </Switch>
       </div>
