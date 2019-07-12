@@ -21,7 +21,6 @@ module Domain
 
     def convert
       prepare_variables
-      render_router_template
       diary_paths.each_with_index do |path, index|
         lines = []
         File.open(path, 'r') do |f|
@@ -39,6 +38,8 @@ module Domain
       render_title_json
       render_tag_json
       render_diary_tag_json
+      render_router_template
+      render_tag
     end
 
     def prepare_variables
@@ -70,7 +71,8 @@ module Domain
     def render_router_template
       value = {
         dates_with_hyphen: @dates_with_hyphen,
-        dates_no_hyphen: @dates_no_hyphen
+        dates_no_hyphen: @dates_no_hyphen,
+        tag_json: @tag_json_hash
       }
 
       ::SubDomain::GeneralDomain::Template.new(value, 'src/components/router.tsx').render
@@ -79,10 +81,23 @@ module Domain
     def render_diary(date_no_hyphen, lines)
       value = {
         date_no_hyphen: date_no_hyphen,
-        content: ::SubDomain::GeneralDomain::StringArrayParser.parse(lines).values.join('')
+        contents: ::SubDomain::GeneralDomain::StringArrayParser.parse(lines).values
       }
+      insert_link_for_tag(value[:contents])
 
       ::SubDomain::GeneralDomain::Template.new(value, "src/components/diary/diary#{date_no_hyphen}.tsx", 'templates/src/components/diary/template.tsx.erb').render
+    end
+
+    def insert_link_for_tag(contents)
+      tags = contents[2].split('&nbsp;')
+      tags.each_with_index do |tag, index|
+        next if index.zero?
+        matcher = tag.match /<span className="inline-code">(.+)<\/span>/
+        name = matcher[1]
+        id = tag_json_hash.find { |k, v| v == name }[0]
+        tag.gsub!(/<span className="inline-code">(.+)<\/span>/, "<Link to='/tag/#{id}'><span className='inline-code'>#{$1}<\/span></Link>")
+      end
+      contents[2] = tags.join('&nbsp;')
     end
 
     def render_title_json
@@ -100,6 +115,18 @@ module Domain
     def render_diary_tag_json
       File.open('src/config/diary_tag.json', 'w') do |f|
         f.write JSON.pretty_generate(diary_tag_json_hash)
+      end
+    end
+
+    def render_tag
+      @tag_json_hash.each do |(k, v)|
+        value = {
+          id: k,
+          name: v,
+          diary_dates: diary_tag_json_hash[:"#{v}"],
+          titles: title_json_hash
+        }
+        ::SubDomain::GeneralDomain::Template.new(value, "src/components/tag/tag#{k}.tsx", 'templates/src/components/tag/template.tsx.erb').render
       end
     end
   end

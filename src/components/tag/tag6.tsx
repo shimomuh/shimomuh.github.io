@@ -1,0 +1,27 @@
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
+import React from 'react';
+import { Link } from 'react-router-dom';
+import 'components/tag.scss';
+
+const Tag6: React.FC = () => {
+  return (
+    <div className='tag'>
+      <h1>Scss</h1>
+      <ul>
+        <li><span className='date'>2019-06-27</span><span className='title'><Link to='/diary/2019-06-27'>create-react-app でも scss が使いたい！</Link></span></li>
+        <li><span className='date'>2019-06-30</span><span className='title'><Link to='/diary/2019-06-30'>コードブロックを counter プロパティを使ってオシャレにしてみた</Link></span></li>
+        <li><span className='date'>2019-07-04</span><span className='title'><Link to='/diary/2019-07-04'>CSS ハックを使って以前実装した `&lt;code&gt;` タグのデザイン崩れに対応する</Link></span></li>
+        <li><span className='date'>2019-07-08</span><span className='title'><Link to='/diary/2019-07-08'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</Link></span></li>
+      </ul>
+      <br /><br />
+      <div>
+        <Link to='/'>戻る</Link>
+      </div>
+    </div>
+  )
+}
+
+export default Tag6
