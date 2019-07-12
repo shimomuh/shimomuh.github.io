@@ -11,9 +11,9 @@ const Tag9: React.FC = () => {
     <div className='tag'>
       <h1>CSS</h1>
       <ul>
-        <li><span className='date'>2019-06-30</span><span className='title'><Link to='/diary/2019-06-30'>コードブロックを counter プロパティを使ってオシャレにしてみた</Link></span></li>
-        <li><span className='date'>2019-07-04</span><span className='title'><Link to='/diary/2019-07-04'>CSS ハックを使って以前実装した `&lt;code&gt;` タグのデザイン崩れに対応する</Link></span></li>
-        <li><span className='date'>2019-07-08</span><span className='title'><Link to='/diary/2019-07-08'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</Link></span></li>
+        <li><span className='tag__date'>2019-06-30</span><span className='tag__title'><Link to='/diary/2019-06-30'>コードブロックを counter プロパティを使ってオシャレにしてみた</Link></span></li>
+        <li><span className='tag__date'>2019-07-04</span><span className='tag__title'><Link to='/diary/2019-07-04'>CSS ハックを使って以前実装した `&lt;code&gt;` タグのデザイン崩れに対応する</Link></span></li>
+        <li><span className='tag__date'>2019-07-08</span><span className='tag__title'><Link to='/diary/2019-07-08'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</Link></span></li>
       </ul>
       <br /><br />
       <div>

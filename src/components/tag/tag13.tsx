@@ -11,7 +11,7 @@ const Tag13: React.FC = () => {
     <div className='tag'>
       <h1>Redux</h1>
       <ul>
-        <li><span className='date'>2019-07-06</span><span className='title'><Link to='/diary/2019-07-06'>Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する</Link></span></li>
+        <li><span className='tag__date'>2019-07-06</span><span className='tag__title'><Link to='/diary/2019-07-06'>Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する</Link></span></li>
       </ul>
       <br /><br />
       <div>
