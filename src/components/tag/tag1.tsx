@@ -9,33 +9,144 @@ import 'components/tag.scss';
 const Tag1: React.FC = () => {
   return (
     <div className='tag'>
-      <h1>このサイトの生い立ち</h1>
+      <h1>「このサイトの生い立ち」がついている日記一覧</h1>
       <ul>
-        <li><span className='tag__date'>2019-06-25</span><span className='tag__title'><Link to='/diary/2019-06-25'>祝 Github Pages 設立</Link></span></li>
-        <li><span className='tag__date'>2019-06-26</span><span className='tag__title'><Link to='/diary/2019-06-26'>Javascript でカレンダーを作ろう</Link></span></li>
-        <li><span className='tag__date'>2019-06-27</span><span className='tag__title'><Link to='/diary/2019-06-27'>create-react-app でも scss が使いたい！</Link></span></li>
-        <li><span className='tag__date'>2019-06-28</span><span className='tag__title'><Link to='/diary/2019-06-28'>react-router-dom でルーティングする</Link></span></li>
-        <li><span className='tag__date'>2019-06-29</span><span className='tag__title'><Link to='/diary/2019-06-29'>【暫定版】ruby で React に載せるための Markdown コンバーターを実装する</Link></span></li>
-        <li><span className='tag__date'>2019-06-30</span><span className='tag__title'><Link to='/diary/2019-06-30'>コードブロックを counter プロパティを使ってオシャレにしてみた</Link></span></li>
-        <li><span className='tag__date'>2019-07-01</span><span className='tag__title'><Link to='/diary/2019-07-01'>React + Typescript の Stateless Function で props を利用する</Link></span></li>
-        <li><span className='tag__date'>2019-07-02</span><span className='tag__title'><Link to='/diary/2019-07-02'>npm run build によってできる不要ファイルの削除</Link></span></li>
-        <li><span className='tag__date'>2019-07-03</span><span className='tag__title'><Link to='/diary/2019-07-03'>タグを楽に仕込む方法を今のうちに考える</Link></span></li>
-        <li><span className='tag__date'>2019-07-04</span><span className='tag__title'><Link to='/diary/2019-07-04'>CSS ハックを使って以前実装した `&lt;code&gt;` タグのデザイン崩れに対応する</Link></span></li>
-        <li><span className='tag__date'>2019-07-05</span><span className='tag__title'><Link to='/diary/2019-07-05'>React on Github Pages でも 404 を返さずに遷移したい！</Link></span></li>
-        <li><span className='tag__date'>2019-07-06</span><span className='tag__title'><Link to='/diary/2019-07-06'>Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する</Link></span></li>
-        <li><span className='tag__date'>2019-07-07</span><span className='tag__title'><Link to='/diary/2019-07-07'>Json ファイルを React で読み取る</Link></span></li>
-        <li><span className='tag__date'>2019-07-08</span><span className='tag__title'><Link to='/diary/2019-07-08'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</Link></span></li>
-        <li><span className='tag__date'>2019-07-09</span><span className='tag__title'><Link to='/diary/2019-07-09'>Markdown から TypeScript に書き換えるコンバーターのリファクタ</Link></span></li>
-        <li><span className='tag__date'>2019-07-10</span><span className='tag__title'><Link to='/diary/2019-07-10'>テンプレートから TypeScript ファイルを生成するクラス</Link></span></li>
-        <li><span className='tag__date'>2019-07-11</span><span className='tag__title'><Link to='/diary/2019-07-11'>yield を使ってモデルクラスは標準出力の依存を避ける</Link></span></li>
-        <li><span className='tag__date'>2019-07-12</span><span className='tag__title'><Link to='/diary/2019-07-12'>タグを分類するための JSON 生成とエンドポイントの修正</Link></span></li>
-        <li><span className='tag__date'>2019-07-13</span><span className='tag__title'><Link to='/diary/2019-07-13'>Ruby で to_json 時にインデントや改行したいとき</Link></span></li>
-        <li><span className='tag__date'>2019-07-14</span><span className='tag__title'><Link to='/diary/2019-07-14'>Github からセキュリティ脆弱性の通知がきたとき</Link></span></li>
-        <li><span className='tag__date'>2019-07-15</span><span className='tag__title'><Link to='/diary/2019-07-15'>タグをリンクにしてタグリンク集を作る</Link></span></li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-16'>
+            <span className='tag__article--date'>2019-07-16</span>
+            <span className='tag__article--title'>Google Calendar っぽくシンプルなデザインを適応する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-15'>
+            <span className='tag__article--date'>2019-07-15</span>
+            <span className='tag__article--title'>タグをリンクにしてタグリンク集を作る</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-14'>
+            <span className='tag__article--date'>2019-07-14</span>
+            <span className='tag__article--title'>Github からセキュリティ脆弱性の通知がきたとき</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-13'>
+            <span className='tag__article--date'>2019-07-13</span>
+            <span className='tag__article--title'>Ruby で to_json 時にインデントや改行したいとき</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-12'>
+            <span className='tag__article--date'>2019-07-12</span>
+            <span className='tag__article--title'>タグを分類するための JSON 生成とエンドポイントの修正</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-11'>
+            <span className='tag__article--date'>2019-07-11</span>
+            <span className='tag__article--title'>yield を使ってモデルクラスは標準出力の依存を避ける</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-10'>
+            <span className='tag__article--date'>2019-07-10</span>
+            <span className='tag__article--title'>テンプレートから TypeScript ファイルを生成するクラス</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-09'>
+            <span className='tag__article--date'>2019-07-09</span>
+            <span className='tag__article--title'>Markdown から TypeScript に書き換えるコンバーターのリファクタ</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-08'>
+            <span className='tag__article--date'>2019-07-08</span>
+            <span className='tag__article--title'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-07'>
+            <span className='tag__article--date'>2019-07-07</span>
+            <span className='tag__article--title'>Json ファイルを React で読み取る</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-06'>
+            <span className='tag__article--date'>2019-07-06</span>
+            <span className='tag__article--title'>Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-05'>
+            <span className='tag__article--date'>2019-07-05</span>
+            <span className='tag__article--title'>React on Github Pages でも 404 を返さずに遷移したい！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-04'>
+            <span className='tag__article--date'>2019-07-04</span>
+            <span className='tag__article--title'>CSS ハックを使って以前実装した `&lt;code&gt;` タグのデザイン崩れに対応する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-03'>
+            <span className='tag__article--date'>2019-07-03</span>
+            <span className='tag__article--title'>タグを楽に仕込む方法を今のうちに考える</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-02'>
+            <span className='tag__article--date'>2019-07-02</span>
+            <span className='tag__article--title'>npm run build によってできる不要ファイルの削除</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-01'>
+            <span className='tag__article--date'>2019-07-01</span>
+            <span className='tag__article--title'>React + Typescript の Stateless Function で props を利用する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-30'>
+            <span className='tag__article--date'>2019-06-30</span>
+            <span className='tag__article--title'>コードブロックを counter プロパティを使ってオシャレにしてみた</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-29'>
+            <span className='tag__article--date'>2019-06-29</span>
+            <span className='tag__article--title'>【暫定版】ruby で React に載せるための Markdown コンバーターを実装する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-28'>
+            <span className='tag__article--date'>2019-06-28</span>
+            <span className='tag__article--title'>react-router-dom でルーティングする</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-27'>
+            <span className='tag__article--date'>2019-06-27</span>
+            <span className='tag__article--title'>create-react-app でも scss が使いたい！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-26'>
+            <span className='tag__article--date'>2019-06-26</span>
+            <span className='tag__article--title'>Javascript でカレンダーを作ろう</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-25'>
+            <span className='tag__article--date'>2019-06-25</span>
+            <span className='tag__article--title'>祝 Github Pages 設立</span>
+          </Link>
+        </li>
       </ul>
       <br /><br />
       <div>
-        <Link to='/'>戻る</Link>
+        <Link className='tag__back' to='/'>戻る</Link>
       </div>
     </div>
   )

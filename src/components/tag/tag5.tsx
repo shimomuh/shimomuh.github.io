@@ -9,18 +9,48 @@ import 'components/tag.scss';
 const Tag5: React.FC = () => {
   return (
     <div className='tag'>
-      <h1>TypeScript</h1>
+      <h1>「TypeScript」がついている日記一覧</h1>
       <ul>
-        <li><span className='tag__date'>2019-06-25</span><span className='tag__title'><Link to='/diary/2019-06-25'>祝 Github Pages 設立</Link></span></li>
-        <li><span className='tag__date'>2019-06-26</span><span className='tag__title'><Link to='/diary/2019-06-26'>Javascript でカレンダーを作ろう</Link></span></li>
-        <li><span className='tag__date'>2019-06-27</span><span className='tag__title'><Link to='/diary/2019-06-27'>create-react-app でも scss が使いたい！</Link></span></li>
-        <li><span className='tag__date'>2019-06-28</span><span className='tag__title'><Link to='/diary/2019-06-28'>react-router-dom でルーティングする</Link></span></li>
-        <li><span className='tag__date'>2019-07-01</span><span className='tag__title'><Link to='/diary/2019-07-01'>React + Typescript の Stateless Function で props を利用する</Link></span></li>
-        <li><span className='tag__date'>2019-07-07</span><span className='tag__title'><Link to='/diary/2019-07-07'>Json ファイルを React で読み取る</Link></span></li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-07'>
+            <span className='tag__article--date'>2019-07-07</span>
+            <span className='tag__article--title'>Json ファイルを React で読み取る</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-01'>
+            <span className='tag__article--date'>2019-07-01</span>
+            <span className='tag__article--title'>React + Typescript の Stateless Function で props を利用する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-28'>
+            <span className='tag__article--date'>2019-06-28</span>
+            <span className='tag__article--title'>react-router-dom でルーティングする</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-27'>
+            <span className='tag__article--date'>2019-06-27</span>
+            <span className='tag__article--title'>create-react-app でも scss が使いたい！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-26'>
+            <span className='tag__article--date'>2019-06-26</span>
+            <span className='tag__article--title'>Javascript でカレンダーを作ろう</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-25'>
+            <span className='tag__article--date'>2019-06-25</span>
+            <span className='tag__article--title'>祝 Github Pages 設立</span>
+          </Link>
+        </li>
       </ul>
       <br /><br />
       <div>
-        <Link to='/'>戻る</Link>
+        <Link className='tag__back' to='/'>戻る</Link>
       </div>
     </div>
   )

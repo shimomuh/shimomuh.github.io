@@ -9,15 +9,20 @@ import 'components/tag.scss';
 const Tag<%= value[:id] %>: React.FC = () => {
   return (
     <div className='tag'>
-      <h1><%= value[:name] %></h1>
+      <h1>「<%= value[:name] %>」がついている日記一覧</h1>
       <ul>
-      <%- value[:diary_dates].each do |date| -%>
-        <li><span className='tag__date'><%= date %></span><span className='tag__title'><Link to='/diary/<%= date %>'><%= value[:titles][date].gsub(/[<>]/, { '<' => '&lt;', '>' => '&gt;' }) %></Link></span></li>
+      <%- value[:diary_dates].reverse.each do |date| -%>
+        <li className='tag__article'>
+          <Link to='/diary/<%= date %>'>
+            <span className='tag__article--date'><%= date %></span>
+            <span className='tag__article--title'><%= value[:titles][date].gsub(/[<>]/, { '<' => '&lt;', '>' => '&gt;' }) %></span>
+          </Link>
+        </li>
       <%- end -%>
       </ul>
       <br /><br />
       <div>
-        <Link to='/'>戻る</Link>
+        <Link className='tag__back' to='/'>戻る</Link>
       </div>
     </div>
   )

@@ -9,16 +9,42 @@ import 'components/tag.scss';
 const Tag10: React.FC = () => {
   return (
     <div className='tag'>
-      <h1>UI/UX</h1>
+      <h1>「UI/UX」がついている日記一覧</h1>
       <ul>
-        <li><span className='tag__date'>2019-06-30</span><span className='tag__title'><Link to='/diary/2019-06-30'>コードブロックを counter プロパティを使ってオシャレにしてみた</Link></span></li>
-        <li><span className='tag__date'>2019-07-03</span><span className='tag__title'><Link to='/diary/2019-07-03'>タグを楽に仕込む方法を今のうちに考える</Link></span></li>
-        <li><span className='tag__date'>2019-07-06</span><span className='tag__title'><Link to='/diary/2019-07-06'>Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する</Link></span></li>
-        <li><span className='tag__date'>2019-07-08</span><span className='tag__title'><Link to='/diary/2019-07-08'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</Link></span></li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-16'>
+            <span className='tag__article--date'>2019-07-16</span>
+            <span className='tag__article--title'>Google Calendar っぽくシンプルなデザインを適応する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-08'>
+            <span className='tag__article--date'>2019-07-08</span>
+            <span className='tag__article--title'>ハイブリットレスポンシブ（レスポンシブ + メディアクエリ）デザイン</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-06'>
+            <span className='tag__article--date'>2019-07-06</span>
+            <span className='tag__article--title'>Redux を使って URL が変わらない VirtualDOM 特有の遷移 (厳密には再描画) を実現する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-03'>
+            <span className='tag__article--date'>2019-07-03</span>
+            <span className='tag__article--title'>タグを楽に仕込む方法を今のうちに考える</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-06-30'>
+            <span className='tag__article--date'>2019-06-30</span>
+            <span className='tag__article--title'>コードブロックを counter プロパティを使ってオシャレにしてみた</span>
+          </Link>
+        </li>
       </ul>
       <br /><br />
       <div>
-        <Link to='/'>戻る</Link>
+        <Link className='tag__back' to='/'>戻る</Link>
       </div>
     </div>
   )
