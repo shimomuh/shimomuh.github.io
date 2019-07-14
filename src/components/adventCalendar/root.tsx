@@ -1,8 +1,6 @@
 import React from 'react';
 import Calendar from 'containers/adventCalendar/calendar';
 import { CalendarModel } from 'models/calendar';
-import { CalendarState } from 'states/calendar';
-import { CalendarActions } from 'containers/adventCalendar/root';
 import './root.scss';
 
 type AdventCalendarProps = {
@@ -13,7 +11,6 @@ type AdventCalendarProps = {
 }
 
 const AdventCalendar: React.FC<AdventCalendarProps> = (props: AdventCalendarProps) => {
-  const { calendar } = props
   return (
     <div className='advent-calendar'>
       <Toolbar {...props} />

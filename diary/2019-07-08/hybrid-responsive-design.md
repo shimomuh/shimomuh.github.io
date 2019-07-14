@@ -53,7 +53,7 @@
 **DOM**
 
 ```html
-<ul>
+<ul class="table-header">
   <li>日</li>
   <li>月</li>
   <li>火</li>
@@ -85,7 +85,7 @@
 ```css
 /* スマホサイズはそのまま */
 @media screen and (max-width: 1024px) {
-  ul { list-style: none; } /* テーブルレイアウト時のヘッダーにあたる曜日は隠す */
+  .table-header { display: none; } /* テーブルレイアウト時のヘッダーにあたる曜日は隠す */
 }
 
 /* PC サイズは少し工夫 */

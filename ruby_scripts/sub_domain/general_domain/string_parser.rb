@@ -71,7 +71,7 @@ module SubDomain
 
       def replace_img_tag
         @value.gsub!(/!\[([^\]][^\(]*)\]\(([^\)]*)\)/, '<img src="\2" alt="\1" />')
-        @value.gsub!(/!\[\]\(([^\)]*)\)/, '<img src="\1" />')
+        @value.gsub!(/!\[\]\(([^\)]*)\)/, '<img src="\1" alt="" />')
       end
 
       def replace_a_tag

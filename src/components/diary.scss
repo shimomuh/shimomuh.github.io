@@ -1,3 +1,5 @@
+$black: #222;
+
 $code-bg: #233;
 $code-txt: #d1edff;
 
@@ -56,6 +58,9 @@ $link: #4aac00;
   h2 { font-size: 1.4rem; }
   h3 { font-size: 1.2rem; }
   h4 { font-size: 1rem; }
+  h2, h3 {
+    border-bottom: 1px solid $black;
+  }
   a {
     color: $link;
     text-decoration: none;
