@@ -24,6 +24,7 @@ module SubDomain
       def parse
         values.each do |value|
           @return_code = false
+          flag_table_tag(value)
           replace_code_block_tag_with_ignore_tag(value)
           replace_ul_or_li_tag(value)
           replace_br_tag(value)
@@ -32,8 +33,31 @@ module SubDomain
           check_h_tag(value)
           insert_code_number_tag(value)
           replace_li_tag(value)
+          replace_table_tag(value)
         end
         add_last_tag
+      end
+
+      def flag_table_tag(value)
+        if @table
+          if value =~ /^\|---\|/
+            @draw_table_body = true
+            value.gsub!(/^.*$/, '')
+            @return_code = true # 一旦センタリングなどは考慮しない
+          elsif value !~ /^\|([^\|])+\|/
+            @end_table = true
+            @table = false
+            @draw_table_header = false
+            @draw_table_body = false
+            return
+          end
+        else
+          if value =~ /^\|([^\|])+\|/
+            @end_table = false
+            @table = true
+            @draw_table_header = true
+          end
+        end
       end
 
       def replace_code_block_tag_with_ignore_tag(value)
@@ -109,10 +133,26 @@ module SubDomain
         end
       end
 
+      def replace_table_tag(value)
+        return if !@table && !@end_table
+        if @draw_table_header && !@draw_table_body
+          value.gsub!(/^\|(.*)$/, '<table><tr><th>\1').gsub!(/^(.*)\|$/, '\1</th></tr>').gsub!(/\|/, '</th><th>')
+        elsif @draw_table_header && @draw_table_body
+          value.gsub!(/^\|(.*)$/, '<tr><td>\1').gsub!(/^(.*)\|$/, '\1</td></tr>').gsub!(/\|/, '</td><td>')
+        elsif @end_table
+          value.gsub!(/^.*$/, '</table>')
+          @end_table = false
+        end
+      end
+
       def add_last_tag
         if @during_ul
           @during_ul = false
           values[values.size - 1].gsub!(/^(.*)$/, '\1</ul>')
+        end
+        if @table && !@end_table
+          @table = false
+          values[values.size - 1].gsub!(/^(.*)$/, '\1</table>')
         end
       end
     end
