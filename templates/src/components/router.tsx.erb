@@ -10,6 +10,9 @@ import 'components/root.scss';
 <%- @value[:dates_no_hyphen].each do |date| -%>
 import Diary<%= date %> from 'components/diary/diary<%= date %>'
 <%- end -%>
+<%- @value[:tag_json].each do |tag_id, _v| -%>
+import Tag<%= tag_id %> from 'components/tag/tag<%= tag_id %>'
+<%- end -%>
 
 const Router: React.FC = () => {
   return (
@@ -19,6 +22,9 @@ const Router: React.FC = () => {
           <Route exact path ='/' component={Index} />
           <%- @value[:dates_with_hyphen].each_with_index do |date, index| -%>
           <Route path='/diary/<%= date %>' component={Diary<%= @value[:dates_no_hyphen][index] %>} />
+          <%- end -%>
+          <%- @value[:tag_json].each do |tag_id, _v| -%>
+          <Route path='/tag/<%= tag_id %>' component={Tag<%= tag_id %>} />
           <%- end -%>
           <Route component={NotFound} />
         </Switch>

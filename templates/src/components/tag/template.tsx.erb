@@ -1,0 +1,26 @@
+//
+// このファイルは自動生成です。
+// 変更したい場合は bin/make-tsx.rb を更新してください。
+//
+import React from 'react';
+import { Link } from 'react-router-dom';
+import 'components/tag.scss';
+
+const Tag<%= value[:id] %>: React.FC = () => {
+  return (
+    <div className='tag'>
+      <h1><%= value[:name] %></h1>
+      <ul>
+      <%- value[:diary_dates].each do |date| -%>
+        <li><span className='tag__date'><%= date %></span><span className='tag__title'><Link to='/diary/<%= date %>'><%= value[:titles][date].gsub(/[<>]/, { '<' => '&lt;', '>' => '&gt;' }) %></Link></span></li>
+      <%- end -%>
+      </ul>
+      <br /><br />
+      <div>
+        <Link to='/'>戻る</Link>
+      </div>
+    </div>
+  )
+}
+
+export default Tag<%= value[:id] %>

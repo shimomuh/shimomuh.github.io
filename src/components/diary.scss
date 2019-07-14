@@ -60,6 +60,13 @@ $link: #4aac00;
     &:hover {
       text-decoration: underline;
     }
+    .inline-code {
+      display: inline-block;
+      background-color: $inline-code-bg;
+      border: 1px solid $inline-code-bd;
+      border-radius: 4px;
+      padding: 0 5px;
+    }
   }
   ul {
     list-style: disc;
