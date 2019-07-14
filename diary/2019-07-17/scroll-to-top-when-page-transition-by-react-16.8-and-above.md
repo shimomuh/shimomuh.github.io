@@ -10,13 +10,10 @@ react-router を使っていて、ページ遷移後にスクロール位置が�
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/638a25b6e9aa4d6fc39187583a98c579427256a0)
 
-### before
 
-![](/diary/2019-07-17/before.gif)
-
-### after
-
-![](/diary/2019-07-17/after.gif)
+|before|after|
+|---|---|
+|![](/diary/2019-07-17/before.gif)|![](/diary/2019-07-17/after.gif)|
 
 ## 過程
 
