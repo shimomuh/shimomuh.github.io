@@ -43,6 +43,7 @@ module SubDomain
             value.gsub!(/^```.*/, "</code></p>")
             @code_block = false
             @return_code = true
+            @ignore_below_br = true
           else
             option[:ignore_tag] = true
             value.gsub!(/^```.*/, '<p className="code"><code>')
@@ -76,15 +77,15 @@ module SubDomain
       end
 
       def replace_br_tag(value)
-        if @after_h_tag
+        if @ignore_below_br && !@return_code
           @return_code = true
-          @after_h_tag = false
+          @ignore_below_br = false
         end
       end
 
       def check_h_tag(value)
         if value =~ /^<h.*/
-          @after_h_tag = true
+          @ignore_below_br = true
         end
       end
 
