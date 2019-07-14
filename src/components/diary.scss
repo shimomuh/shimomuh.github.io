@@ -3,6 +3,8 @@ $code-txt: #d1edff;
 
 $inline-code-bd: #9cf;
 $inline-code-bg: #dff;
+$quote: #bbb;
+$quote-border: #ddd;
 
 /* Qiita */
 $link: #4aac00;
@@ -71,6 +73,11 @@ $link: #4aac00;
   ul {
     list-style: disc;
     padding-left: 20px;
+  }
+  q {
+    border-left: 2px solid $quote-border;
+    padding-left: 10px;
+    color: $quote;
   }
 }
 

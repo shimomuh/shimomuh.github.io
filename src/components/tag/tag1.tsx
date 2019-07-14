@@ -1,6 +1,6 @@
 //
 // このファイルは自動生成です。
-// 変更したい場合は bin/make-tsx.rb を更新してください。
+// 変更したい場合は ruby_scripts/domain/dairy_converter.rb を更新してください。
 //
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,12 @@ const Tag1: React.FC = () => {
     <div className='tag'>
       <h1>「このサイトの生い立ち」がついている日記一覧</h1>
       <ul>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-17'>
+            <span className='tag__article--date'>2019-07-17</span>
+            <span className='tag__article--title'>react-router で遷移したときにスクロール位置を Top に戻す(React 16.8 and above 版)</span>
+          </Link>
+        </li>
         <li className='tag__article'>
           <Link to='/diary/2019-07-16'>
             <span className='tag__article--date'>2019-07-16</span>
