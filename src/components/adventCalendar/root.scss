@@ -1,0 +1,29 @@
+$border: #ccc;
+$hover: #ffe4b5;
+.advent-calendar {
+  &__toolbar {
+    display: flex;
+    margin-bottom: 10px;
+    h2 {
+      margin: 0 0 0 10px;
+      padding: 0;
+    }
+  }
+  &__button-group {
+    &--prev-button,
+    &--reset-button,
+    &--next-button {
+      font-size: 1rem;
+      padding: 5px 10px;
+      border: 1px solid $border;
+      border-radius: 5px;
+      margin: 0 5px;
+      &:hover {
+        background-color: $hover;
+      }
+    }
+    &--reset-button {
+      margin-left: 0;
+    }
+  }
+}
