@@ -41,7 +41,7 @@ $border: #ccc;
           .calendar__cell--date {
             color: $disable;
           }
-          .calendar__cell--icon img {
+          .calendar__cell--icon {
             opacity: 0.2;
           }
         }
@@ -81,7 +81,7 @@ $border: #ccc;
           min-height: 8rem;
           font-size: 0.9rem;
         }
-        #{$o}--icon img {
+        #{$o}--icon {
           width: 24px;
           margin: 0 2px;
         }
@@ -142,9 +142,9 @@ $border: #ccc;
       #{$p}__cell--title {
         display: block;
       }
-      #{$p}__cell--icon img {
+      #{$p}__cell--icon {
         width: 24px;
-        margin: 0 5px;
+        margin: 5px 5px 0 5px;
       }
     }
   }
