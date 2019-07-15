@@ -5,11 +5,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/tag.scss';
+import tagIcon from 'config/tag_icon.json';
 
 const Tag9: React.FC = () => {
   return (
     <div className='tag'>
-      <h1>「CSS」がついている日記一覧</h1>
+      <div className='tag__header'>
+        <img src={`/static/tag/${tagIcon[9]}`} alt="" />
+        <h1>「CSS」がついている日記一覧</h1>
+      </div>
       <ul>
         <li className='tag__article'>
           <Link to='/diary/2019-07-16'>

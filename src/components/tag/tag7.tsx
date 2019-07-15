@@ -5,12 +5,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/tag.scss';
+import tagIcon from 'config/tag_icon.json';
 
 const Tag7: React.FC = () => {
   return (
     <div className='tag'>
-      <h1>「Ruby」がついている日記一覧</h1>
+      <div className='tag__header'>
+        <img src={`/static/tag/${tagIcon[7]}`} alt="" />
+        <h1>「Ruby」がついている日記一覧</h1>
+      </div>
       <ul>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-19'>
+            <span className='tag__article--date'>2019-07-19</span>
+            <span className='tag__article--title'>アイコンをつけて視認性を向上する</span>
+          </Link>
+        </li>
         <li className='tag__article'>
           <Link to='/diary/2019-07-18'>
             <span className='tag__article--date'>2019-07-18</span>
