@@ -2,7 +2,8 @@ import React from 'react';
 import './calendar.scss';
 import { CalendarModel } from 'models/calendar';
 import { Link } from 'react-router-dom';
-import config from 'config/diary_title.json';
+import diary_title_config from 'config/diary_title.json';
+import diary_tag_icon_config from 'config/diary_tag_icon.json'
 
 type CalendarProps = {
   calendar: CalendarModel;
@@ -31,17 +32,38 @@ type CalendarBodyProps = {
   calendar: CalendarModel;
 }
 
-type ConfigProps = {
+type DiaryTitleConfigProps = {
   [key: string]: string;
+}
+
+type DiaryTagIconConfigProps = {
+  [key: string]: string[] | undefined;
 }
 
 const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
   const { calendar } = props;
-  const title: ConfigProps = config;
+  const title: DiaryTitleConfigProps = diary_title_config;
+  const icons: DiaryTagIconConfigProps = diary_tag_icon_config;
   const cellClassName: any = (isActive: any) => {
     const klassName = 'calendar__cell'
     if (isActive) { return klassName.concat(' ', 'is-active') }
     return klassName
+  }
+  const renderIcons: any = (icons: string[] | undefined) => {
+    if (icons === undefined) return (<span className='calendar__cell-icons'></span>);
+    return (
+      <span className='calendar__cell--icons'>
+        {
+          icons.map((iconFile: string, key: number) => {
+            return (
+              <span key={key} className='calendar__cell--icon'>
+                <img src={`/static/tag/${iconFile}`} alt="" />
+              </span>
+            );
+          })
+        }
+      </span>
+    );
   }
   return (
     <ul className='calendar__body'>
@@ -54,6 +76,7 @@ const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
                   <span className='calendar__cell--date'>{d.date}</span>
                   <span className='calendar__cell--day'>({d.day})</span>
                   <span className='calendar__cell--title'>{title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`]}</span>
+                  {renderIcons(icons[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`])}
                 </Link>
               </li>
             );

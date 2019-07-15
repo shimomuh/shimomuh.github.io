@@ -10,17 +10,19 @@ module Domain
   class DiaryConverter
     DIARY_PATH = 'diary/**/*.md'
 
-    attr_reader :diary_paths, :title_json_hash, :tag_json_hash, :diary_tag_json_hash
+    attr_reader :diary_paths, :title_json_hash, :tag_json_hash, :diary_tag_json_hash, :diary_tag_icon_json_hash
 
     def initialize
       @diary_paths = Dir.glob(DIARY_PATH).sort
       @title_json_hash = {}
       @tag_json_hash = {}
       @diary_tag_json_hash = {}
+      @diary_tag_icon_json_hash = {}
     end
 
     def convert
       prepare_variables
+      read_tag_icon_json
       diary_paths.each_with_index do |path, index|
         lines = []
         File.open(path, 'r') do |f|
@@ -29,8 +31,10 @@ module Domain
           end
         end
         @title_json_hash[@dates_with_hyphen[index]] = lines[0].gsub(/^# /, '')
-        prepare_tag_json(lines[2])
-        prepare_diary_tag_json(lines[2], @dates_with_hyphen[index])
+        prepare_tags(lines[2])
+        prepare_tag_json
+        prepare_diary_tag_json(@dates_with_hyphen[index])
+        prepare_diary_tag_icon_json(@dates_with_hyphen[index])
 
         render_diary(@dates_no_hyphen[index], lines)
         yield "#{@dates_with_hyphen[index]} ... done [#{index + 1}/#{@dates_with_hyphen.size}]" if block_given?
@@ -38,6 +42,7 @@ module Domain
       render_title_json
       render_tag_json
       render_diary_tag_json
+      render_diary_tag_icon_json
       render_router_template
       render_tag
     end
@@ -52,19 +57,37 @@ module Domain
       end
     end
 
-    def prepare_tag_json(line)
-      tags = line.split('`').select.with_index { |_v, i| i.odd? }
-      tags.each do |tag|
+    def read_tag_icon_json
+      File.open('src/config/tag_icon.json', 'r') do |f|
+        @tag_icon_json_hash = JSON.load(f)
+      end
+    end
+
+    def prepare_tags(line)
+      @tags = line.split('`').select.with_index { |_v, i| i.odd? }
+    end
+
+    def prepare_tag_json
+      @tags.each do |tag|
         next if @tag_json_hash.values.include?(tag)
         @tag_json_hash["#{@tag_json_hash.values.size + 1}"] = tag
       end
     end
 
-    def prepare_diary_tag_json(line, date_with_hyphen)
-      tags = line.split('`').select.with_index { |_v, i| i.odd? }
-      tags.each do |tag|
+    def prepare_diary_tag_json(date_with_hyphen)
+      @tags.each do |tag|
         @diary_tag_json_hash[:"#{tag}"] = [] unless @diary_tag_json_hash[:"#{tag}"]
         @diary_tag_json_hash[:"#{tag}"].push date_with_hyphen
+      end
+    end
+
+    def prepare_diary_tag_icon_json(date_with_hyphen)
+      @diary_tag_icon_json_hash[:"#{date_with_hyphen}"] = []
+      @tags.each do |tag|
+        @tag_json_hash.each do |key, value|
+          next unless value == tag
+          @diary_tag_icon_json_hash[:"#{date_with_hyphen}"].push @tag_icon_json_hash[key]
+        end
       end
     end
 
@@ -115,6 +138,12 @@ module Domain
     def render_diary_tag_json
       File.open('src/config/diary_tag.json', 'w') do |f|
         f.write JSON.pretty_generate(diary_tag_json_hash)
+      end
+    end
+
+    def render_diary_tag_icon_json
+      File.open('src/config/diary_tag_icon.json', 'w') do |f|
+        f.write JSON.pretty_generate(diary_tag_icon_json_hash)
       end
     end
 

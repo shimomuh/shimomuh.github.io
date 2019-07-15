@@ -5,6 +5,13 @@ $hover: #ffe4b5;
 $link: #4aac00;
 
 .tag {
+  &__header {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+    }
+  }
   &__article {
     border-bottom: 1px solid $border;
     &:first-child {
