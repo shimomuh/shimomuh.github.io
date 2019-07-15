@@ -8,7 +8,7 @@
 
 ## 結果
 
-![](/diary/2019-07-16/like-google-calendar-design.gif)
+![](/static/diary/2019-07-16/like-google-calendar-design.gif)
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/f94c2cf48dd65d67bf8f4314b628856f200191f8)
 

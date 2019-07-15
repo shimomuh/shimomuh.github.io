@@ -16,6 +16,12 @@ const Tag4: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-20'>
+            <span className='tag__article--date'>2019-07-20</span>
+            <span className='tag__article--title'>create-react-app で作った JS ファイルで静的ファイルを参照したい</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-17'>
             <span className='tag__article--date'>2019-07-17</span>
             <span className='tag__article--title'>react-router で遷移したときにスクロール位置を Top に戻す(React 16.8 and above 版)</span>

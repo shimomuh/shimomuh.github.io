@@ -15,7 +15,7 @@
 
 ブラウザでなんとなく確認したら画像がとんでもないことになっていたのを見つけた...
 
-![](/diary/2019-07-04/browser-diff-before.png)
+![](/static/diary/2019-07-04/browser-diff-before.png)
 
 スタイルはあくまで CSS が担当すべき派の僕としては CSS をハックしてでも頑張るという方向で対処することにした
 
@@ -46,4 +46,4 @@ _::-webkit-full-page-media, _:future, :root .diary {
 
 [ブラウザ別に適用させるCSSハック2018 | 株式会社クロコロール](https://kuroko-role.co.jp/css-html/browser-hack2018/) を丸パクリ...
 
-![](/diary/2019-07-04/browser-diff-after.png)
+![](/static/diary/2019-07-04/browser-diff-after.png)

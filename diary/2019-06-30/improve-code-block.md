@@ -71,7 +71,7 @@ table レイアウトの参考は [コードブロックを表すMarkdownをコ�
 
 以下のように分けて考えてもらうとよい
 
-![](/diary/2019-06-30/description.png)
+![](/static/diary/2019-06-30/description.png)
 
 ```css
 /* ナンバリングの部分は含まない右側 */

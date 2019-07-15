@@ -40,7 +40,7 @@
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/842e8a628fc405d61bd6f2a6f7ee97098e8c95a7)
 
-![](/diary/2019-07-08/responsive-plus-media-query.gif)
+![](/static/diary/2019-07-08/responsive-plus-media-query.gif)
 
 ## 過程
 

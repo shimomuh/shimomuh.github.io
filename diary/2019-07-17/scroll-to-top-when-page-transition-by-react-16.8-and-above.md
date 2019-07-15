@@ -13,7 +13,7 @@ react-router を使っていて、ページ遷移後にスクロール位置が�
 
 |before|after|
 |---|---|
-|![](/diary/2019-07-17/before.gif)|![](/diary/2019-07-17/after.gif)|
+|![](/static/diary/2019-07-17/before.gif)|![](/static/diary/2019-07-17/after.gif)|
 
 ## 過程
 
