@@ -16,6 +16,12 @@ const Tag7: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-22'>
+            <span className='tag__article--date'>2019-07-22</span>
+            <span className='tag__article--title'>rubocop を使って ruby コードに秩序を！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-20'>
             <span className='tag__article--date'>2019-07-20</span>
             <span className='tag__article--title'>create-react-app で作った JS ファイルで静的ファイルを参照したい</span>
