@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'string_parser'
 
 # サブドメイン：コアドメインをサポートするドメインのうち
@@ -27,8 +29,9 @@ module SubDomain
           flag_table_tag(value)
           replace_code_block_tag_with_ignore_tag(value)
           replace_ul_or_li_tag(value)
-          replace_br_tag(value)
+          replace_br_tag
           next if @return_code
+
           ::SubDomain::GeneralDomain::StringParser.parse(value, option)
           check_h_tag(value)
           insert_code_number_tag(value)
@@ -49,31 +52,30 @@ module SubDomain
             @table = false
             @draw_table_header = false
             @draw_table_body = false
-            return
           end
         else
-          if value =~ /^\|([^\|])+\|/
-            @end_table = false
-            @table = true
-            @draw_table_header = true
-          end
+          return if value !~ /^\|([^\|])+\|/
+
+          @end_table = false
+          @table = true
+          @draw_table_header = true
         end
       end
 
       def replace_code_block_tag_with_ignore_tag(value)
-        if value =~ /^```/
-          if option[:ignore_tag]
-            option[:ignore_tag] = false
-            value.gsub!(/^```.*/, "</code></p>")
-            @code_block = false
-            @return_code = true
-            @ignore_below_br = true
-          else
-            option[:ignore_tag] = true
-            value.gsub!(/^```.*/, '<p className="code"><code>')
-            @code_block = true
-            @return_code = true
-          end
+        return if value !~ /^```/
+
+        if option[:ignore_tag]
+          option[:ignore_tag] = false
+          value.gsub!(/^```.*/, '</code></p>')
+          @code_block = false
+          @return_code = true
+          @ignore_below_br = true
+        else
+          option[:ignore_tag] = true
+          value.gsub!(/^```.*/, '<p className="code"><code>')
+          @code_block = true
+          @return_code = true
         end
       end
 
@@ -88,33 +90,35 @@ module SubDomain
             @end_ul = true
             @return = true
           end
+          return
+        end
+
+        if value =~ /^\* /
+          @during_ul = true
+          @first_li = true
+          value.gsub!(/^\* /, '')
         else
-          if value =~ /^\* /
-            @during_ul = true
-            @first_li = true
-            value.gsub!(/^\* /, '')
-          else
-            @during_ul = false
-            @first_li = false
-          end
+          @during_ul = false
+          @first_li = false
         end
       end
 
-      def replace_br_tag(value)
-        if @ignore_below_br && !@return_code
+      def replace_br_tag
+        if @ignore_below_br && !@return_code # rubocop:disable Style/GuardClause
           @return_code = true
           @ignore_below_br = false
         end
       end
 
       def check_h_tag(value)
-        if value =~ /^<h.*/
-          @ignore_below_br = true
-        end
+        return if value !~ /^<h.*/
+
+        @ignore_below_br = true
       end
 
       def insert_code_number_tag(value)
         return unless @code_block
+
         value.gsub!(/^(.*)$/, '<span className="code__with-order">\1</span><br />')
       end
 
@@ -127,14 +131,15 @@ module SubDomain
           end
         end
 
-        if @end_ul
-          @end_ul = false
-          value.gsub!(/^(.*)$/, '</ul>')
-        end
+        return unless @end_ul
+
+        @end_ul = false
+        value.gsub!(/^(.*)$/, '</ul>')
       end
 
       def replace_table_tag(value)
         return if !@table && !@end_table
+
         if @draw_table_header && !@draw_table_body
           value.gsub!(/^\|(.*)$/, '<table><tr><th>\1').gsub!(/^(.*)\|$/, '\1</th></tr>').gsub!(/\|/, '</th><th>')
         elsif @draw_table_header && @draw_table_body
@@ -150,7 +155,7 @@ module SubDomain
           @during_ul = false
           values[values.size - 1].gsub!(/^(.*)$/, '\1</ul>')
         end
-        if @table && !@end_table
+        if @table && !@end_table # rubocop:disable Style/GuardClause
           @table = false
           values[values.size - 1].gsub!(/^(.*)$/, '\1</table>')
         end
