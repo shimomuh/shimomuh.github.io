@@ -1,6 +1,6 @@
 //
 // このファイルは自動生成です。
-// 変更したい場合は bin/make-tsx.rb を更新してください。
+// 変更したい場合は ruby_scripts/domain/dairy_converter.rb を更新してください。
 //
 import React from 'react';
 import { Link } from 'react-router-dom';

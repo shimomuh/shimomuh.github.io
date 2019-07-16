@@ -53,6 +53,7 @@ module SubDomain
         replace_i_tag
         replace_s_tag
         replace_br_tag
+        replace_q_tag
       end
 
       def escape_about_html
@@ -94,6 +95,10 @@ module SubDomain
 
       def replace_br_tag
         @value = @value.replace('<br />') if @value.size.zero?
+      end
+
+      def replace_q_tag
+        @value.gsub!(/^&gt;&nbsp;(.+)/, '<q>\1</q>')
       end
 
       def replace_h_tag
