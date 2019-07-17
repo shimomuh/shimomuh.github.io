@@ -16,6 +16,12 @@ const Tag5: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-23'>
+            <span className='tag__article--date'>2019-07-23</span>
+            <span className='tag__article--title'>tslint を使って TypeScript にも秩序を！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-19'>
             <span className='tag__article--date'>2019-07-19</span>
             <span className='tag__article--title'>アイコンをつけて視認性を向上する</span>
