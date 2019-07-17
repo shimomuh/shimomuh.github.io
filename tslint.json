@@ -1,0 +1,29 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "jsx-wrap-multiline": false,
+    "_comment-quotemark": "quote は single だろうが double だろうが許容する",
+    "quotemark": false,
+    "_comment-ordered-imports": "import はアルファベット順",
+    "ordered-imports": false,
+    "_comment-no-submodule-imports": "import されるファイルは submodule (/ を使うもの) も許容する",
+    "no-submodule-imports": false,
+    "_comment-no-implicit-dependencies": "tsconfig の path alias を無視したいので許容する",
+    "no-implicit-dependencies": false,
+    "_comment-trailing-comma": "文末のコンマは無視しよう fyi: https://selmertsx.hatenablog.com/entry/2018/02/06/201945",
+    "trailing-comma": false,
+    "_comment-max-classes-per-file": "1つのファイルに private な小さなクラスの宣言を許容する",
+    "max-classes-per-file": false,
+    "_comment-jsx-no-multiline-js": "関数埋め込みを許容する",
+    "jsx-no-multiline-js": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "src/components/tag/*.ts{,x}",
+      "src/components/diary/*.ts{,x}",
+      "src/react-app-env.d.ts",
+      "src/serviceWorker.ts",
+      "src/components/router.tsx"
+    ]
+  }
+}

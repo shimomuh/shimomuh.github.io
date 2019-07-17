@@ -3,13 +3,13 @@ import './calendar.scss';
 import { CalendarModel } from 'models/calendar';
 import { Link } from 'react-router-dom';
 import diary_title_config from 'config/diary_title.json';
-import diary_tag_icon_config from 'config/diary_tag_icon.json'
+import diary_tag_icon_config from 'config/diary_tag_icon.json';
 
-type CalendarProps = {
+interface ICalendarProps {
   calendar: CalendarModel;
 }
 
-const Calendar: React.FC<CalendarProps> = (props) => {
+const Calendar: React.FC<ICalendarProps> = (props) => {
   const { calendar } = props;
   return (
     <div className='calendar'>
@@ -17,7 +17,7 @@ const Calendar: React.FC<CalendarProps> = (props) => {
       <CalendarBody calendar={calendar} />
     </div>
   );
-}
+};
 
 const CalendarHeader: React.FC = () => {
   const day = ['日', '月', '火', '水', '木', '金', '土'];
@@ -26,31 +26,31 @@ const CalendarHeader: React.FC = () => {
       {day.map((d: string, key: number) => <li className='calendar__cell' key={key}>{d}</li>)}
     </ul>
   );
-}
+};
 
-type CalendarBodyProps = {
+interface ICalendarBodyProps {
   calendar: CalendarModel;
 }
 
-type DiaryTitleConfigProps = {
+interface IDiaryTitleConfigProps {
   [key: string]: string;
 }
 
-type DiaryTagIconConfigProps = {
+interface IDiaryTagIconConfigProps {
   [key: string]: string[] | undefined;
 }
 
-const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
+const CalendarBody: React.FC<ICalendarBodyProps> = (props) => {
   const { calendar } = props;
-  const title: DiaryTitleConfigProps = diary_title_config;
-  const icons: DiaryTagIconConfigProps = diary_tag_icon_config;
+  const title: IDiaryTitleConfigProps = diary_title_config;
+  const tagIcons: IDiaryTagIconConfigProps = diary_tag_icon_config;
   const cellClassName: any = (isActive: any) => {
-    const klassName = 'calendar__cell'
-    if (isActive) { return klassName.concat(' ', 'is-active') }
-    return klassName
-  }
+    const klassName = 'calendar__cell';
+    if (isActive) { return klassName.concat(' ', 'is-active'); }
+    return klassName;
+  };
   const renderIcons: any = (icons: string[] | undefined) => {
-    if (icons === undefined) return (<span className='calendar__cell-icons'></span>);
+    if (icons === undefined) { return (<span className='calendar__cell-icons' />); }
     return (
       <span className='calendar__cell--icons'>
         {
@@ -62,27 +62,29 @@ const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
         }
       </span>
     );
-  }
+  };
   return (
     <ul className='calendar__body'>
       {
-        calendar.dates.map((week: object[], key: number) => {
+        calendar.dates.map((week: object[]) => {
           return week.map((d: any, key: number) => {
             return (
               <li key={key} className={cellClassName(d.isActive)}>
                 <Link to={`/diary/${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`}>
                   <span className='calendar__cell--date'>{d.date}</span>
                   <span className='calendar__cell--day'>({d.day})</span>
-                  <span className='calendar__cell--title'>{title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`]}</span>
-                  {renderIcons(icons[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`])}
+                  <span className='calendar__cell--title'>{
+                    title[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`]
+                  }</span>
+                  {renderIcons(tagIcons[`${d.year}-${d.getZeroPaddingMonth()}-${d.getZeroPaddingDate()}`])}
                 </Link>
               </li>
             );
-          })
+          });
         })
       }
     </ul>
   );
-}
+};
 
 export default Calendar;
