@@ -12,6 +12,12 @@ const Tag7: React.FC = () => {
       <h1>「Ruby」がついている日記一覧</h1>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-18'>
+            <span className='tag__article--date'>2019-07-18</span>
+            <span className='tag__article--title'>マークダウンの Table に対応する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-15'>
             <span className='tag__article--date'>2019-07-15</span>
             <span className='tag__article--title'>タグをリンクにしてタグリンク集を作る</span>

@@ -1,3 +1,5 @@
+$black: #222;
+
 $code-bg: #233;
 $code-txt: #d1edff;
 
@@ -5,6 +7,9 @@ $inline-code-bd: #9cf;
 $inline-code-bg: #dff;
 $quote: #bbb;
 $quote-border: #ddd;
+
+$table-border: #ccc;
+$table-bg: #f2f2f2;
 
 /* Qiita */
 $link: #4aac00;
@@ -56,6 +61,9 @@ $link: #4aac00;
   h2 { font-size: 1.4rem; }
   h3 { font-size: 1.2rem; }
   h4 { font-size: 1rem; }
+  h2, h3 {
+    border-bottom: 1px solid $black;
+  }
   a {
     color: $link;
     text-decoration: none;
@@ -78,6 +86,32 @@ $link: #4aac00;
     border-left: 2px solid $quote-border;
     padding-left: 10px;
     color: $quote;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    tr {
+      border-bottom: solid 1px $table-border;
+      th {
+        border-left: 1px solid $table-border;
+        border-top: 1px solid $table-border;
+        border-bottom: 1px solid $table-border;
+        background-color: $table-bg;
+        padding: 10px;
+        &:last-child {
+          border-right: 1px solid $table-border;
+        }
+      }
+      td {
+        border-left: 1px solid $table-border;
+        border-bottom: 1px solid $table-border;
+        border-top: none;
+        padding: 10px;
+        &:last-child {
+          border-right: 1px solid $table-border;
+        }
+      }
+    }
   }
 }
 
