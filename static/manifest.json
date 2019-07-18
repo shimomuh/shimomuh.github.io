@@ -2,7 +2,7 @@
 	"name":				"",
 	"short_name":		"",
 	"description":		"",
-	"start_url":		"/icons/",
+	"start_url":		"/icon/",
 	"display":			"standalone",
 	"orientation":		"any",
 	"background_color":	"#fff",

@@ -5,11 +5,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/tag.scss';
+import tagIcon from 'config/tag_icon.json';
 
 const Tag<%= value[:id] %>: React.FC = () => {
   return (
     <div className='tag'>
-      <h1>「<%= value[:name] %>」がついている日記一覧</h1>
+      <div className='tag__header'>
+        <img src={`/static/tag/${tagIcon[<%= value[:id] %>]}`} alt="" />
+        <h1>「<%= value[:name] %>」がついている日記一覧</h1>
+      </div>
       <ul>
       <%- value[:diary_dates].reverse.each do |date| -%>
         <li className='tag__article'>
