@@ -1,0 +1,22 @@
+#!/bin/sh
+
+GREEN="\e[32m"
+END="\e[m"
+
+function stdout() {
+  echo ""
+  printf "${GREEN}"
+  printf "# --------------\n"
+  printf "#               \n"
+  printf "# $1            \n"
+  printf "#               \n"
+  printf "# --------------\n"
+  printf "${END}"
+  echo ""
+}
+
+stdout "rubocop"
+bundle exec rubocop ruby/lib
+
+stdout "tslint"
+npm run lint
