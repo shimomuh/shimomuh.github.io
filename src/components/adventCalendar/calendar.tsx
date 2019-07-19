@@ -56,9 +56,7 @@ const CalendarBody: React.FC<CalendarBodyProps> = (props) => {
         {
           icons.map((iconFile: string, key: number) => {
             return (
-              <span key={key} className='calendar__cell--icon'>
-                <img src={`/static/tag/${iconFile}`} alt="" />
-              </span>
+              <img key={key} className='calendar__cell--icon' src={`/static/tag/${iconFile}`} alt="" />
             );
           })
         }
