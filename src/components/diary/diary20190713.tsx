@@ -21,7 +21,7 @@ const Diary20190713: React.FC = () => {
         
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;json&#39;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">File.open(&#39;file.json&#39;&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;f.write&nbsp;&#123;&nbsp;hoge:&nbsp;1&nbsp;huga:&nbsp;2&nbsp;&#125;.to_json</span><br />
         <span className="code__with-order">end</span><br />
@@ -41,11 +41,11 @@ const Diary20190713: React.FC = () => {
         <br />
         <h2>結論</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/96b448f496f040fa89ea9db5e4956829c06ed3b1"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/96b448f496f040fa89ea9db5e4956829c06ed3b1">→成果</a>
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;json&#39;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">File.open(&#39;file.json&#39;&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;f.write&nbsp;JSON.pretty_generate(&#123;&nbsp;hoge:&nbsp;1&nbsp;huga:&nbsp;2&nbsp;&#125;)</span><br />
         <span className="code__with-order">end</span><br />
@@ -64,7 +64,7 @@ const Diary20190713: React.FC = () => {
         <br />
         <h2>参考</h2>
         
-        <ul><li><a href={"http://hai3.net/blog/2013/02/14/json-pretty-generate/"}>to_jsonの時にppっぽくしたい場合</a></li></ul>
+        <ul><li><a href="http://hai3.net/blog/2013/02/14/json-pretty-generate/">to_jsonの時にppっぽくしたい場合</a></li></ul>
       <br /><br />
       <div>
         <Link to='/'>戻る</Link>

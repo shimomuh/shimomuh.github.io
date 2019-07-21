@@ -33,7 +33,7 @@ const Diary20190630: React.FC = () => {
         </ul>
         試しにブラウザの幅を変更してもらえるとわかるはずだ
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/pull/6/commits/97b9cb15da919f4ee9cff2dcc49cc4c1a6f4dac1"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/pull/6/commits/97b9cb15da919f4ee9cff2dcc49cc4c1a6f4dac1">→成果</a>
         <br />
         <h2>過程</h2>
         
@@ -52,11 +52,11 @@ const Diary20190630: React.FC = () => {
         </ul>
         そもそも&nbsp;counter&nbsp;使うつもりだったので、そのまま&nbsp;counter&nbsp;を使った
         <br />
-        table&nbsp;レイアウトの参考は&nbsp;<a href={"http://carrinova.com/markdown<i>code</i>blocks/"}>コードブロックを表すMarkdownをコードブロックの中に表示する方法</a>
+        table&nbsp;レイアウトの参考は&nbsp;<a href="http://carrinova.com/markdown_code_blocks/">コードブロックを表すMarkdownをコードブロックの中に表示する方法</a>
         <br />
         <h3>counter&nbsp;を使った実装</h3>
         
-        懐かしくて忘れてたので&nbsp;<a href={"https://www.granfairs.com/blog/staff/css-ol-styling-with-counter"}>&lt;ol&gt;の番号だけ装飾するには？CSSカウンタを使ってみた</a>&nbsp;にお世話になりつつ記憶を掘り起こした
+        懐かしくて忘れてたので&nbsp;<a href="https://www.granfairs.com/blog/staff/css-ol-styling-with-counter">&lt;ol&gt;の番号だけ装飾するには？CSSカウンタを使ってみた</a>&nbsp;にお世話になりつつ記憶を掘り起こした
         <br />
         今回は&nbsp;relative&nbsp;や&nbsp;counter&nbsp;margin&nbsp;をうまく採用した方法で以下の通り
         <br />

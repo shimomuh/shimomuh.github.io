@@ -29,7 +29,7 @@ const Diary20190628: React.FC = () => {
         
         をインスコ
         <br />
-        あとは&nbsp;<a href={"https://numb86-tech.hatenablog.com/entry/2017/05/06/125333"}>React&nbsp;Router&nbsp;v4&nbsp;の基本的な考え方と使い方</a>&nbsp;のママ
+        あとは&nbsp;<a href="https://numb86-tech.hatenablog.com/entry/2017/05/06/125333">React&nbsp;Router&nbsp;v4&nbsp;の基本的な考え方と使い方</a>&nbsp;のママ
         <br />
         &nbsp;
         <br />
@@ -39,7 +39,7 @@ const Diary20190628: React.FC = () => {
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">import&nbsp;ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
         <span className="code__with-order">import&nbsp;&#123;&nbsp;BrowserRouter&nbsp;Route&nbsp;&#125;&nbsp;from&nbsp;&#39;react-router-dom&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Router:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;BrowserRouter&gt;</span><br />
@@ -50,7 +50,7 @@ const Diary20190628: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/BrowserRouter&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Index:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
@@ -58,7 +58,7 @@ const Diary20190628: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Home:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
@@ -66,7 +66,7 @@ const Diary20190628: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">ReactDOM.render(&lt;Router&nbsp;/&gt;&nbsp;document.getElementById(&#39;#app&#39;));</span><br />
         </code></p>
         
@@ -78,7 +78,7 @@ const Diary20190628: React.FC = () => {
         <br />
         &nbsp;
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/pull/4/commits/ebb1789f743089f95f9746d45da7890c80ac839b"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/pull/4/commits/ebb1789f743089f95f9746d45da7890c80ac839b">→成果</a>
       <br /><br />
       <div>
         <Link to='/'>戻る</Link>

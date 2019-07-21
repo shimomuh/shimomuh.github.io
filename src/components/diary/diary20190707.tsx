@@ -38,7 +38,7 @@ const Diary20190707: React.FC = () => {
         <br />
         &nbsp;
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/23fec03e5f7656ccf9dab360d7d4fe7fd1ec460a"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/23fec03e5f7656ccf9dab360d7d4fe7fd1ec460a">→成果</a>
         <br />
         &nbsp;
         <br />
@@ -56,7 +56,7 @@ const Diary20190707: React.FC = () => {
         <br />
         めっちゃ簡単でした
         <br />
-        <a href={"https://stackoverflow.com/questions/49996456/importing-json-file-in-typescript"}>Importing&nbsp;json&nbsp;file&nbsp;in&nbsp;TypeScript&nbsp;-&nbsp;stack&nbsp;overflow</a>
+        <a href="https://stackoverflow.com/questions/49996456/importing-json-file-in-typescript">Importing&nbsp;json&nbsp;file&nbsp;in&nbsp;TypeScript&nbsp;-&nbsp;stack&nbsp;overflow</a>
         <br />
         &nbsp;
         <br />
@@ -75,7 +75,7 @@ const Diary20190707: React.FC = () => {
         <p className="code javascript"><code>
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">import&nbsp;json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;json.key&#125;&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
         <span className="code__with-order">&#125;</span><br />
@@ -99,18 +99,18 @@ const Diary20190707: React.FC = () => {
         <br />
         &nbsp;
         <br />
-        そこで&nbsp;<a href={"https://qiita.com/gonta/items/fb7b9e6d0f12060c27d6"}>Typescriptで、Objectkeyとすると出るIndex&nbsp;signature&nbsp;of&nbsp;object&nbsp;type&nbsp;implicitly&nbsp;has&nbsp;an&nbsp;&#39;any&#39;&nbsp;type.を正しく回避する</a>&nbsp;に書いてあったことを参考に冗長に対応した
+        そこで&nbsp;<a href="https://qiita.com/gonta/items/fb7b9e6d0f12060c27d6">Typescriptで、Objectkeyとすると出るIndex&nbsp;signature&nbsp;of&nbsp;object&nbsp;type&nbsp;implicitly&nbsp;has&nbsp;an&nbsp;&#39;any&#39;&nbsp;type.を正しく回避する</a>&nbsp;に書いてあったことを参考に冗長に対応した
         <br />
         <i>多分もっとうまい方法はある</i>
         <br />
         <p className="code javascript"><code>
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">import&nbsp;json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;\[key:&nbsp;string]:&nbsp;string;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;const&nbsp;config:&nbsp;Props&nbsp;=&nbsp;json</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;config.key&#125;&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />

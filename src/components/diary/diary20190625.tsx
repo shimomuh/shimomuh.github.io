@@ -45,17 +45,17 @@ const Diary20190625: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        ここに<a href={"https://shimomuh.github.io"}>このホームページ</a>が誕生した。
+        ここに<a href="https://shimomuh.github.io">このホームページ</a>が誕生した。
         <br />
         とはいえ、これで終わると何も伝わらないので、やったことを書く
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/701ff943a1bada641bf941af404ba9e1551852bc"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/701ff943a1bada641bf941af404ba9e1551852bc">→成果</a>
         <br />
         <h2>過程</h2>
         
         <h3>Github&nbsp;Pages</h3>
         
-        過去に&nbsp;<a href={"https://pages.github.com/"}>Github&nbsp;Pages</a>&nbsp;でサイトを作ったことはあったのでサイト構築については割愛。
+        過去に&nbsp;<a href="https://pages.github.com/">Github&nbsp;Pages</a>&nbsp;でサイトを作ったことはあったのでサイト構築については割愛。
         <br />
         Github&nbsp;Pages&nbsp;については&nbsp;Google&nbsp;先生や&nbsp;Siri&nbsp;に聞いてみよう！
         <br />
@@ -63,11 +63,11 @@ const Diary20190625: React.FC = () => {
         
         次にリポジトリに&nbsp;<span className="inline-code">.node-version</span>&nbsp;を作った。
         <br />
-        stable&nbsp;でなくてもよかったので&nbsp;<a href={"https://nodejs.org/ja/"}>nodejs</a>&nbsp;から最新版を取得した（もちろん&nbsp;ndenv&nbsp;を使ってね）
+        stable&nbsp;でなくてもよかったので&nbsp;<a href="https://nodejs.org/ja/">nodejs</a>&nbsp;から最新版を取得した（もちろん&nbsp;ndenv&nbsp;を使ってね）
         <br />
         <h3>Typescript&nbsp;/&nbsp;create-react-app</h3>
         
-        Typescript&nbsp;を触ってみたかった&nbsp;+&nbsp;Github&nbsp;Pages&nbsp;上で&nbsp;React&nbsp;を動かしてみたかったので、&nbsp;<a href={"https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter"}>TypeScript-React-Starter</a>&nbsp;に倣って、ローカルに&nbsp;test-react-sample&nbsp;的な名前で&nbsp;create-react-app&nbsp;を実行して一通り動作を確認。
+        Typescript&nbsp;を触ってみたかった&nbsp;+&nbsp;Github&nbsp;Pages&nbsp;上で&nbsp;React&nbsp;を動かしてみたかったので、&nbsp;<a href="https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter">TypeScript-React-Starter</a>&nbsp;に倣って、ローカルに&nbsp;test-react-sample&nbsp;的な名前で&nbsp;create-react-app&nbsp;を実行して一通り動作を確認。
         <br />
         <span className="inline-code">npm&nbsp;-g</span>&nbsp;を&nbsp;<span className="inline-code">npm&nbsp;--save-dev</span>&nbsp;にしたりディレクトリを調整しながら必要なものだけつまんで導入。
         <br />
@@ -91,7 +91,7 @@ const Diary20190625: React.FC = () => {
         <br />
         が、怠け者の僕はすぐに&nbsp;Google&nbsp;先生に聞いたら先人がいた
         <br />
-        <a href={"https://qiita.com/yakimeron/items/7a4f8d9e70a4a2b1b96b"}>create-react-appでbuild先のパスを変更する</a>
+        <a href="https://qiita.com/yakimeron/items/7a4f8d9e70a4a2b1b96b">create-react-appでbuild先のパスを変更する</a>
         <br />
         ありがたく参考にさせてもらってディレクトリをカスタマイズ
         <br />
@@ -99,11 +99,11 @@ const Diary20190625: React.FC = () => {
         <br />
         <h2>謝辞</h2>
         
-        まず僕は&nbsp;<a href={"https://pages.github.com/"}>Github&nbsp;Pages&nbsp;の存在</a>&nbsp;を知っていた（これはなんて幸運なことだ！）
+        まず僕は&nbsp;<a href="https://pages.github.com/">Github&nbsp;Pages&nbsp;の存在</a>&nbsp;を知っていた（これはなんて幸運なことだ！）
         <br />
         次に、過去に業務レベルで&nbsp;ReactJS&nbsp;をバリバリ触っていた
         <br />
-        さらには、ついこの前まで隣の席で一緒にお仕事をしていた&nbsp;<a href={"https://github.com/Takepepe"}>@Takepepe</a>&nbsp;さんが<a href={"https://www.amazon.co.jp/dp/483996937X?fbclid=IwAR2f8NdtIH6YFiojk-dgtCWEg-dibkggPCTVtEqR73DEdSRiM1Q6iotC0c8"}>実践TypeScript&nbsp;-&nbsp;BFFとNext.js&amp;Nuxt.jsの型定義</a>&nbsp;という本を出すと聞いて、久々に書こうと触発されたのもあるかもしれない（謝謝）
+        さらには、ついこの前まで隣の席で一緒にお仕事をしていた&nbsp;<a href="https://github.com/Takepepe">@Takepepe</a>&nbsp;さんが<a href="https://www.amazon.co.jp/dp/483996937X?fbclid=IwAR2f8NdtIH6YFiojk-dgtCWEg-dibkggPCTVtEqR73DEdSRiM1Q6iotC0c8">実践TypeScript&nbsp;-&nbsp;BFFとNext.js&amp;Nuxt.jsの型定義</a>&nbsp;という本を出すと聞いて、久々に書こうと触発されたのもあるかもしれない（謝謝）
         <br />
         いろんな因果があって、今ここに&nbsp;commit&nbsp;しているが、どれか一つでも欠けていたらはじめなかっただろう
         <br />

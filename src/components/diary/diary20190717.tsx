@@ -19,7 +19,7 @@ const Diary20190717: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/638a25b6e9aa4d6fc39187583a98c579427256a0"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/638a25b6e9aa4d6fc39187583a98c579427256a0">→成果</a>
         <br />
         <br />
         <table><tr><th>before</th><th>after</th></tr>
@@ -30,7 +30,7 @@ const Diary20190717: React.FC = () => {
         
         まずは動きをみてもらってどう変わったかをみてもらった
         <br />
-        仕組みは案外簡単で&nbsp;<a href={"https://taroken.org/react-router-scroll-top/"}>【React】React-Routerで別パスに行った時に上にスクロールしてくれない時</a>&nbsp;を参考にさせてもらって作ったのだが、この記事の中に&nbsp;<a href={"https://reacttraining.com/react-router/web/guides/scroll-restoration"}>公式</a>&nbsp;をみよ！とあったのでみてみたら
+        仕組みは案外簡単で&nbsp;<a href="https://taroken.org/react-router-scroll-top/">【React】React-Routerで別パスに行った時に上にスクロールしてくれない時</a>&nbsp;を参考にさせてもらって作ったのだが、この記事の中に&nbsp;<a href="https://reacttraining.com/react-router/web/guides/scroll-restoration">公式</a>&nbsp;をみよ！とあったのでみてみたら
         <br />
         &nbsp;
         <br />
@@ -41,7 +41,7 @@ const Diary20190717: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;useEffect(()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;window.scrollTo(0&nbsp;0);</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&#125;&nbsp;[pathname]);</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;children;</span><br />
         <span className="code__with-order">&#125;;</span><br />
         </code></p>

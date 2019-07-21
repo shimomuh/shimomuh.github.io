@@ -30,7 +30,7 @@ const Diary20190706: React.FC = () => {
         <br />
         &nbsp;
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/018c6f2b9a3227fd279213e627d8f90f0ffcac97"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/018c6f2b9a3227fd279213e627d8f90f0ffcac97">→成果</a>
         <br />
         &nbsp;
         <br />
@@ -53,7 +53,7 @@ const Diary20190706: React.FC = () => {
         
         ほぼ以下に従っただけ
         <br />
-        <a href={"https://qiita.com/IzumiSy/items/b7d8a96eacd2cd8ad510"}>関東最速でReact+Redux+TypeScriptなアプリを作る</a>
+        <a href="https://qiita.com/IzumiSy/items/b7d8a96eacd2cd8ad510">関東最速でReact+Redux+TypeScriptなアプリを作る</a>
         <br />
         一応はまった点だけ補足しておく
         <br />
@@ -61,7 +61,7 @@ const Diary20190706: React.FC = () => {
         
         久々にはまった点が&nbsp;Reduxは浅い比較&nbsp;(&nbsp;shallow&nbsp;equality&nbsp;checking&nbsp;)&nbsp;だということである
         <br />
-        <a href={"https://qiita.com/yasuhiro-yamada/items/aebda0dff79a70eb71d7"}>ReduxのStateが変更されたのに再レンダリングされない問題</a>&nbsp;をみて思い出した
+        <a href="https://qiita.com/yasuhiro-yamada/items/aebda0dff79a70eb71d7">ReduxのStateが変更されたのに再レンダリングされない問題</a>&nbsp;をみて思い出した
         <br />
         例えば以下のようなコンポーネントがあったとしよう
         <br />
@@ -71,18 +71,18 @@ const Diary20190706: React.FC = () => {
         <br />
         <p className="code javascript"><code>
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;store:&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;calendar:&nbsp;CalendarModel;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">Component:&nbsp;React.RC&lt;Props&gt;&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;console.log(props.store.calendar.year)&nbsp;//&nbsp;(1)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;reutnr&nbsp;&lt;p&gt;&#123;props.store.calendar.year&#125;&lt;/p&gt;&nbsp;//&nbsp;(2)</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">class&nbsp;CalendarModel&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;public&nbsp;year:&nbsp;number;</span><br />
         <span className="code__with-order">&#125;</span><br />
@@ -100,28 +100,28 @@ const Diary20190706: React.FC = () => {
         <span className="code__with-order">//&nbsp;reducer</span><br />
         <span className="code__with-order">import&nbsp;&#123;&nbsp;reducerWithInitialState&nbsp;&#125;&nbsp;from&nbsp;&#39;typescript-fsa-reducers&#39;;</span><br />
         <span className="code__with-order">import&nbsp;actionCreatorFactory&nbsp;from&nbsp;&#39;typescript-fsa&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">interface&nbsp;CalendarState&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;calendar:&nbsp;CalendarModel</span><br />
         <span className="code__with-order">&nbsp;&nbsp;year:&nbsp;number;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;state:&nbsp;CalendarState&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;calendar:&nbsp;new&nbsp;Calender()</span><br />
         <span className="code__with-order">&nbsp;&nbsp;year:&nbsp;new&nbsp;Calender().year</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;actionCreator&nbsp;=&nbsp;actionCreatorFactory();</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;calendarActions&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;nextYear:&nbsp;actionCreator&lt;CalendarModel&gt;(&#39;NEXT_YEAR&#39;)</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">export&nbsp;const&nbsp;calendarReducer&nbsp;=&nbsp;reducerWithInitialState(state)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;.case(calendarActions.nextYear&nbsp;(state&nbsp;model)&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Object.assign(&#123;&#125;&nbsp;state&nbsp;&#123;&nbsp;calendar:&nbsp;model&nbsp;year:&nbsp;model.year&nbsp;&#125;)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&#125;);</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">class&nbsp;CalendarModel&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;public&nbsp;year:&nbsp;number;</span><br />
         <span className="code__with-order">&#125;</span><br />

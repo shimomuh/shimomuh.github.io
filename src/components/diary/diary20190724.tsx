@@ -35,7 +35,7 @@ const Diary20190724: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/8a2d40362a68a0b68d606bc5810df892529b4c21"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/8a2d40362a68a0b68d606bc5810df892529b4c21">→成果</a>
         <br />
         ネットワークほぼない状態で書くことを書いたので新しい知識はなかったので共有することは少ないが、テストをどうやったかという話をしよう
         <br />
@@ -63,24 +63,24 @@ const Diary20190724: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;context&nbsp;&#39;M&nbsp;のとき&#39;&nbsp;do</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;&#39;methodA&nbsp;は&nbsp;m&nbsp;を返す&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;context&nbsp;&#39;N&nbsp;のとき&#39;&nbsp;do</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;&#39;methodA&nbsp;は例外を返す&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;context&nbsp;&#39;O&nbsp;のとき&#39;&nbsp;do</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;未実装の場合は理想と現実の&nbsp;gap&nbsp;を書く</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pending&nbsp;&#39;本当はこうしたい（けど今はこんな感じで&nbsp;fail&nbsp;する）&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
         <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;describe&nbsp;&#39;.methodB&#39;&nbsp;do</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;自明なものはこういう理由で割愛してると書いてあげる</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;&#39;このテストは内部で&nbsp;ClassB&nbsp;の&nbsp;methodC&nbsp;を&nbsp;delegate&nbsp;しているだけなので割愛&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;このようにコメントだけ残すのもあり</span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;この場合はテストに出てこないので可能な限り理由が表示される形でテストしておくほうがよい</span><br />
         <span className="code__with-order">&nbsp;&nbsp;describe&nbsp;&#39;.methodC&#39;&nbsp;do</span><br />

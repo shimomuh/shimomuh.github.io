@@ -51,7 +51,7 @@ const Diary20190703: React.FC = () => {
         <ul><li>タグの下準備</li>
         <li>テンプレート</li>
         </ul>
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/e5f75adf508c6e4b92806eb0e80fc96f58c1ad9d"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/e5f75adf508c6e4b92806eb0e80fc96f58c1ad9d">→成果</a>
         <br />
         テンプレートは言わずもがなテンプレートを用意しただけ。
         <br />
@@ -80,11 +80,11 @@ const Diary20190703: React.FC = () => {
         <br />
         今回みたいに最小限の価値ある機能を考えて作り出すという考え方は&nbsp;MVP(Minimum&nbsp;Viable&nbsp;Product)&nbsp;と呼ばれる
         <br />
-        <a href={"https://www.oreilly.co.jp/books/9784873117324/"}>O&#39;Reilly&nbsp;Japan&nbsp;-&nbsp;ユーザーストーリーマッピング</a>&nbsp;の書籍などでも触れられているので知っていると今後ものづくりをする人は役にたつかもしれない
+        <a href="https://www.oreilly.co.jp/books/9784873117324/">O&#39;Reilly&nbsp;Japan&nbsp;-&nbsp;ユーザーストーリーマッピング</a>&nbsp;の書籍などでも触れられているので知っていると今後ものづくりをする人は役にたつかもしれない
         <br />
         <h2>謝辞</h2>
         
-        MVP&nbsp;の考え方については僕が社内でスタートアップのような制度を利用していた時にオブザーバーとしてお世話になっていた今や&nbsp;uni&#39;que&nbsp;Inc.&nbsp;CEO/Founder&nbsp;の&nbsp;<a href={"https://www.facebook.com/kazuo.wakamiya?fref=nf&amp;<i>tn</i>=%2Cdm-R-R&amp;eid=ARBofPGrIIXYL7OBz4orgZfLRJ_4LrzkgIAvjDnuC-9qR6yyI-C5j1bOmojWzykhnDgvRQIUqwezMKf2"}>@Kazuo&nbsp;Wakamiya</a>&nbsp;にお世話になりながら繰り返し実践した経験の賜物である。
+        MVP&nbsp;の考え方については僕が社内でスタートアップのような制度を利用していた時にオブザーバーとしてお世話になっていた今や&nbsp;uni&#39;que&nbsp;Inc.&nbsp;CEO/Founder&nbsp;の&nbsp;<a href="https://www.facebook.com/kazuo.wakamiya?fref=nf&amp;__tn__=%2Cdm-R-R&amp;eid=ARBofPGrIIXYL7OBz4orgZfLRJ_4LrzkgIAvjDnuC-9qR6yyI-C5j1bOmojWzykhnDgvRQIUqwezMKf2">@Kazuo&nbsp;Wakamiya</a>&nbsp;にお世話になりながら繰り返し実践した経験の賜物である。
         <br />
         今も当時とは違うサービスに携わっているがこの考え方のおかげでものづくりが洗練されているのはいうまでもないので、これを実体験として学ばせてもらったことに感謝したい。
         <br />

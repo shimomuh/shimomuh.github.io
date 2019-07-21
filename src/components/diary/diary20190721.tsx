@@ -21,7 +21,7 @@ const Diary20190721: React.FC = () => {
         
         最終的に&nbsp;html&nbsp;に以下のようなタグを埋め込むのがゴール
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/8d688a0212a7c1a991adb4af45c56bc6d64aa668"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/8d688a0212a7c1a991adb4af45c56bc6d64aa668">→成果</a>
         <br />
         <h2>過程</h2>
         
@@ -29,7 +29,7 @@ const Diary20190721: React.FC = () => {
         <br />
         Google&nbsp;でアカウントは作っている前提として
         <br />
-        <a href={"https://analytics.google.com/analytics/web/"}>Google&nbsp;Analytics</a>&nbsp;にアクセスすると、ログインを求められてログインするとリダイレクトで&nbsp;Analytics&nbsp;のトップに飛ばされる
+        <a href="https://analytics.google.com/analytics/web/">Google&nbsp;Analytics</a>&nbsp;にアクセスすると、ログインを求められてログインするとリダイレクトで&nbsp;Analytics&nbsp;のトップに飛ばされる
         <br />
         &nbsp;
         <br />

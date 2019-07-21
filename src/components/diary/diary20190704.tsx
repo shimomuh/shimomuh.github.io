@@ -37,14 +37,14 @@ const Diary20190704: React.FC = () => {
         <li>Safari&nbsp;は微調整</li>
         <li>IE&nbsp;は...&nbsp;色々ありそうなので別途</li>
         </ul>
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/ff334744a9283e290e7dff3baaa539ee8a21f6b3"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/ff334744a9283e290e7dff3baaa539ee8a21f6b3">→成果</a>
         <br />
         <p className="code scss"><code>
         <span className="code__with-order">/*&nbsp;Safari&nbsp;のみ&nbsp;*/</span><br />
         <span className="code__with-order">_::-webkit-full-page-media&nbsp;_:future&nbsp;:root&nbsp;.diary&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;color:&nbsp;red;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">/*&nbsp;Firefox&nbsp;のみ&nbsp;*/</span><br />
         <span className="code__with-order">@-moz-document&nbsp;url-prefix()&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;.diary&nbsp;&#123;</span><br />
@@ -55,7 +55,7 @@ const Diary20190704: React.FC = () => {
         
         みたいな感じで対応した
         <br />
-        <a href={"https://kuroko-role.co.jp/css-html/browser-hack2018/"}>ブラウザ別に適用させるCSSハック2018&nbsp;|&nbsp;株式会社クロコロール</a>&nbsp;を丸パクリ...
+        <a href="https://kuroko-role.co.jp/css-html/browser-hack2018/">ブラウザ別に適用させるCSSハック2018&nbsp;|&nbsp;株式会社クロコロール</a>&nbsp;を丸パクリ...
         <br />
         <img src="/static/diary/2019-07-04/browser-diff-after.png" alt="" />
       <br /><br />

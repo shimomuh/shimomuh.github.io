@@ -16,6 +16,12 @@ const Tag7: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-25'>
+            <span className='tag__article--date'>2019-07-25</span>
+            <span className='tag__article--title'>マークダウンコンバーターロジックを見直す</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-24'>
             <span className='tag__article--date'>2019-07-24</span>
             <span className='tag__article--title'>プロジェクトの途中から膨大なコードの品質を保証したくて rspec を導入する</span>

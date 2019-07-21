@@ -21,7 +21,7 @@ const Diary20190716: React.FC = () => {
         
         <img src="/static/diary/2019-07-16/like-google-calendar-design.gif" alt="" />
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/f94c2cf48dd65d67bf8f4314b628856f200191f8"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/f94c2cf48dd65d67bf8f4314b628856f200191f8">→成果</a>
         <br />
         <h2>過程</h2>
         

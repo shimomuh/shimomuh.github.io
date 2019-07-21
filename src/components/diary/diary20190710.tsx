@@ -28,13 +28,13 @@ const Diary20190710: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/c143c49e64f943cd244107dbea252d05a400615d"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/c143c49e64f943cd244107dbea252d05a400615d">→成果</a>
         <br />
         以下抜粋
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;erb&#39;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;サブドメイン：コアドメインをサポートするドメインのうち</span><br />
         <span className="code__with-order">#</span><br />
         <span className="code__with-order">module&nbsp;SubDomain</span><br />
@@ -45,17 +45,17 @@ const Diary20190710: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Template</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attr_reader&nbsp;:value&nbsp;:output_path&nbsp;:input_path</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;initialize(value&nbsp;output_path&nbsp;input_path&nbsp;=&nbsp;nil)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@value&nbsp;=&nbsp;value</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@output_path&nbsp;=&nbsp;output_path</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@input_path&nbsp;=&nbsp;input_path&nbsp;?&nbsp;input_path&nbsp;:&nbsp;&quot;templates/#&#123;output_path&#125;.erb&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;render</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content&nbsp;=&nbsp;File.read(File.expand_path(input_path))</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;erb&nbsp;=&nbsp;ERB.new(content&nbsp;&nbsp;nil&nbsp;&#39;-&#39;)</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File.open(output_path&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f.write&nbsp;erb.result(binding)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
@@ -63,7 +63,7 @@ const Diary20190710: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
         <span className="code__with-order">&nbsp;&nbsp;end</span><br />
         <span className="code__with-order">end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">::SubDomain::GeneralDomain::Template.new(value&nbsp;&#39;src/components/router.tsx&#39;).render</span><br />
         <span className="code__with-order">dates_no_hyphen.each&nbsp;do&nbsp;|date_no_hyphen|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;::SubDomain::GeneralDomain::Template.new(value&nbsp;&quot;src/components/diary/diary#&#123;date_no_hyphen&#125;.tsx&quot;&nbsp;&#39;templates/src/components/diary/template.tsx.erb&#39;).render</span><br />
@@ -89,7 +89,7 @@ const Diary20190710: React.FC = () => {
         <span className="code__with-order">&lt;%-&nbsp;@value[:dates_no_hyphen].each&nbsp;do&nbsp;|date|&nbsp;-%&gt;</span><br />
         <span className="code__with-order">import&nbsp;Diary&lt;%=&nbsp;date&nbsp;%&gt;&nbsp;from&nbsp;&#39;components/diary/diary&lt;%=&nbsp;date&nbsp;%&gt;&#39;</span><br />
         <span className="code__with-order">&lt;%-&nbsp;end&nbsp;-%&gt;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Router:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;BrowserRouter&gt;</span><br />
@@ -105,7 +105,7 @@ const Diary20190710: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/BrowserRouter&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;)</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">export&nbsp;default&nbsp;Router</span><br />
         </code></p>
       <br /><br />
