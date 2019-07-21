@@ -36,18 +36,21 @@ module SubDomain
       def initialize(value = '', option = {})
         @value = value
         @option = option
-        parse_along_flow
       end
 
       def self.parse(value, option = {})
-        new(value, option).value
+        new(value, option).parse_along_flow
+        value
       end
 
       def parse_along_flow
+        # 文字エスケープ系
         escape_about_html unless option[:escape_about_html]
         escape_about_emoji unless option[:escape_about_emoji]
         return if option[:ignore_tag]
 
+        # タグ系
+        replace_br_tag
         replace_inline_code
         replace_h_tag
         return if @ignore_tag
@@ -57,9 +60,10 @@ module SubDomain
         replace_b_tag
         replace_i_tag
         replace_s_tag
-        replace_br_tag
         replace_q_tag
       end
+
+      private
 
       def escape_about_html
         @value.gsub!(/[#{ESCAPE_TABLE.keys}]/, ESCAPE_TABLE)
@@ -81,6 +85,7 @@ module SubDomain
 
       def replace_a_tag
         @value.gsub!(/\[([^\]][^\(]*)\]\(([^\)]*)\)/, '<a href={"\2"}>\1</a>')
+        @value.gsub!(/\[\]\(([^\)]*)\)/, '<a href={"\1"}>\1</a>')
       end
 
       def replace_b_tag

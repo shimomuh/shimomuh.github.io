@@ -53,6 +53,8 @@ module Domain
       render_tag
     end
 
+    private
+
     def prepare_variables
       @dates_with_hyphen = []
       @dates_no_hyphen = []
@@ -112,7 +114,7 @@ module Domain
     def render_diary(date_no_hyphen, lines)
       value = {
         date_no_hyphen: date_no_hyphen,
-        contents: ::SubDomain::GeneralDomain::StringArrayParser.parse(lines).values
+        contents: ::SubDomain::GeneralDomain::StringArrayParser.parse(lines)
       }
       insert_link_for_tag(value[:contents])
 

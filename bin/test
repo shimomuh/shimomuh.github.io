@@ -18,5 +18,8 @@ function stdout() {
 stdout "rubocop"
 bundle exec rubocop ruby/lib
 
+stdout "rspec"
+bundle exec rspec ruby/spec --format documentation
+
 stdout "tslint"
 npm run lint
