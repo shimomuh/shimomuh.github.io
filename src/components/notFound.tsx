@@ -7,6 +7,6 @@ const NotFound: React.FC = () => {
       <p>Not Found</p>
     </div>
   );
-}
+};
 
 export default NotFound;

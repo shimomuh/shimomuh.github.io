@@ -1,12 +1,12 @@
 import { Action } from 'typescript-fsa';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { State } from 'states/store';
+import { ICalendarState } from 'states/calendar';
 import { calendarActions } from 'actions/calendar';
 import Calendar from 'components/adventCalendar/calendar';
 import { CalendarModel } from 'models/calendar';
 
-export interface CalendarActions {
+export interface ICalendarActions {
   nextMonth: (model: CalendarModel) => Action<CalendarModel>;
   previousMonth: (model: CalendarModel) => Action<CalendarModel>;
 }
@@ -18,8 +18,8 @@ function mapDispatchToProps(dispatch: Dispatch<Action<CalendarModel>>) {
   };
 }
 
-function mapStateToProps(state: State) {
-  return Object.assign({}, state);
+function mapStateToProps(state: ICalendarState) {
+  return { ...state };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calendar);

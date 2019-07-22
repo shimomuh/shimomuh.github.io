@@ -9,6 +9,6 @@ const Index: React.FC = () => {
       <AdventCalendar />
     </div>
   );
-}
+};
 
 export default Index;

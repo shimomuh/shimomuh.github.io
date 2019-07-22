@@ -10,10 +10,10 @@
 // ]
 //
 class Calendar {
-  private today: Date;
-  public year: number;
-  public month: number;
   public dates: any;
+  public month: number;
+  public year: number;
+  private today: Date;
 
   constructor() {
     this.today = new Date();
@@ -66,7 +66,7 @@ class Calendar {
       lastMonthDateCount -= 1;
       if (index > 0) { recursiveCalcDate(index); }
       return;
-    }
+    };
     let nextMonthDateCount = 1;
 
     for (let i = 0; thisMonthDateCount <= thisMonthLastDate; i++) {
@@ -106,7 +106,7 @@ class DateCell {
     this.date = date.getDate();
     this.month = date.getMonth() + 1;
     this.year = date.getFullYear();
-    this.day = '日月火水木金土'.charAt(date.getDay())
+    this.day = '日月火水木金土'.charAt(date.getDay());
     this.isActive = isActive;
   }
 

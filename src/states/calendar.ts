@@ -1,26 +1,26 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { calendarActions } from 'actions/calendar';
-import { CalendarModel } from 'models/calendar'
+import { CalendarModel } from 'models/calendar';
 
-export interface CalendarState {
+export interface ICalendarState {
   calendar: CalendarModel;
-  year: number;
   month: number;
+  year: number;
 }
 
-const state: CalendarState = {
+const calendarState: ICalendarState = {
   calendar: new CalendarModel(),
-  year: new CalendarModel().year,
-  month: new CalendarModel().month
+  month: new CalendarModel().month,
+  year: new CalendarModel().year
 };
 
-export const calendarReducer = reducerWithInitialState(state)
+export const calendarReducer = reducerWithInitialState(calendarState)
   .case(calendarActions.returnToday, (state, model) => {
-    return Object.assign({}, state, { calendar: model.returnToday(), month: model.month, year: model.year  })
+    return { ...state, calendar: model.returnToday(), month: model.month, year: model.year };
   })
   .case(calendarActions.nextMonth, (state, model) => {
-    return Object.assign({}, state, { calendar: model.nextMonth(), month: model.month, year: model.year  })
+    return { ...state, calendar: model.nextMonth(), month: model.month, year: model.year };
   })
   .case(calendarActions.previousMonth, (state, model) => {
-    return Object.assign({}, state, { calendar: model.previousMonth(), month: model.month, year: model.year })
-  })
+    return { ...state, calendar: model.previousMonth(), month: model.month, year: model.year };
+  });
