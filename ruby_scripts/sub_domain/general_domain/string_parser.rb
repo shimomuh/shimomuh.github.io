@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # サブドメイン：コアドメインをサポートするドメインのうち
 #
 module SubDomain
@@ -16,7 +18,7 @@ module SubDomain
         '{' => '&#123;',
         '}' => '&#125;',
         ' ' => '&nbsp;'
-      }
+      }.freeze
 
       # see: http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html
       EMOJI_TABLE = {
@@ -27,7 +29,7 @@ module SubDomain
         ':ok_hand:' => '&#x1f44c;',
         ':\+1:'     => '&#x1f44d;',
         ':+1:'      => '&#x1f44d;'
-      }
+      }.freeze
 
       attr_reader :value, :option
 
@@ -45,9 +47,11 @@ module SubDomain
         escape_about_html unless option[:escape_about_html]
         escape_about_emoji unless option[:escape_about_emoji]
         return if option[:ignore_tag]
+
         replace_inline_code
         replace_h_tag
         return if @ignore_tag
+
         replace_img_tag
         replace_a_tag
         replace_b_tag

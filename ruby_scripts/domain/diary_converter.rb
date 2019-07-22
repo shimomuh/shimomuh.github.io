@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../sub_domain/general_domain/template'
 require_relative '../sub_domain/general_domain/string_array_parser'
 require 'json'
@@ -10,7 +12,11 @@ module Domain
   class DiaryConverter
     DIARY_PATH = 'diary/**/*.md'
 
-    attr_reader :diary_paths, :title_json_hash, :tag_json_hash, :diary_tag_json_hash, :diary_tag_icon_json_hash
+    attr_reader :diary_paths,
+                :title_json_hash,
+                :tag_json_hash,
+                :diary_tag_json_hash,
+                :diary_tag_icon_json_hash
 
     def initialize
       @diary_paths = Dir.glob(DIARY_PATH).sort
@@ -70,7 +76,8 @@ module Domain
     def prepare_tag_json
       @tags.each do |tag|
         next if @tag_json_hash.values.include?(tag)
-        @tag_json_hash["#{@tag_json_hash.values.size + 1}"] = tag
+
+        @tag_json_hash[(@tag_json_hash.values.size + 1).to_s] = tag
       end
     end
 
@@ -86,6 +93,7 @@ module Domain
       @tags.each do |tag|
         @tag_json_hash.each do |key, value|
           next unless value == tag
+
           @diary_tag_icon_json_hash[:"#{date_with_hyphen}"].push @tag_icon_json_hash[key]
         end
       end
@@ -115,10 +123,11 @@ module Domain
       tags = contents[2].split('&nbsp;')
       tags.each_with_index do |tag, index|
         next if index.zero?
-        matcher = tag.match /<span className="inline-code">(.+)<\/span>/
+
+        matcher = tag.match(%r{<span className="inline-code">(.+)<\/span>})
         name = matcher[1]
-        id = tag_json_hash.find { |k, v| v == name }[0]
-        tag.gsub!(/<span className="inline-code">(.+)<\/span>/, "<Link to='/tag/#{id}'><span className='inline-code'>#{$1}<\/span></Link>")
+        id = tag_json_hash.find { |_k, v| v == name }[0]
+        tag.gsub!(%r{<span className="inline-code">(.+)<\/span>}, "<Link to='/tag/#{id}'><span className='inline-code'>#{$1}<\/span></Link>") # rubocop:disable Style/PerlBackrefs
       end
       contents[2] = tags.join('&nbsp;')
     end

@@ -1,0 +1,41 @@
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# Ruby 2.3 から `# frozen_string_literal: true` とファイル先頭に書くと文字リテラルがデフォルトで freeze されるようになる
+# これは Ruby 3.0 で文字リテラルがデフォルトで freeze になる予定なので互換性の問題もあって移行シミュレーションが可能なように導入されている
+# 今回はあえて気にして true にしてみる
+# fyi: https://www.task-notes.com/entry/20160831/1472572735
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+# 本当はもっと小分けしたいがリファクタの時間はもったいないので諦める
+Metrics/ClassLength:
+  Max: 200
+
+# なんかめっちゃ長いのもあるので諦める
+Metrics/LineLength:
+  Max: 200
+
+# 割と危険度が高いと判断されたものも許容する
+Metrics/AbcSize:
+  Max: 50
+
+# メソッドの危険度（多分破壊的処理とかめっちゃやってるから怒られる）
+Metrics/PerceivedComplexity:
+  Max: 10
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+# メソッドの長さはある程度許容する
+Metrics/MethodLength:
+  Max: 30
+
+# JSON.load の代わりに JSON.parse 使えってことだったけどそうするとエラーなケースがあったのでひとまず回避
+Security/JSONLoad:
+  Enabled: false
+
+# ハッシュの key => value の値を列挙した時に value の位置が揃うように空白を入れたときに警告するもの
+# 可読性的には全然ありなので、 false にする
+Layout/AlignHash:
+  Enabled: false

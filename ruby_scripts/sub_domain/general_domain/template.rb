@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'erb'
 
 # サブドメイン：コアドメインをサポートするドメインのうち
@@ -14,12 +16,12 @@ module SubDomain
       def initialize(value, output_path, input_path = nil)
         @value = value
         @output_path = output_path
-        @input_path = input_path ? input_path : "templates/#{output_path}.erb"
+        @input_path = input_path || "templates/#{output_path}.erb"
       end
 
       def render
         content = File.read(File.expand_path(input_path))
-        erb = ERB.new(content,  nil, '-')
+        erb = ERB.new(content, trim_mode: '-')
 
         File.open(output_path, 'w') do |f|
           f.write erb.result(binding)
