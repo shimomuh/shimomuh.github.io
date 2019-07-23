@@ -27,18 +27,21 @@ module SubDomain
 
       def parse
         values.each do |value|
+          parser = ::SubDomain::GeneralDomain::StringParser.new(value)
           @return_code = false
+          parser.escape
           flag_table_tag(value)
           replace_code_block_tag_with_ignore_tag(value)
           replace_ul_or_li_tag(value)
           flag_br_tag
           next if @return_code
 
-          ::SubDomain::GeneralDomain::StringParser.parse(value, option)
+          parser.parse(value, option)
           check_h_tag(value)
           insert_code_number_tag(value)
           replace_li_tag(value)
           replace_table_tag(value)
+          parser.unescape
         end
         add_last_tag
       end

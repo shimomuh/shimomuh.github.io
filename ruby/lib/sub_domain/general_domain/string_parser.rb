@@ -42,11 +42,26 @@ module SubDomain
         @inline_code = []
         @a_tag = []
         @img_tag = []
+        @escape = []
       end
 
       def self.parse(value, option = {})
         new(value, option).parse_along_flow
         value
+      end
+
+      def parse(value, option = {})
+        @value = value
+        @option = option
+        parse_along_flow
+      end
+
+      def escape
+        mask_escape_with_backslash
+      end
+
+      def unescape
+        replace_escape_with_backslash
       end
 
       def parse_along_flow
@@ -75,6 +90,17 @@ module SubDomain
         @value.gsub!(/(#{EMOJI_TABLE.keys.join('|')})/, EMOJI_TABLE)
       end
 
+      def mask_escape_with_backslash
+        return if @escape.size > AVOID_STACK_LEVEL_TOO_DEEP
+
+        matcher = /\\(.)/.match(value)
+        return unless matcher
+
+        @escape.push(matcher[1])
+        @value.gsub!(matcher[0], "%ESCAPE#{@escape.size - 1}%")
+        mask_escape_with_backslash
+      end
+
       def mask_ignore_inner_tag
         mask_inline_code
         mask_img_tag
@@ -88,7 +114,7 @@ module SubDomain
         return unless matcher
 
         @inline_code.push(matcher[1])
-        @value.gsub!(matcher[0], "{CODE#{@inline_code.size - 1}}")
+        @value.gsub!(matcher[0], "%CODE#{@inline_code.size - 1}%")
         mask_inline_code
       end
 
@@ -104,7 +130,7 @@ module SubDomain
         return unless matcher
 
         @img_tag.push(src: matcher[2], alt: matcher[1])
-        @value.gsub!(matcher[0], "{IMG#{@img_tag.size - 1}}")
+        @value.gsub!(matcher[0], "%IMG#{@img_tag.size - 1}%")
         mask_include_alt_img_tag
       end
 
@@ -115,7 +141,7 @@ module SubDomain
         return unless matcher
 
         @img_tag.push(src: matcher[1], alt: '')
-        @value.gsub!(matcher[0], "{IMG#{@img_tag.size - 1}}")
+        @value.gsub!(matcher[0], "%IMG#{@img_tag.size - 1}%")
         mask_exclude_alt_img_tag
       end
 
@@ -131,7 +157,7 @@ module SubDomain
         return unless matcher
 
         @a_tag.push(href: matcher[2], text: matcher[1])
-        @value.gsub!(matcher[0], "{A#{@a_tag.size - 1}}")
+        @value.gsub!(matcher[0], "%A#{@a_tag.size - 1}%")
         mask_include_text_a_tag
       end
 
@@ -142,7 +168,7 @@ module SubDomain
         return unless matcher
 
         @a_tag.push(href: matcher[1], text: matcher[1])
-        @value.gsub!(matcher[0], "{A#{@a_tag.size - 1}}")
+        @value.gsub!(matcher[0], "%A#{@a_tag.size - 1}%")
         mask_exclude_text_a_tag
       end
 
@@ -191,19 +217,25 @@ module SubDomain
 
       def replace_inline_code
         @inline_code.each_with_index do |code, index|
-          @value.gsub!("{CODE#{index}}", "<span className=\"inline-code\">#{code}</span>")
+          @value.gsub!("%CODE#{index}%", "<span className=\"inline-code\">#{code}</span>")
         end
       end
 
       def replace_img_tag
         @img_tag.each_with_index do |img, index|
-          @value.gsub!("{IMG#{index}}", "<img src=\"#{img[:src]}\" alt=\"#{img[:alt]}\" />")
+          @value.gsub!("%IMG#{index}%", "<img src=\"#{img[:src]}\" alt=\"#{img[:alt]}\" />")
         end
       end
 
       def replace_a_tag
         @a_tag.each_with_index do |a, index|
-          @value.gsub!("{A#{index}}", "<a href=\"#{a[:href]}\">#{a[:text]}</a>")
+          @value.gsub!("%A#{index}%", "<a href=\"#{a[:href]}\">#{a[:text]}</a>")
+        end
+      end
+
+      def replace_escape_with_backslash
+        @escape.each_with_index do |esc, index|
+          @value.gsub!("%ESCAPE#{index}%", esc)
         end
       end
     end

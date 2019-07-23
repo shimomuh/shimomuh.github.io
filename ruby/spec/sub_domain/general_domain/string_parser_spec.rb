@@ -64,14 +64,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
         is_expected.to eq '文字なし``'
       end
     end
-
-    context '\ で無効化できる' do
-      let(:value) { '\`無効化\`' }
-
-      pending '置換されない' do
-        is_expected.to eq '\`無効化\`'
-      end
-    end
   end
 
   describe '.replace_img_tag' do
@@ -110,14 +102,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
       let(:value) { '![](url1)' }
       it 'alt はなしで置換される' do
         is_expected.to eq '<img src="url1" alt="" />'
-      end
-    end
-
-    context '\ で無効化できる' do
-      let(:value) { '\![alt1](url1)' }
-
-      pending '置換されない' do
-        is_expected.to eq '\![alt1](url1)'
       end
     end
   end
@@ -160,14 +144,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
         is_expected.to eq '<a href="url1">url1</a>'
       end
     end
-
-    context '\ で無効化できる' do
-      let(:value) { '\[name1](url1)' }
-
-      pending '置換されない' do
-        is_expected.to eq '\[name1](url1)'
-      end
-    end
   end
 
   describe '.replace_b_tag' do
@@ -188,14 +164,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
 
       it '置換されない' do
         is_expected.to eq '**あ'
-      end
-    end
-
-    context '\ で無効化できる' do
-      let(:value) { '\*あ*' }
-
-      pending '置換されない' do
-        is_expected.to eq '\*あ*'
       end
     end
   end
@@ -220,14 +188,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
         is_expected.to eq '__あ'
       end
     end
-
-    context '\ で無効化できる' do
-      let(:value) { '\_あ_' }
-
-      pending '置換されない' do
-        is_expected.to eq '\_あ_'
-      end
-    end
   end
 
   describe '.replace_s_tag' do
@@ -248,14 +208,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
 
       it '置換されない' do
         is_expected.to eq '~~あ'
-      end
-    end
-
-    context '\ で無効化できる' do
-      let(:value) { '\~あ~' }
-
-      pending '置換されない' do
-        is_expected.to eq '\~あ~'
       end
     end
   end
@@ -334,14 +286,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
         is_expected.to eq '&gt;&nbsp;'
       end
     end
-
-    context '\ で無効化できる' do
-      let(:value) { '\&gt;&nbsp;あ' }
-
-      it '置換されない' do
-        is_expected.to eq '\&gt;&nbsp;あ'
-      end
-    end
   end
 
   describe '.replace_h_tag' do
@@ -388,14 +332,6 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
         is_expected.to eq '##&nbsp;'
       end
     end
-
-    context '\ で無効化できる' do
-      let(:value) { '\#&nbsp;あ' }
-
-      it '置換されない' do
-        is_expected.to eq '\#&nbsp;あ'
-      end
-    end
   end
 
   describe '.parse_along_flow' do
@@ -425,6 +361,26 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
 
       it 'インラインコードとbrタグを除くタグ文法処理をしない' do
         is_expected.to eq '<h1><span className="inline-code">あいう[name](url)</span></h1>'
+      end
+    end
+  end
+
+  describe '.escape/.unescape' do
+    subject { instance.value }
+
+    before do
+      instance.escape
+      instance.parse_along_flow
+      instance.unescape
+    end
+
+    context 'エスケープした場合' do
+      let(:value) do
+        '\> 引用 \`code` \[](link) \![]\(img) \*あ* \_あ_ \~あ~'
+      end
+
+      it 'あらゆる文字を無効化する' do
+        is_expected.to eq '>&nbsp;引用&nbsp;`code`&nbsp;[](link)&nbsp;![](img)&nbsp;*あ*&nbsp;_あ_&nbsp;~あ~'
       end
     end
 
