@@ -11,16 +11,18 @@ module SubDomain
     # 文字列配列をパースするツール
     #
     class StringArrayParser
+      class ParserError < StandardError; end
+
       attr_reader :values, :option
 
       def initialize(values)
         @values = values
         @option = {}
-        parse
       end
 
       def self.parse(values)
-        new(values)
+        new(values).parse
+        values
       end
 
       def parse
@@ -29,7 +31,7 @@ module SubDomain
           flag_table_tag(value)
           replace_code_block_tag_with_ignore_tag(value)
           replace_ul_or_li_tag(value)
-          replace_br_tag
+          flag_br_tag
           next if @return_code
 
           ::SubDomain::GeneralDomain::StringParser.parse(value, option)
@@ -41,6 +43,8 @@ module SubDomain
         add_last_tag
       end
 
+      private
+
       def flag_table_tag(value)
         if @table
           if value =~ /^\|---\|/
@@ -48,6 +52,8 @@ module SubDomain
             value.gsub!(/^.*$/, '')
             @return_code = true # 一旦センタリングなどは考慮しない
           elsif value !~ /^\|([^\|])+\|/
+            raise ParserError unless @draw_table_body
+
             @end_table = true
             @table = false
             @draw_table_header = false
@@ -73,7 +79,7 @@ module SubDomain
           @ignore_below_br = true
         else
           option[:ignore_tag] = true
-          value.gsub!(/^```.*/, '<p className="code"><code>')
+          value.gsub!(/^```(.*)$/, '<p className="code \1"><code>')
           @code_block = true
           @return_code = true
         end
@@ -103,7 +109,7 @@ module SubDomain
         end
       end
 
-      def replace_br_tag
+      def flag_br_tag
         if @ignore_below_br && !@return_code # rubocop:disable Style/GuardClause
           @return_code = true
           @ignore_below_br = false
@@ -156,6 +162,8 @@ module SubDomain
           values[values.size - 1].gsub!(/^(.*)$/, '\1</ul>')
         end
         if @table && !@end_table # rubocop:disable Style/GuardClause
+          raise ParserError if !@draw_table_header || !@draw_table_body
+
           @table = false
           values[values.size - 1].gsub!(/^(.*)$/, '\1</table>')
         end

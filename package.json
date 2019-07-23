@@ -154,5 +154,6 @@
     "type": "git",
     "url": "git@github.com:shimomuh/shimomuh.github.io.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://shimomuh.github.io"
 }
