@@ -29,7 +29,7 @@ module SubDomain
         values.each do |value|
           parser = ::SubDomain::GeneralDomain::StringParser.new(value)
           @return_code = false
-          parser.escape
+          parser.escape unless @code_block
           flag_table_tag(value)
           replace_code_block_tag_with_ignore_tag(value)
           replace_ul_or_li_tag(value)
@@ -41,7 +41,7 @@ module SubDomain
           insert_code_number_tag(value)
           replace_li_tag(value)
           replace_table_tag(value)
-          parser.unescape
+          parser.unescape unless @code_block
         end
         add_last_tag
       end
