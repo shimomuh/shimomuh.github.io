@@ -23,7 +23,7 @@ const Diary20190712: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/b2150ce16dfd0c9132280e29d8bf0e267c5ecf4a"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/b2150ce16dfd0c9132280e29d8bf0e267c5ecf4a">→成果</a>
         <br />
         JSON&nbsp;吐き出しについてはタイトルのときと類似なので割愛して今回はエンドポイントの見直しについて少し触れる
         <br />

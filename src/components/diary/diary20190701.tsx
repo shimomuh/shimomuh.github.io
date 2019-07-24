@@ -22,7 +22,7 @@ const Diary20190701: React.FC = () => {
         
         カレンダー拡張にあたり、props&nbsp;を扱いたくなったが、<span className="inline-code">Type&nbsp;&#39;&#123;&nbsp;渡した変数:&nbsp;渡した変数の型;&nbsp;&#125;&#39;&nbsp;is&nbsp;not&nbsp;assignable&nbsp;to&nbsp;type&nbsp;&#39;IntrinsicAttributes&nbsp;&amp;&nbsp;&#123;&nbsp;children?:&nbsp;ReactNode;&nbsp;&#125;&#39;.</span>&nbsp;というエラーに阻まれた
         <br />
-        ちなみに、そもそもなぜ&nbsp;stateless&nbsp;function&nbsp;を採用しているかは&nbsp;<a href={"https://www.webprofessional.jp/optimizing-react-performance-stateless-components/"}>ステートレスなコンポーネントによるReactのパフォーマンス最適化</a>&nbsp;あたりを参照。
+        ちなみに、そもそもなぜ&nbsp;stateless&nbsp;function&nbsp;を採用しているかは&nbsp;<a href="https://www.webprofessional.jp/optimizing-react-performance-stateless-components/">ステートレスなコンポーネントによるReactのパフォーマンス最適化</a>&nbsp;あたりを参照。
         <br />
         <br />
         <h2>結果</h2>
@@ -32,19 +32,19 @@ const Diary20190701: React.FC = () => {
         <p className="code javqscript"><code>
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">import&nbsp;ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&lt;Props&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;props.value&#125;&lt;/p&gt;;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">ReactDOM.render(&lt;Component&nbsp;value=&quot;hoge&quot;&nbsp;/&gt;&nbsp;document.getElementById(&#39;#app&#39;));</span><br />
         </code></p>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/pull/7/commits/b635bb97bd4ccbad0c56bd9766dc907d2d18775f"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/pull/7/commits/b635bb97bd4ccbad0c56bd9766dc907d2d18775f">→成果</a>
         <br />
         <h2>過程</h2>
         
@@ -54,11 +54,11 @@ const Diary20190701: React.FC = () => {
         <span className="code__with-order">function&nbsp;App&nbsp;()&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;Component&nbsp;value=&#39;hoge&#39;&nbsp;/&gt;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">function&nbsp;Component(props:&nbsp;Props)&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;const&nbsp;&#123;&nbsp;value&nbsp;&#125;&nbsp;=&nbsp;props</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;value&nbsp;&#125;&lt;/p&gt;</span><br />
@@ -71,11 +71,11 @@ const Diary20190701: React.FC = () => {
         <span className="code__with-order">const&nbsp;App:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;Component&nbsp;value=&#39;hoge&#39;&nbsp;/&gt;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&nbsp;=&nbsp;(props:&nbsp;Props)&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;const&nbsp;&#123;&nbsp;value&nbsp;&#125;&nbsp;=&nbsp;props;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;value&nbsp;&#125;&lt;/p&gt;;</span><br />
@@ -92,7 +92,7 @@ const Diary20190701: React.FC = () => {
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&lt;Props&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;const&nbsp;&#123;&nbsp;value&nbsp;&#125;&nbsp;=&nbsp;props;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;value&nbsp;&#125;&lt;/p&gt;;</span><br />

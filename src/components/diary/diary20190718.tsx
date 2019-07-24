@@ -19,7 +19,7 @@ const Diary20190718: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/1c1fedc9afffdffed79f303545053cc809af7e57"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/1c1fedc9afffdffed79f303545053cc809af7e57">→成果</a>
         <br />
         以下のように表示される
         <br />

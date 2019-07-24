@@ -37,7 +37,7 @@ const Diary20190708: React.FC = () => {
         <ul><li>可読性が落ちない</li>
         <li>スマホかどうかを&nbsp;UA&nbsp;なんかで判断すると、特定端末がうまく拾えなくて死ぬ、みたいなケースを回避できる</li>
         </ul>
-        特に後者は悩みもので、昔&nbsp;Ruby&nbsp;on&nbsp;Rails&nbsp;の&nbsp;<a href={"https://github.com/jpmobile/jpmobile"}>jpmobile</a>&nbsp;という&nbsp;Gem&nbsp;を使って端末をサーバサイドで判断して出力先テンプレートを変えるということをしていたが、これだと後者の問題にひっかかる
+        特に後者は悩みもので、昔&nbsp;Ruby&nbsp;on&nbsp;Rails&nbsp;の&nbsp;<a href="https://github.com/jpmobile/jpmobile">jpmobile</a>&nbsp;という&nbsp;Gem&nbsp;を使って端末をサーバサイドで判断して出力先テンプレートを変えるということをしていたが、これだと後者の問題にひっかかる
         <br />
         &nbsp;
         <br />
@@ -49,7 +49,7 @@ const Diary20190708: React.FC = () => {
         <br />
         &nbsp;
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/842e8a628fc405d61bd6f2a6f7ee97098e8c95a7"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/842e8a628fc405d61bd6f2a6f7ee97098e8c95a7">→成果</a>
         <br />
         <img src="/static/diary/2019-07-08/responsive-plus-media-query.gif" alt="" />
         <br />
@@ -98,7 +98,7 @@ const Diary20190708: React.FC = () => {
         <span className="code__with-order">@media&nbsp;screen&nbsp;and&nbsp;(max-width:&nbsp;1024px)&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;.table-header&nbsp;&#123;&nbsp;display:&nbsp;none;&nbsp;&#125;&nbsp;/*&nbsp;テーブルレイアウト時のヘッダーにあたる曜日は隠す&nbsp;*/</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">/*&nbsp;PC&nbsp;サイズは少し工夫&nbsp;*/</span><br />
         <span className="code__with-order">@media&nbsp;screen&nbsp;and&nbsp;(min-width:&nbsp;1024px)&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;li&nbsp;span&nbsp;&#123;&nbsp;display:&nbsp;none;&nbsp;&#125;&nbsp;/*&nbsp;曜日は隠す&nbsp;*/</span><br />
@@ -118,9 +118,9 @@ const Diary20190708: React.FC = () => {
         <span className="code__with-order">&#125;</span><br />
         </code></p>
         
-        <ul><li>メディアクエリは&nbsp;<a href={"https://dev.classmethod.jp/smartphone/device-media-queries/"}>デバイスに合わせてCSSを振り分ける「Media&nbsp;Queries」</a></li>
+        <ul><li>メディアクエリは&nbsp;<a href="https://dev.classmethod.jp/smartphone/device-media-queries/">デバイスに合わせてCSSを振り分ける「Media&nbsp;Queries」</a></li>
         </ul>
-        <ul><li>flex&nbsp;レイアウトは<a href={"https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet"}>日本語対応！CSS&nbsp;Flexboxのチートシートを作ったので配布します&nbsp;|&nbsp;Web&nbsp;クリエイターボックス</a></li>
+        <ul><li>flex&nbsp;レイアウトは<a href="https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet">日本語対応！CSS&nbsp;Flexboxのチートシートを作ったので配布します&nbsp;|&nbsp;Web&nbsp;クリエイターボックス</a></li>
         </ul>
         あたりを参照するのがいいかな&nbsp;<s>（一部書き方忘れてた）</s>
         <br />

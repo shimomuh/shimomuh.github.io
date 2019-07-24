@@ -23,7 +23,7 @@ const Diary20190723: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/4aaf58453bc79eea53ca971eb4a07b5e240fd468"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/4aaf58453bc79eea53ca971eb4a07b5e240fd468">→成果</a>
         <br />
         <p className="code json"><code>
         <span className="code__with-order">&#123;</span><br />

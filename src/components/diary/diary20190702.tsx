@@ -25,7 +25,7 @@ const Diary20190702: React.FC = () => {
         
         <span className="inline-code">bin/remove-old-file.rb</span>&nbsp;に書いた
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/f192cd3c07421b48fea622633da4fe092a71c40b"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/f192cd3c07421b48fea622633da4fe092a71c40b">→成果</a>
         <br />
         愚直にパターンマッチングして対象のものを消すという処理
         <br />

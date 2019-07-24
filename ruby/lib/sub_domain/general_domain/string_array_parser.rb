@@ -71,14 +71,14 @@ module SubDomain
       def replace_code_block_tag_with_ignore_tag(value)
         return if value !~ /^```/
 
-        if option[:ignore_tag]
-          option[:ignore_tag] = false
+        if option[:code_block]
+          option[:code_block] = false
           value.gsub!(/^```.*/, '</code></p>')
           @code_block = false
           @return_code = true
           @ignore_below_br = true
         else
-          option[:ignore_tag] = true
+          option[:code_block] = true
           value.gsub!(/^```(.*)$/, '<p className="code \1"><code>')
           @code_block = true
           @return_code = true

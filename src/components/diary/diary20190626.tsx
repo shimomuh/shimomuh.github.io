@@ -30,7 +30,7 @@ const Diary20190626: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://qiita.com/kan_dai/items/b1850750b883f83b9bee"}>JavaScriptでカレンダーを自作したら勉強になった</a>
+        <a href="https://qiita.com/kan_dai/items/b1850750b883f83b9bee">JavaScriptでカレンダーを自作したら勉強になった</a>
         <br />
         <br />
         以上
@@ -40,7 +40,7 @@ const Diary20190626: React.FC = () => {
         <br />
         成果物以上の効果として、勘を取り戻しつつ課題がみつかるので進捗感が得られた
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/pull/2/commits/3e483e1c8ace75af061ee36fb071d0507b01f08a"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/pull/2/commits/3e483e1c8ace75af061ee36fb071d0507b01f08a">→成果</a>
         <br />
         <h2>過程</h2>
         
@@ -82,7 +82,7 @@ const Diary20190626: React.FC = () => {
         <br />
         参考にしたのはこのあたり
         <br />
-        <a href={"https://qiita.com/nju33/items/cf924f7b6bb513bef8a2"}>TypeScriptでaliasなパスでmoduleをimportできるように</a>
+        <a href="https://qiita.com/nju33/items/cf924f7b6bb513bef8a2">TypeScriptでaliasなパスでmoduleをimportできるように</a>
         <br />
         <h3>ロジックを書く</h3>
         
@@ -128,7 +128,7 @@ const Diary20190626: React.FC = () => {
         <p className="code javascript"><code>
         <span className="code__with-order">class&nbsp;Calendar&nbsp;&#123;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">export&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;CalendarModel&nbsp;&#125;;</span><br />
         </code></p>
         
@@ -137,15 +137,15 @@ const Diary20190626: React.FC = () => {
         <p className="code javascript"><code>
         <span className="code__with-order">//&nbsp;src/models/calendar.tsx</span><br />
         <span className="code__with-order">export&nbsp;class&nbsp;Calendar&nbsp;&#123;&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">//&nbsp;src/components/adventCalendar/calendar.tsx</span><br />
         <span className="code__with-order">import&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;Model&nbsp;&#125;&nbsp;from&nbsp;&#39;models/calendar&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">export&nbsp;const&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;var&nbsp;model&nbsp;=&nbsp;new&nbsp;Model();</span><br />
         <span className="code__with-order">&nbsp;&nbsp;//&nbsp;...(略)...</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         </code></p>
         
         みたいな感じにしたかったが、うまい方法が見つからず今は前者を選んでいる

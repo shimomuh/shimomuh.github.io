@@ -36,7 +36,10 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
   describe '.replace_inline_code' do
     subject { instance.value }
 
-    before { instance.send(:replace_inline_code) }
+    before do
+      instance.send(:mask_inline_code)
+      instance.send(:replace_inline_code)
+    end
 
     context '1行に複数のインラインコードを含む場合' do
       let(:value) { '`ここはインライン``ここもインライン`' }
@@ -74,7 +77,10 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
   describe '.replace_img_tag' do
     subject { instance.value }
 
-    before { instance.send(:replace_img_tag) }
+    before do
+      instance.send(:mask_img_tag)
+      instance.send(:replace_img_tag)
+    end
 
     context '1行に複数の画像文法を含む場合' do
       let(:value) { '![alt1](url1) ![alt2](url2)' }
@@ -119,13 +125,16 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
   describe '.replace_a_tag' do
     subject { instance.value }
 
-    before { instance.send(:replace_a_tag) }
+    before do
+      instance.send(:mask_a_tag)
+      instance.send(:replace_a_tag)
+    end
 
     context '1行に複数のリンク文法を含む場合' do
       let(:value) { '[name1](url1) [name2](url2)' }
 
       it '全て置換される' do
-        is_expected.to eq '<a href={"url1"}>name1</a> <a href={"url2"}>name2</a>'
+        is_expected.to eq '<a href="url1">name1</a> <a href="url2">name2</a>'
       end
     end
 
@@ -133,7 +142,7 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
       let(:value) { '[[爆笑]このリンクを見るべし！](url1)' }
 
       it '[] を正しく認識し置換する' do
-        is_expected.to eq '<a href={"url1"}>[爆笑]このリンクを見るべし！</a>'
+        is_expected.to eq '<a href="url1">[爆笑]このリンクを見るべし！</a>'
       end
     end
 
@@ -148,7 +157,7 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
     context 'リンク名がない場合' do
       let(:value) { '[](url1)' }
       it 'リンクをリンク名として置換される' do
-        is_expected.to eq '<a href={"url1"}>url1</a>'
+        is_expected.to eq '<a href="url1">url1</a>'
       end
     end
 
@@ -251,10 +260,10 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
     end
   end
 
-  describe '.replace_br_tag' do
+  describe '.br_tag_if_blank' do
     subject { instance.value }
 
-    before { instance.send(:replace_br_tag) }
+    before { instance.send(:br_tag_if_blank) }
 
     context '空だった場合' do
       let(:value) { '' }
@@ -394,12 +403,12 @@ RSpec.describe SubDomain::GeneralDomain::StringParser do
 
     before { instance.parse_along_flow }
 
-    context 'option[:ignore_tag] が true の場合' do
-      let(:option) { { ignore_tag: true } }
+    context 'option[:code_block] が true の場合' do
+      let(:option) { { code_block: true } }
       let(:value) { '# ` &:tada:`' }
 
-      it 'エスケープと絵文字変換だけしてタグ系の変換は何もしない' do
-        is_expected.to eq '#&nbsp;`&nbsp;&amp;&#x1f389;`'
+      it 'エスケープだけしてタグ系の変換は何もしない' do
+        is_expected.to eq '#&nbsp;`&nbsp;&amp;:tada:`'
       end
     end
 

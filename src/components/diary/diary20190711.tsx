@@ -26,7 +26,7 @@ const Diary20190711: React.FC = () => {
         <br />
         <h2>成果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/4c87dbb180a1c008e266b77a0bb858d4f7278c15"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/4c87dbb180a1c008e266b77a0bb858d4f7278c15">→成果</a>
         <br />
         yield&nbsp;周りについてはググってもらうとして、以下のようにすることでモデルのテストで標準出力を無視できるよという話
         <br />
@@ -36,7 +36,7 @@ const Diary20190711: React.FC = () => {
         <span className="code__with-order">class&nbsp;Model</span><br />
         <span className="code__with-order">&nbsp;&nbsp;def&nbsp;initialize</span><br />
         <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;def&nbsp;exec</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;...(なんか処理)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;puts&nbsp;&#39;exec!&#39;</span><br />
@@ -60,7 +60,7 @@ const Diary20190711: React.FC = () => {
         <span className="code__with-order">class&nbsp;Model</span><br />
         <span className="code__with-order">&nbsp;&nbsp;def&nbsp;initialize</span><br />
         <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&nbsp;&nbsp;def&nbsp;exec</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;&#39;exec!&#39;&nbsp;if&nbsp;given_block?</span><br />
         <span className="code__with-order">&nbsp;&nbsp;end</span><br />

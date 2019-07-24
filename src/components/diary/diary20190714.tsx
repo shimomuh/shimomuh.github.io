@@ -39,7 +39,7 @@ const Diary20190714: React.FC = () => {
         <br />
         今回は以下のような感じ
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/a8a1acd8691635107bbf7a7209301911dc5df89c"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/a8a1acd8691635107bbf7a7209301911dc5df89c">→成果</a>
         <br />
         <p className="code bash"><code>
         <span className="code__with-order">npm&nbsp;i&nbsp;--save-dev&nbsp;lodash.template@4.5.0</span><br />

@@ -87,7 +87,7 @@ RSpec.describe SubDomain::GeneralDomain::StringArrayParser do
 
         it 'タグは適応される' do
           is_expected.to eq [
-            '<table><tr><th><a href={"https://..."}>link</a></th><th><b>太字</b></th></tr>',
+            '<table><tr><th><a href="https://...">link</a></th><th><b>太字</b></th></tr>',
             '',
             '<tr><td><img src="img" alt="" /></td><td><s>否定線</s></td></tr></table>'
           ]
@@ -426,7 +426,7 @@ RSpec.describe SubDomain::GeneralDomain::StringArrayParser do
 
         it 'タグは適応される' do
           is_expected.to eq [
-            '<ul><li><a href={"https://..."}>link</a></li>',
+            '<ul><li><a href="https://...">link</a></li>',
             '<li><b>太字A</b></li>',
             '<li><b>太字B</b></li>',
             '<li><img src="img" alt="" /></li>',

@@ -23,15 +23,15 @@ const Diary20190705: React.FC = () => {
         <br />
         そこで、対処したかったが、できれば&nbsp;BrowerHistory&nbsp;の代わりに&nbsp;HashHistory&nbsp;は使いたくなかった
         <br />
-        そこで、slack&nbsp;overflow&nbsp;の&nbsp;<a href={"https://stackoverflow.com/questions/46056414/getting-404-for-links-with-create-react-app-deployed-to-github-pages"}>getting&nbsp;404&nbsp;for&nbsp;links&nbsp;with&nbsp;create-react-app&nbsp;deployed&nbsp;to&nbsp;github&nbsp;pages</a>&nbsp;を参考にさせてもらった&nbsp;&#x1f64f;
+        そこで、slack&nbsp;overflow&nbsp;の&nbsp;<a href="https://stackoverflow.com/questions/46056414/getting-404-for-links-with-create-react-app-deployed-to-github-pages">getting&nbsp;404&nbsp;for&nbsp;links&nbsp;with&nbsp;create-react-app&nbsp;deployed&nbsp;to&nbsp;github&nbsp;pages</a>&nbsp;を参考にさせてもらった&nbsp;&#x1f64f;
         <br />
         <h2>結果</h2>
         
         Github&nbsp;Pages&nbsp;の特性を使って問題を解決した。
         <br />
-        <a href={"(https://github.com/shimomuh/shimomuh.github.io/commit/61fa7ddc9a16f187d94260293f962238350a098b"}>→成果</a>
+        <a href="(https://github.com/shimomuh/shimomuh.github.io/commit/61fa7ddc9a16f187d94260293f962238350a098b">→成果</a>
         <br />
-        結論だけ言うと&nbsp;stack&nbsp;overflow&nbsp;のリンクにあった&nbsp;<a href={"https://github.com/rafrex/spa-github-pages"}>spa-github-pages&nbsp;-&nbsp;Github</a>&nbsp;をコピペしただけなのだが、それだけだとあまりにも味気ないので、スクリプトの解説とそもそもなぜこれでいけるのかについて説明する。
+        結論だけ言うと&nbsp;stack&nbsp;overflow&nbsp;のリンクにあった&nbsp;<a href="https://github.com/rafrex/spa-github-pages">spa-github-pages&nbsp;-&nbsp;Github</a>&nbsp;をコピペしただけなのだが、それだけだとあまりにも味気ないので、スクリプトの解説とそもそもなぜこれでいけるのかについて説明する。
         <br />
         <h2>過程</h2>
         
@@ -143,7 +143,7 @@ const Diary20190705: React.FC = () => {
         <br />
         これによって、パス的には&nbsp;<span className="inline-code">xxx.github.io</span>&nbsp;にクエリ付きパラメータでアクセスしたのと一緒になるのでルートに飛ばされるという寸法である
         <br />
-        ~これと&nbsp;<span className="inline-code">HashHistory</span>&nbsp;どっちが好みかは意見が割れそうだが~
+        <s>これと&nbsp;<span className="inline-code">HashHistory</span>&nbsp;どっちが好みかは意見が割れそうだが</s>
         <br />
         &nbsp;
         <br />

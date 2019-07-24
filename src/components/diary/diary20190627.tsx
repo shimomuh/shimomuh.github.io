@@ -62,11 +62,11 @@ const Diary20190627: React.FC = () => {
         
         あとはいつも通りの&nbsp;scss&nbsp;ライフが送れます&nbsp;&#x1f389;
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/pull/3/commits/0c66d7360925c15c9cdea7d51a33cf0d01695cae"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/pull/3/commits/0c66d7360925c15c9cdea7d51a33cf0d01695cae">→成果</a>
         <br />
         <h2>参考</h2>
         
-        <ul><li><a href={"https://qiita.com/yikeda6616/items/0e31a920d533d70c0bd9"}>create-react-appでSassやCSS-moduleを使う方法</a></li></ul>
+        <ul><li><a href="https://qiita.com/yikeda6616/items/0e31a920d533d70c0bd9">create-react-appでSassやCSS-moduleを使う方法</a></li></ul>
       <br /><br />
       <div>
         <Link to='/'>戻る</Link>

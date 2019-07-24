@@ -19,7 +19,7 @@ const Diary20190719: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/05c7e8ae1e11488359d72d692f8c4ac4cb8a8121"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/05c7e8ae1e11488359d72d692f8c4ac4cb8a8121">→成果</a>
         <br />
         サイトTOPの記事のタイトルだけではわからないのでタグを表現する方法としてアイコンを採用した
         <br />

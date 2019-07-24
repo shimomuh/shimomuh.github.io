@@ -33,7 +33,7 @@ const Diary20190629: React.FC = () => {
         <br />
         でも基盤を作ってしまえばあとは&nbsp;bugfix&nbsp;なりリファクタして汎用的に作ったりするだけなので後悔はしていない
         <br />
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/pull/5/commits/b8218234437c1d3da57ace0b253deb8318cc1740"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/pull/5/commits/b8218234437c1d3da57ace0b253deb8318cc1740">→成果</a>
         <br />
         <h2>過程</h2>
         
@@ -51,7 +51,7 @@ const Diary20190629: React.FC = () => {
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">import&nbsp;Index1&nbsp;from&nbsp;&#39;./index1&#39;;</span><br />
         <span className="code__with-order">import&nbsp;Index2&nbsp;from&nbsp;&#39;./index2&#39;;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
@@ -60,7 +60,7 @@ const Diary20190629: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">export&nbsp;default&nbsp;Root;</span><br />
         </code></p>
         
@@ -70,24 +70,24 @@ const Diary20190629: React.FC = () => {
         <span className="code__with-order">cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&nbsp;src/root.tsx</span><br />
         <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">EOS</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">for&nbsp;i&nbsp;in&nbsp;(1&nbsp;2)</span><br />
         <span className="code__with-order">do</span><br />
         <span className="code__with-order">&nbsp;&nbsp;echo&nbsp;&quot;import&nbsp;Index$&#123;i&#125;&nbsp;from&nbsp;&#39;./index$&#123;i&#125;&#39;;&quot;&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
         <span className="code__with-order">done</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
         <span className="code__with-order">const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
         <span className="code__with-order">EOS</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;...</span><br />
         </code></p>
         
         <i>これはひどい</i>
         <br />
-        <a href={"https://qiita.com/take4s5i/items/e207cee4fb04385a9952"}>bashのヒアドキュメントを活用する</a>&nbsp;とかみるとまだマシにかけるかもしれない（が、諦めた）
+        <a href="https://qiita.com/take4s5i/items/e207cee4fb04385a9952">bashのヒアドキュメントを活用する</a>&nbsp;とかみるとまだマシにかけるかもしれない（が、諦めた）
         <br />
         その結果&nbsp;erb&nbsp;を使うことにした
         <br />
@@ -103,7 +103,7 @@ const Diary20190629: React.FC = () => {
         <span className="code__with-order">&lt;%-&nbsp;[1&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;</span><br />
         <span className="code__with-order">import&nbsp;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;from&nbsp;&#39;./index&lt;%=&nbsp;i&nbsp;%&gt;&#39;;</span><br />
         <span className="code__with-order">&lt;%-&nbsp;end&nbsp;-%&gt;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
@@ -113,10 +113,10 @@ const Diary20190629: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">export&nbsp;default&nbsp;Root;</span><br />
         <span className="code__with-order">EOS</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">erb&nbsp;=&nbsp;ERB.new(template&nbsp;nil&nbsp;&#39;-&#39;)</span><br />
         <span className="code__with-order">File.open(&#39;src/root.tsx&#39;&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;f.write&nbsp;erb.result(binding)</span><br />
@@ -125,7 +125,7 @@ const Diary20190629: React.FC = () => {
         
         これで元のテンプレートがどんなのだったかもわからなくなるくらい壊滅的な書き方にならなくてハッピー！
         <br />
-        <a href={"http://mukaer.com/archives/2013/06/05/rubyerb/"}>Rubyでテキストにコードを埋め込む。|ERBでテンプレート利用</a>&nbsp;を参考に。
+        <a href="http://mukaer.com/archives/2013/06/05/rubyerb/">Rubyでテキストにコードを埋め込む。|ERBでテンプレート利用</a>&nbsp;を参考に。
         <br />
         <h3>ファイルの読み込み/書き込み、ファイル取得</h3>
         
@@ -134,8 +134,8 @@ const Diary20190629: React.FC = () => {
         <br />
         <h4>bash&nbsp;でやってた&nbsp;cat&nbsp;や&nbsp;&gt;&gt;&nbsp;の代用</h4>
         
-        <ul><li><a href={"https://uxmilk.jp/22615"}>Rubyでファイルの書き込み・読み込みを行う方法</a></li>
-        <li><a href={"https://www.buildinsider.net/language/rubytips/0021"}>ファイルから1行／段落ごと読み込む（入力する）には？</a></li>
+        <ul><li><a href="https://uxmilk.jp/22615">Rubyでファイルの書き込み・読み込みを行う方法</a></li>
+        <li><a href="https://www.buildinsider.net/language/rubytips/0021">ファイルから1行／段落ごと読み込む（入力する）には？</a></li>
         </ul>
         <h3>文字エスケープ</h3>
         
@@ -143,7 +143,7 @@ const Diary20190629: React.FC = () => {
         <br />
         というわけで、文字のエスケープについてだが、&nbsp;<span className="inline-code">cgi/escape</span>&nbsp;なんてものもあるけど、後述の絵文字対応のときに備えて自前で実装した
         <br />
-        ほぼ&nbsp;<a href={"https://qiita.com/scivola/items/b2d749a5a720f9eb02b1"}>素の&nbsp;Ruby&nbsp;で&nbsp;HTML&nbsp;エスケープするなら&nbsp;cgi/escapeが最強</a>&nbsp;を丸パクリ
+        ほぼ&nbsp;<a href="https://qiita.com/scivola/items/b2d749a5a720f9eb02b1">素の&nbsp;Ruby&nbsp;で&nbsp;HTML&nbsp;エスケープするなら&nbsp;cgi/escapeが最強</a>&nbsp;を丸パクリ
         <br />
         <s>最強と言う人を裏切る勇気</s>
         <br />
@@ -164,7 +164,7 @@ const Diary20190629: React.FC = () => {
         <br />
         ちなみに一番時間を食ったのがこの正規表現かもしれない
         <br />
-        <a href={"https://qiita.com/anqooqie/items/191ad215e93237c77811"}>[正規表現]&nbsp;.*?は最短マッチではない</a>
+        <a href="https://qiita.com/anqooqie/items/191ad215e93237c77811">[正規表現]&nbsp;.*?は最短マッチではない</a>
         <br />
         こういうのまじ助かりました&nbsp;&#x1f647;
         <br />
@@ -184,13 +184,13 @@ const Diary20190629: React.FC = () => {
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">EMOJI_TABLE&nbsp;=&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#39;&#x1f389;&#39;&nbsp;=&gt;&nbsp;&#39;&amp;#x1f389;&#39;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&#39;:tada:&#39;&nbsp;=&gt;&nbsp;&#39;&amp;#x1f389;&#39;</span><br />
         <span className="code__with-order">&#125;</span><br />
-        <span className="code__with-order"></span><br />
-        <span className="code__with-order">&quot;おめでとう&nbsp;&#x1f389;&quot;.gsub(/&#x1f389;/&nbsp;EMOJI_TABLE)</span><br />
+        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order">&quot;おめでとう&nbsp;:tada:&quot;.gsub(/:tada:/&nbsp;EMOJI_TABLE)</span><br />
         </code></p>
         
-        絵文字のコードは&nbsp;<a href={"http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html"}>主な特殊文字の文字コード&nbsp;-&nbsp;Guppy</a>&nbsp;を参考に。
+        絵文字のコードは&nbsp;<a href="http://guppy.eng.kagawa-u.ac.jp/~kagawa/OpenCampus/unicode.html">主な特殊文字の文字コード&nbsp;-&nbsp;Guppy</a>&nbsp;を参考に。
       <br /><br />
       <div>
         <Link to='/'>戻る</Link>

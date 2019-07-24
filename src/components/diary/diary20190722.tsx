@@ -25,7 +25,7 @@ const Diary20190722: React.FC = () => {
         <br />
         <h2>結果</h2>
         
-        <a href={"https://github.com/shimomuh/shimomuh.github.io/commit/b0bfa1f4c30137969d1bdc0d22f59b424946258b"}>→成果</a>
+        <a href="https://github.com/shimomuh/shimomuh.github.io/commit/b0bfa1f4c30137969d1bdc0d22f59b424946258b">→成果</a>
         <br />
         ぶっちゃけ初めから入れとこうに尽きる
         <br />
@@ -35,40 +35,40 @@ const Diary20190722: React.FC = () => {
         <span className="code__with-order">#&nbsp;日本語のコメントを許可する</span><br />
         <span className="code__with-order">Style/AsciiComments:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Enabled:&nbsp;false</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;Ruby&nbsp;2.3&nbsp;から&nbsp;`#&nbsp;frozen_string_literal:&nbsp;true`&nbsp;とファイル先頭に書くと文字リテラルが&gt;デフォルトで&nbsp;freeze&nbsp;されるようになる</span><br />
         <span className="code__with-order">#&nbsp;これは&nbsp;Ruby&nbsp;3.0&nbsp;で文字リテラルがデフォルトで&nbsp;freeze&nbsp;になる予定なので互換性の問題も&gt;あって移行シミュレーションが可能なように導入されている</span><br />
         <span className="code__with-order">#&nbsp;今回はあえて気にして&nbsp;true&nbsp;にしてみる</span><br />
         <span className="code__with-order">#&nbsp;fyi:&nbsp;https://www.task-notes.com/entry/20160831/1472572735</span><br />
         <span className="code__with-order">Style/FrozenStringLiteralComment:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Enabled:&nbsp;true</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;本当はもっと小分けしたいがリファクタの時間はもったいないので諦める</span><br />
         <span className="code__with-order">Metrics/ClassLength:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Max:&nbsp;200</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;なんかめっちゃ長いのもあるので諦める</span><br />
         <span className="code__with-order">Metrics/LineLength:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Max:&nbsp;200</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;割と危険度が高いと判断されたものも許容する</span><br />
         <span className="code__with-order">Metrics/AbcSize:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Max:&nbsp;50</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;メソッドの危険度（多分破壊的処理とかめっちゃやってるから怒られる）</span><br />
         <span className="code__with-order">Metrics/PerceivedComplexity:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Max:&nbsp;10</span><br />
         <span className="code__with-order">Metrics/CyclomaticComplexity:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Max:&nbsp;10</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;メソッドの長さはある程度許容する</span><br />
         <span className="code__with-order">Metrics/MethodLength:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Max:&nbsp;30</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;JSON.load&nbsp;の代わりに&nbsp;JSON.parse&nbsp;使えってことだったけどそうするとエラーなケースがあ&gt;ったのでひとまず回避</span><br />
         <span className="code__with-order">Security/JSONLoad:</span><br />
         <span className="code__with-order">&nbsp;&nbsp;Enabled:&nbsp;false</span><br />
-        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;ハッシュの&nbsp;key&nbsp;=&gt;&nbsp;value&nbsp;の値を列挙した時に&nbsp;value&nbsp;の位置が揃うように空白を入れたとき</span><br />
         <span className="code__with-order">に警告するもの</span><br />
         <span className="code__with-order">#&nbsp;可読性的には全然ありなので、&nbsp;false&nbsp;にする</span><br />
