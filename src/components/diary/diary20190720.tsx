@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190720: React.FC = () => {
   return (
@@ -30,23 +31,23 @@ const Diary20190720: React.FC = () => {
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">#&nbsp;正規表現で対応するファイルを決める</span><br />
         <span className="code__with-order">#&nbsp;sort&nbsp;しているのは&nbsp;Dir.glob&nbsp;が順序を保証しないため</span><br />
-        <span className="code__with-order">image_file_paths&nbsp;=&nbsp;Dir.glob(&#39;diary/**/*\.&#123;pngjpgjpeggifsvg&#125;&#39;).sort</span><br />
+        <span className="code__with-order">image_file_paths&nbsp;=&nbsp;Dir.glob(&#39;diary/**/*\.<span className="syntax--braces">&#123;</span>pngjpgjpeggifsvg<span className="syntax--braces">&#125;</span>&#39;).sort</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">dirs&nbsp;=&nbsp;[]</span><br />
-        <span className="code__with-order">files&nbsp;=&nbsp;[]</span><br />
-        <span className="code__with-order">Dir.glob(&#39;diary/**/*\.&#123;pngjpgjpeggifsvg&#125;&#39;)&nbsp;do&nbsp;|f|&nbsp;#&nbsp;はじめにファイルを読み込み</span><br />
+        <span className="code__with-order">dirs&nbsp;=&nbsp;<span className="syntax--brackets">[</span><span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">files&nbsp;=&nbsp;<span className="syntax--brackets">[</span><span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">Dir.glob(&#39;diary/**/*\.<span className="syntax--braces">&#123;</span>pngjpgjpeggifsvg<span className="syntax--braces">&#125;</span>&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|&nbsp;#&nbsp;はじめにファイルを読み込み</span><br />
         <span className="code__with-order">&nbsp;&nbsp;files.push&nbsp;f</span><br />
         <span className="code__with-order">&nbsp;&nbsp;dirs.push&nbsp;File.dirname(f)</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">dirs.uniq.sort.each&nbsp;do&nbsp;|dir|</span><br />
+        <span className="code__with-order">dirs.uniq.sort.each<span className="syntax--do">&nbsp;do</span>&nbsp;|dir|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;puts&nbsp;dir</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;FileUtils.mkdir_p(&quot;public/static/#&#123;dir&#125;&quot;)&nbsp;#&nbsp;存在しないディレクトリにコピーしないように&nbsp;mkdir&nbsp;-p&nbsp;して</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;FileUtils.mkdir_p(&quot;public/static/#<span className="syntax--braces">&#123;</span>dir<span className="syntax--braces">&#125;</span>&quot;)&nbsp;#&nbsp;存在しないディレクトリにコピーしないように&nbsp;mkdir&nbsp;-p&nbsp;して</span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">files.each&nbsp;do&nbsp;|file|</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;FileUtils.cp&nbsp;file&nbsp;&quot;public/static/#&#123;file&#125;&quot;&nbsp;#&nbsp;ファイルをコピーする</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order">files.each<span className="syntax--do">&nbsp;do</span>&nbsp;|file|</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;FileUtils.cp&nbsp;file&nbsp;&quot;public/static/#<span className="syntax--braces">&#123;</span>file<span className="syntax--braces">&#125;</span>&quot;&nbsp;#&nbsp;ファイルをコピーする</span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
       <br /><br />
       <div>

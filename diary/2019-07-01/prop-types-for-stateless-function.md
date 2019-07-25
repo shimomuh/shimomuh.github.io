@@ -18,7 +18,7 @@
 
 React.FC にうまいこと型宣言してあげる
 
-```javqscript
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 

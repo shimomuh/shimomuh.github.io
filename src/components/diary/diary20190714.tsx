@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190714: React.FC = () => {
   return (

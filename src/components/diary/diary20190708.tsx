@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190708: React.FC = () => {
   return (
@@ -95,27 +96,27 @@ const Diary20190708: React.FC = () => {
         <br />
         <p className="code css"><code>
         <span className="code__with-order">/*&nbsp;スマホサイズはそのまま&nbsp;*/</span><br />
-        <span className="code__with-order">@media&nbsp;screen&nbsp;and&nbsp;(max-width:&nbsp;1024px)&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;.table-header&nbsp;&#123;&nbsp;display:&nbsp;none;&nbsp;&#125;&nbsp;/*&nbsp;テーブルレイアウト時のヘッダーにあたる曜日は隠す&nbsp;*/</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--media">@media&nbsp;</span>screen&nbsp;and&nbsp;(max-width:&nbsp;1024px)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;.table-header&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;display:&nbsp;none;&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;/*&nbsp;テーブルレイアウト時のヘッダーにあたる曜日は隠す&nbsp;*/</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">/*&nbsp;PC&nbsp;サイズは少し工夫&nbsp;*/</span><br />
-        <span className="code__with-order">@media&nbsp;screen&nbsp;and&nbsp;(min-width:&nbsp;1024px)&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;li&nbsp;span&nbsp;&#123;&nbsp;display:&nbsp;none;&nbsp;&#125;&nbsp;/*&nbsp;曜日は隠す&nbsp;*/</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;ul&nbsp;&#123;</span><br />
+        <span className="code__with-order"><span className="syntax--media">@media&nbsp;</span>screen&nbsp;and&nbsp;(min-width:&nbsp;1024px)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;li&nbsp;span&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;display:&nbsp;none;&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;/*&nbsp;曜日は隠す&nbsp;*/</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;ul&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;&nbsp;/*&nbsp;flex&nbsp;style&nbsp;を使う&nbsp;*/</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;flex-wrap:&nbsp;wrap;&nbsp;/*&nbsp;いい塩梅で折り返す&nbsp;*/</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;li&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;li&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;14%;&nbsp;/*&nbsp;(int)(100&nbsp;/&nbsp;7)&nbsp;=&nbsp;14&nbsp;*/</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:nth-child(7n&nbsp;+&nbsp;1)&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:nth-child(7n&nbsp;+&nbsp;1)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;&nbsp;/*&nbsp;日曜&nbsp;*/</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:nth-child(7n)&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:nth-child(7n)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;blue;&nbsp;/*&nbsp;土曜&nbsp;*/</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         <ul><li>メディアクエリは&nbsp;<a href="https://dev.classmethod.jp/smartphone/device-media-queries/">デバイスに合わせてCSSを振り分ける「Media&nbsp;Queries」</a></li>
@@ -127,12 +128,12 @@ const Diary20190708: React.FC = () => {
         ポイントは
         <br />
         <p className="code css"><code>
-        <span className="code__with-order">.parent&nbsp;&#123;</span><br />
+        <span className="code__with-order">.parent&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;flex-wrap:&nbsp;wrap;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;.children&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;.children&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;14%;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         の部分

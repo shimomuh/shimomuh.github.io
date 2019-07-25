@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190627: React.FC = () => {
   return (
@@ -38,15 +39,15 @@ const Diary20190627: React.FC = () => {
         <p className="code "><code>
         <span className="code__with-order">src</span><br />
         <span className="code__with-order">├──&nbsp;components</span><br />
-        <span className="code__with-order">│  &nbsp;├──&nbsp;adventCalendar</span><br />
-        <span className="code__with-order">│  &nbsp;│  &nbsp;├──&nbsp;calendar.css&nbsp;-&gt;&nbsp;calendar.scss</span><br />
-        <span className="code__with-order">│  &nbsp;│  &nbsp;├──&nbsp;calendar.tsx</span><br />
+        <span className="code__with-order">│  &nbsp;├──&nbsp;adventCal<span className="syntax--end">end</span>ar</span><br />
+        <span className="code__with-order">│  &nbsp;│  &nbsp;├──&nbsp;cal<span className="syntax--end">end</span>ar.css&nbsp;-&gt;&nbsp;cal<span className="syntax--end">end</span>ar.scss</span><br />
+        <span className="code__with-order">│  &nbsp;│  &nbsp;├──&nbsp;cal<span className="syntax--end">end</span>ar.tsx</span><br />
         <span className="code__with-order">│  &nbsp;│  &nbsp;└──&nbsp;root.tsx</span><br />
         <span className="code__with-order">│  &nbsp;└──&nbsp;index.tsx</span><br />
         <span className="code__with-order">├──&nbsp;index.css&nbsp;-&gt;&nbsp;index.scss</span><br />
         <span className="code__with-order">├──&nbsp;index.tsx</span><br />
         <span className="code__with-order">├──&nbsp;models</span><br />
-        <span className="code__with-order">│  &nbsp;└──&nbsp;calendar.tsx</span><br />
+        <span className="code__with-order">│  &nbsp;└──&nbsp;cal<span className="syntax--end">end</span>ar.tsx</span><br />
         <span className="code__with-order">├──&nbsp;react-app-env.d.ts</span><br />
         <span className="code__with-order">└──&nbsp;serviceWorker.ts</span><br />
         </code></p>
@@ -56,8 +57,8 @@ const Diary20190627: React.FC = () => {
         例えば、&nbsp;index.tsx&nbsp;で以下を置換してあげるだけ
         <br />
         <p className="code diff"><code>
-        <span className="code__with-order">-&nbsp;import&nbsp;&#39;./index.css&#39;</span><br />
-        <span className="code__with-order">+&nbsp;import&nbsp;&#39;./index.scss&#39;</span><br />
+        <span className="code__with-order">-&nbsp;<span className="syntax--import">import&nbsp;</span>&#39;./index.css&#39;</span><br />
+        <span className="code__with-order">+&nbsp;<span className="syntax--import">import&nbsp;</span>&#39;./index.scss&#39;</span><br />
         </code></p>
         
         あとはいつも通りの&nbsp;scss&nbsp;ライフが送れます&nbsp;&#x1f389;

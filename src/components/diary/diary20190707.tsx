@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190707: React.FC = () => {
   return (
@@ -63,9 +64,9 @@ const Diary20190707: React.FC = () => {
         <b>json</b>
         <br />
         <p className="code json"><code>
-        <span className="code__with-order">&#123;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&quot;key&quot;:&nbsp;&quot;value&quot;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         &nbsp;
@@ -73,12 +74,12 @@ const Diary20190707: React.FC = () => {
         <b>Typescript</b>
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order">import&nbsp;json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;json.key&#125;&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>json.key<span className="syntax--braces">&#125;</span>&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         なんてシンプルなんだﾊｯΣ&nbsp;(ﾟДﾟ!!!
@@ -104,17 +105,17 @@ const Diary20190707: React.FC = () => {
         <i>多分もっとうまい方法はある</i>
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order">import&nbsp;json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;\[key:&nbsp;string]:&nbsp;string;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;\<span className="syntax--brackets">[</span>key:&nbsp;string<span className="syntax--brackets">]</span>:&nbsp;string;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;const&nbsp;config:&nbsp;Props&nbsp;=&nbsp;json</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;config.key&#125;&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--const">const&nbsp;</span>config:&nbsp;Props&nbsp;=&nbsp;json</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>config.key<span className="syntax--braces">&#125;</span>&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         <h2>おまけ</h2>
@@ -124,15 +125,15 @@ const Diary20190707: React.FC = () => {
         成果だけだと見辛そうだったので完結に書いてみた
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">hash&nbsp;=&nbsp;&#123;&#125;</span><br />
-        <span className="code__with-order">files.each&nbsp;do&nbsp;|file|</span><br />
+        <span className="code__with-order">hash&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">files.each<span className="syntax--do">&nbsp;do</span>&nbsp;|file|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;date&nbsp;=&nbsp;extract_date(file.path)</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;File.open(input_file&nbsp;&#39;r&#39;)&nbsp;do&nbsp;|f|</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;f.each_line.with_inedx&nbsp;do&nbsp;|line&nbsp;index|</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hash[date]&nbsp;=&nbsp;line[index]&nbsp;if&nbsp;index.zero?</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;File.open(input_file&nbsp;&#39;r&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;f.each_line.with_inedx<span className="syntax--do">&nbsp;do</span>&nbsp;|line&nbsp;index|</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hash<span className="syntax--brackets">[</span>date<span className="syntax--brackets">]</span>&nbsp;=&nbsp;line<span className="syntax--brackets">[</span>index<span className="syntax--brackets">]</span>&nbsp;<span className="syntax--if">if&nbsp;</span>index.zero?</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         <span className="code__with-order">File.open(output_file&nbsp;hash.to_json)</span><br />
         </code></p>
         

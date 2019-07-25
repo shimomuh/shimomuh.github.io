@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190626: React.FC = () => {
   return (
@@ -65,15 +66,15 @@ const Diary20190626: React.FC = () => {
         もしかしたらこれが一番時間かかったかもしれない
         <br />
         <p className="code json"><code>
-        <span className="code__with-order">&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&quot;compilerOptions&quot;:&nbsp;&#123;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&quot;compilerOptions&quot;:&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;baseUrl&quot;:&nbsp;&quot;src&quot;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;paths&quot;:&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;components/*&quot;:&nbsp;[&quot;components/*&quot;]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;models/*&quot;:&nbsp;[&quot;models/*&quot;]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;paths&quot;:&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;components/*&quot;:&nbsp;<span className="syntax--brackets">[</span>&quot;components/*&quot;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;models/*&quot;:&nbsp;<span className="syntax--brackets">[</span>&quot;models/*&quot;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         はじめ&nbsp;<span className="inline-code">&quot;~*&quot;:&nbsp;[&quot;*&quot;]</span>&nbsp;みたいな形で&nbsp;<span className="inline-code">src</span>&nbsp;を&nbsp;root&nbsp;に参照しようと思ったがうまくいかなかった
@@ -91,16 +92,16 @@ const Diary20190626: React.FC = () => {
         イメージ的には以下を返すような関数
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">const&nbsp;getCalendar&nbsp;=&nbsp;(year:&nbsp;number&nbsp;month:&nbsp;number):&nbsp;any&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;[</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;6&nbsp;&nbsp;7&nbsp;&nbsp;8]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;9&nbsp;10&nbsp;11&nbsp;12&nbsp;13&nbsp;14&nbsp;15]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;16&nbsp;17&nbsp;18&nbsp;19&nbsp;20&nbsp;21&nbsp;22]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;23&nbsp;24&nbsp;25&nbsp;26&nbsp;27&nbsp;28&nbsp;29]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;30&nbsp;31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;]</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>getCal<span className="syntax--end">end</span>ar&nbsp;=&nbsp;(year:&nbsp;number&nbsp;month:&nbsp;number):&nbsp;any&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;<span className="syntax--brackets">[</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;6&nbsp;&nbsp;7&nbsp;&nbsp;8<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;&nbsp;9&nbsp;10&nbsp;11&nbsp;12&nbsp;13&nbsp;14&nbsp;15<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;16&nbsp;17&nbsp;18&nbsp;19&nbsp;20&nbsp;21&nbsp;22<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;23&nbsp;24&nbsp;25&nbsp;26&nbsp;27&nbsp;28&nbsp;29<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;30&nbsp;31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         あとはロジックを考えて中身を埋めるだけ
@@ -126,25 +127,25 @@ const Diary20190626: React.FC = () => {
         そこで、前者はどうしようもないので&nbsp;DateCell&nbsp;という名前にして&nbsp;Calendar&nbsp;はコンテキストマッピングとして処理することでクラス実装時は&nbsp;Calendar&nbsp;として実装すればよいので助かった
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">class&nbsp;Calendar&nbsp;&#123;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Cal<span className="syntax--end">end</span>ar&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">export&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;CalendarModel&nbsp;&#125;;</span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;Cal<span className="syntax--end">end</span>ar&nbsp;as&nbsp;Cal<span className="syntax--end">end</span>arModel&nbsp;<span className="syntax--braces">&#125;</span>;</span><br />
         </code></p>
         
         これで衝突を避けられる。本音を言うと
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">//&nbsp;src/models/calendar.tsx</span><br />
-        <span className="code__with-order">export&nbsp;class&nbsp;Calendar&nbsp;&#123;&#125;</span><br />
+        <span className="code__with-order">//&nbsp;src/models/cal<span className="syntax--end">end</span>ar.tsx</span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--class">class&nbsp;</span>Cal<span className="syntax--end">end</span>ar&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">//&nbsp;src/components/adventCalendar/calendar.tsx</span><br />
-        <span className="code__with-order">import&nbsp;&#123;&nbsp;Calendar&nbsp;as&nbsp;Model&nbsp;&#125;&nbsp;from&nbsp;&#39;models/calendar&#39;;</span><br />
+        <span className="code__with-order">//&nbsp;src/components/adventCal<span className="syntax--end">end</span>ar/cal<span className="syntax--end">end</span>ar.tsx</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;Cal<span className="syntax--end">end</span>ar&nbsp;as&nbsp;Model&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;models/cal<span className="syntax--end">end</span>ar&#39;;</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">export&nbsp;const&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;var&nbsp;model&nbsp;=&nbsp;new&nbsp;Model();</span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--const">const&nbsp;</span>Cal<span className="syntax--end">end</span>ar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--var">var&nbsp;</span>model&nbsp;=&nbsp;new&nbsp;Model();</span><br />
         <span className="code__with-order">&nbsp;&nbsp;//&nbsp;...(略)...</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
         </code></p>
         
@@ -161,7 +162,7 @@ const Diary20190626: React.FC = () => {
         <br />
         <p className="code javascript"><code>
         <span className="code__with-order">&lt;ul&gt;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#123;[1&nbsp;2&nbsp;3].map((num:&nbsp;number&nbsp;key:&nbsp;number)&nbsp;=&gt;&nbsp;&lt;li&nbsp;key=&#123;key&#125;&gt;&#123;num&#125;&lt;/li&gt;)&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--brackets">[</span>1&nbsp;2&nbsp;3<span className="syntax--brackets">]</span>.map((num:&nbsp;number&nbsp;key:&nbsp;number)&nbsp;=&gt;&nbsp;&lt;li&nbsp;key=<span className="syntax--braces">&#123;</span>key<span className="syntax--braces">&#125;</span>&gt;<span className="syntax--braces">&#123;</span>num<span className="syntax--braces">&#125;</span>&lt;/li&gt;)<span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order">&lt;/ul&gt;</span><br />
         </code></p>
       <br /><br />

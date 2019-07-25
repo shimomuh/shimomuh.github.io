@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190718: React.FC = () => {
   return (
@@ -39,11 +40,11 @@ const Diary20190718: React.FC = () => {
         加えて、この処理方法の欠点としてページの終わりが表を表すタグだった場合閉じタグ処理が実行されないので、文末だったらフラグをみて未処理の文法があればその終了処理をした
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">texts.each&nbsp;do&nbsp;|text|</span><br />
+        <span className="code__with-order">texts.each<span className="syntax--do">&nbsp;do</span>&nbsp;|text|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;flag_table_tag(text)&nbsp;#&nbsp;テキストをみてフラグを立てる</span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;...他のタグ処理やエスケープ処理...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;replace_table_tag(text)&nbsp;#&nbsp;フラグをみて&nbsp;`|`&nbsp;を置換する</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         <span className="code__with-order">add_last_tag&nbsp;#&nbsp;万一文末で閉じタグ処理を行なっていなければフラグをみてここで行う</span><br />
         </code></p>
         
