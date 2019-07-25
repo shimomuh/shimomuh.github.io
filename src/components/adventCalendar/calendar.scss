@@ -130,7 +130,7 @@ $border: #ccc;
       }
       #{$p}__cell--date {
         display: block;
-        width: 1.5rem;
+        width: 1.4rem;
         text-align: right;
         flex: 0 0 auto;
       }
@@ -140,7 +140,12 @@ $border: #ccc;
         margin-right: 0.5rem;
       }
       #{$p}__cell--title {
+        max-width: 80%;
         display: block;
+        flex: 1 1 0%;
+      }
+      #{$p}__cell--icons {
+        width: 68px;
       }
       #{$p}__cell--icon {
         width: 24px;
