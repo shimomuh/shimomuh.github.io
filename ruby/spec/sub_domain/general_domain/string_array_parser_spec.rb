@@ -186,7 +186,7 @@ RSpec.describe SubDomain::GeneralDomain::StringArrayParser do
           ]
         end
 
-        pending '表としては表示されないがエスケープ文字(\)は表示されない' do
+        it '表としては表示されないがエスケープ文字(\)は表示されない' do
           is_expected.to eq [
             '|a|b|',
             '|---|---|',
@@ -342,11 +342,11 @@ RSpec.describe SubDomain::GeneralDomain::StringArrayParser do
         ]
       end
 
-      pending 'コードタグ処理は行われずエスケープ文字(\)は表示されない' do
+      it 'コードタグ処理は行われずエスケープ文字(\)は表示されない' do
         is_expected.to eq [
           '```ruby',
-          'num = 1',
-          'puts num',
+          'num&nbsp;=&nbsp;1',
+          'puts&nbsp;num',
           '```'
         ]
       end
@@ -510,10 +510,10 @@ RSpec.describe SubDomain::GeneralDomain::StringArrayParser do
           ]
         end
 
-        pending 'リストタグの処理は行われず、エスケープ文字(\)は表示されない' do
+        it 'リストタグの処理は行われず、エスケープ文字(\)は表示されない' do
           is_expected.to eq [
-            '* エスケープ',
-            '* エスケープ',
+            '*&nbsp;エスケープ',
+            '*&nbsp;エスケープ',
             '<br />'
           ]
         end
