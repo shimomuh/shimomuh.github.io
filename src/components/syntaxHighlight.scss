@@ -1,0 +1,59 @@
+$yellow: #ff6;
+$cyan: #0ff;
+$magenta: #f0f;
+
+.code {
+  &.ruby {
+    .syntax {
+      &--class,
+      &--def {
+        color: $cyan;
+      }
+      &--self {
+        color: $magenta;
+      }
+      &--end {
+        color: $yellow;
+      }
+    }
+  }
+  &.js,
+  &.javascript,
+  &.typescript {
+    .syntax {
+      &--document,
+      &--var {
+        color: $yellow;
+      }
+    }
+  }
+  &.css,
+  &.scss {
+    .syntax {
+      &--media {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.syntax {
+  &--import,
+  &--const,
+  &--return,
+  &--export,
+  &--default,
+  &--function,
+  &--if,
+  &--do,
+  &--for {
+    color: $yellow;
+  }
+  &--braces, /* {} */
+  &--brackets { /* [] */
+    color: $cyan;
+  }
+  &--quote {
+    color: $magenta;
+  }
+}

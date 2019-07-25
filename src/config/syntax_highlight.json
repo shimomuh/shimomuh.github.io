@@ -1,0 +1,38 @@
+{
+  "common": [
+    { "value": "bool&nbsp;",      "className": "bool" },
+    { "value": "const&nbsp;",     "className": "const" },
+    { "value": "class&nbsp;",     "className": "class" },
+    { "value": "for&nbsp;",       "className": "for" },
+    { "value": "function",        "className": "function" },
+    { "value": "import&nbsp;",    "className": "import" },
+    { "value": "int&nbsp;",       "className": "int" },
+    { "value": "interface&nbsp;", "className": "interface" },
+    { "value": "if&nbsp;",        "className": "if" },
+    { "value": "private&nbsp;",   "className": "private" },
+    { "value": "public&nbsp;",    "className": "public" },
+    { "value": "return",          "className": "return" },
+    { "value": "string&nbsp;",    "className": "string" },
+    { "value": "var&nbsp;",       "className": "var" },
+    { "value": "&#123;",          "className": "braces" },
+    { "value": "&#125;",          "className": "braces" },
+    { "value": "&nbsp;do",        "className": "do" },
+    { "value": "[",               "className": "brackets" },
+    { "value": "]",               "className": "brackets" }
+  ],
+  "ruby": [
+    { "value": "def&nbsp;",       "className": "def" },
+    { "value": "self",            "className": "self" },
+    { "value": "end",             "className": "end" }
+  ],
+  "js": [
+    { "value": "let&nbsp;",       "className": "let" },
+    { "value": "document",        "className": "document" },
+    { "value": "default",         "className": "default" },
+    { "value": "export",          "className": "export" },
+    { "value": "undefined",       "className": "undefined" }
+  ],
+  "css": [
+    { "value": "@media&nbsp;",          "className": "media" }
+  ]
+}
