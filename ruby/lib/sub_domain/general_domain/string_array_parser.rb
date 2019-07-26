@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'string_parser'
+require_relative '../support_domain/syntax_highlight'
 
 # サブドメイン：コアドメインをサポートするドメインのうち
 #
@@ -37,6 +38,7 @@ module SubDomain
           next if @return_code
 
           parser.parse(value, option)
+          ::SubDomain::SupportDomain::SyntaxHighlight.insert_tag(value) if @code_block
           check_h_tag(value)
           insert_code_number_tag(value)
           replace_li_tag(value)
