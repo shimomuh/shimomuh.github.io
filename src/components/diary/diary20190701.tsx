@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190701: React.FC = () => {
   return (
@@ -29,19 +30,19 @@ const Diary20190701: React.FC = () => {
         
         React.FC&nbsp;にうまいこと型宣言してあげる
         <br />
-        <p className="code javqscript"><code>
-        <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order">import&nbsp;ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
+        <p className="code javascript"><code>
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
+        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&lt;Props&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;props.value&#125;&lt;/p&gt;;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.FC&lt;Props&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>props.value<span className="syntax--braces">&#125;</span>&lt;/p&gt;;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">ReactDOM.render(&lt;Component&nbsp;value=&quot;hoge&quot;&nbsp;/&gt;&nbsp;document.getElementById(&#39;#app&#39;));</span><br />
+        <span className="code__with-order">ReactDOM.r<span className="syntax--end">end</span>er(&lt;Component&nbsp;value=&quot;hoge&quot;&nbsp;/&gt;<span className="syntax--do">&nbsp;do</span>cument.getElementById(&#39;#app&#39;));</span><br />
         </code></p>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/pull/7/commits/b635bb97bd4ccbad0c56bd9766dc907d2d18775f">→成果</a>
@@ -51,35 +52,35 @@ const Diary20190701: React.FC = () => {
         typescript&nbsp;で書く前まで（babelで）は&nbsp;stateless&nbsp;function&nbsp;での&nbsp;props&nbsp;の受け渡しは以下のようにやっていた
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">function&nbsp;App&nbsp;()&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;Component&nbsp;value=&#39;hoge&#39;&nbsp;/&gt;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--function">function</span>&nbsp;App&nbsp;()&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;Component&nbsp;value=&#39;hoge&#39;&nbsp;/&gt;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
+        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">function&nbsp;Component(props:&nbsp;Props)&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;const&nbsp;&#123;&nbsp;value&nbsp;&#125;&nbsp;=&nbsp;props</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;value&nbsp;&#125;&lt;/p&gt;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--function">function</span>&nbsp;Component(props:&nbsp;Props)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--const">const&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;value&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;=&nbsp;props</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>&nbsp;value&nbsp;<span className="syntax--braces">&#125;</span>&lt;/p&gt;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         ところがどっこい同じように&nbsp;typescript&nbsp;で書くとエラーで怒られた
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">const&nbsp;App:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;Component&nbsp;value=&#39;hoge&#39;&nbsp;/&gt;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>App:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;Component&nbsp;value=&#39;hoge&#39;&nbsp;/&gt;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
+        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&nbsp;=&nbsp;(props:&nbsp;Props)&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;const&nbsp;&#123;&nbsp;value&nbsp;&#125;&nbsp;=&nbsp;props;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;value&nbsp;&#125;&lt;/p&gt;;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.FC&nbsp;=&nbsp;(props:&nbsp;Props)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--const">const&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;value&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;=&nbsp;props;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>&nbsp;value&nbsp;<span className="syntax--braces">&#125;</span>&lt;/p&gt;;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         理由は&nbsp;React.FC&nbsp;の方に引数の指定をしてあげる必要があるから。
@@ -89,22 +90,22 @@ const Diary20190701: React.FC = () => {
         宣言の仕方は以下の通り
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;&#123;</span><br />
+        <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;value:&nbsp;string;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&lt;Props&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;const&nbsp;&#123;&nbsp;value&nbsp;&#125;&nbsp;=&nbsp;props;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;value&nbsp;&#125;&lt;/p&gt;;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.FC&lt;Props&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--const">const&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;value&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;=&nbsp;props;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>&nbsp;value&nbsp;<span className="syntax--braces">&#125;</span>&lt;/p&gt;;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         もちろん超絶短く書きたい人は短く書いてもらって結構
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">const&nbsp;Component:&nbsp;React.FC&lt;&#123;&nbsp;value:&nbsp;string&nbsp;&#125;&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;&lt;p&gt;&#123;&nbsp;props.value&nbsp;&#125;&lt;/p&gt;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.FC&lt;<span className="syntax--braces">&#123;</span>&nbsp;value:&nbsp;<span className="syntax--string">string&nbsp;</span><span className="syntax--braces">&#125;</span>&gt;&nbsp;=&nbsp;(props)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>&nbsp;props.value&nbsp;<span className="syntax--braces">&#125;</span>&lt;/p&gt;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
       <br /><br />

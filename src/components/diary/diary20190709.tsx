@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190709: React.FC = () => {
   return (
@@ -57,21 +58,21 @@ const Diary20190709: React.FC = () => {
         処理の大枠は以下のようなイメージ
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">class&nbsp;StringArrayParser</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;def&nbsp;self.parse(str_array)</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;string_array.each&nbsp;do&nbsp;|str|</span><br />
+        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>StringArrayParser</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span><span className="syntax--self">self</span>.parse(str_array)</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;string_array.each<span className="syntax--do">&nbsp;do</span>&nbsp;|str|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multi_line_parse&nbsp;str</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringParser.parse&nbsp;str</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;class&nbsp;StringParser</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;self.parse(str)</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--class">class&nbsp;</span>StringParser</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span><span className="syntax--self">self</span>.parse(str)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;escape&nbsp;str</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one_line_parse&nbsp;str</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">StringArrayParser.parse&nbsp;articles</span><br />
         </code></p>

@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190705: React.FC = () => {
   return (
@@ -96,8 +97,8 @@ const Diary20190705: React.FC = () => {
         ほぼ全容は以下の通りである
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">var&nbsp;segmentCount&nbsp;=&nbsp;0;</span><br />
-        <span className="code__with-order">var&nbsp;l&nbsp;=&nbsp;window.location;</span><br />
+        <span className="code__with-order"><span className="syntax--var">var&nbsp;</span>segmentCount&nbsp;=&nbsp;0;</span><br />
+        <span className="code__with-order"><span className="syntax--var">var&nbsp;</span>l&nbsp;=&nbsp;window.location;</span><br />
         <span className="code__with-order">l.replace(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;l.protocol&nbsp;+&nbsp;&#39;//&#39;&nbsp;+&nbsp;l.hostname&nbsp;+&nbsp;(l.port&nbsp;?&nbsp;&#39;:&#39;&nbsp;+&nbsp;l.port&nbsp;:&nbsp;&#39;&#39;)&nbsp;+</span><br />
         <span className="code__with-order">&nbsp;&nbsp;l.pathname.split(&#39;/&#39;).slice(0&nbsp;1&nbsp;+&nbsp;segmentCount).join(&#39;/&#39;)&nbsp;+&nbsp;&#39;/?p=/&#39;&nbsp;+</span><br />
@@ -118,7 +119,7 @@ const Diary20190705: React.FC = () => {
         次に、&nbsp;L5&nbsp;に説明するために&nbsp;<span className="inline-code">xxx.github.io/hoge</span>&nbsp;にアクセスした場合を想定する
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">l.pathname.split(&#39;/&#39;)&nbsp;//&nbsp;=&gt;&nbsp;[&quot;&quot;&nbsp;&quot;hoge&quot;]</span><br />
+        <span className="code__with-order">l.pathname.split(&#39;/&#39;)&nbsp;//&nbsp;=&gt;&nbsp;<span className="syntax--brackets">[</span>&quot;&quot;&nbsp;&quot;hoge&quot;<span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.slice(0&nbsp;1&nbsp;+&nbsp;segmentCount)&nbsp;//&nbsp;=&gt;&nbsp;&quot;&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.join(&#39;/&#39;)&nbsp;//&nbsp;=&gt;&nbsp;&quot;&quot;</span><br />
         </code></p>
@@ -127,7 +128,7 @@ const Diary20190705: React.FC = () => {
         <br />
         <p className="code javascript"><code>
         <span className="code__with-order">l.pathname.slice(1)&nbsp;//&nbsp;=&gt;&nbsp;&quot;hoge&quot;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.split(&#39;/&#39;)&nbsp;//&nbsp;=&gt;&nbsp;[&quot;hoge&quot;]</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.split(&#39;/&#39;)&nbsp;//&nbsp;=&gt;&nbsp;<span className="syntax--brackets">[</span>&quot;hoge&quot;<span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.slice(segmentCount)&nbsp;//&nbsp;=&gt;&nbsp;&quot;hoge&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.join(&#39;/&#39;)&nbsp;//&nbsp;=&gt;&nbsp;&quot;hoge&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.replace(/&amp;/g&nbsp;&#39;~and~&#39;)&nbsp;//&nbsp;=&gt;&nbsp;&quot;hoge&quot;&nbsp;(クエリ判定)</span><br />
@@ -150,22 +151,22 @@ const Diary20190705: React.FC = () => {
         受け取り側(<span className="inline-code">index.html</span>)の内容は以下の通り
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">(function(l)&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;if&nbsp;(l.search)&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;q&nbsp;=&nbsp;&#123;&#125;;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;l.search.slice(1).split(&#39;&amp;&#39;).forEach(function(v)&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;a&nbsp;=&nbsp;v.split(&#39;=&#39;);</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q[a[0]]&nbsp;=&nbsp;a.slice(1).join(&#39;=&#39;).replace(/~and~/g&nbsp;&#39;&amp;&#39;);</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&#125;);</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(q.p&nbsp;!==&nbsp;undefined)&nbsp;&#123;</span><br />
+        <span className="code__with-order">(<span className="syntax--function">function</span>(l)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--if">if&nbsp;</span>(l.search)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--var">var&nbsp;</span>q&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span>;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;l.search.slice(1).split(&#39;&amp;&#39;).forEach(<span className="syntax--function">function</span>(v)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--var">var&nbsp;</span>a&nbsp;=&nbsp;v.split(&#39;=&#39;);</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q<span className="syntax--brackets">[</span>a<span className="syntax--brackets">[</span>0<span className="syntax--brackets">]</span><span className="syntax--brackets">]</span>&nbsp;=&nbsp;a.slice(1).join(&#39;=&#39;).replace(/~and~/g&nbsp;&#39;&amp;&#39;);</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span>);</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--if">if&nbsp;</span>(q.p&nbsp;!==&nbsp;<span className="syntax--undefined">undefined</span>)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.history.replaceState(null&nbsp;null</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l.pathname.slice(0&nbsp;-1)&nbsp;+&nbsp;(q.p&nbsp;||&nbsp;&#39;&#39;)&nbsp;+</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(q.q&nbsp;?&nbsp;(&#39;?&#39;&nbsp;+&nbsp;q.q)&nbsp;:&nbsp;&#39;&#39;)&nbsp;+</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l.hash</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;(window.location))</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span>(window.location))</span><br />
         </code></p>
         
         わざわざ解説しないが、先ほどの逆の手順で再度解析して適切な送信先に&nbsp;replaceState&nbsp;で飛ばしている

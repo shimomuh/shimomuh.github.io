@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190704: React.FC = () => {
   return (
@@ -41,16 +42,16 @@ const Diary20190704: React.FC = () => {
         <br />
         <p className="code scss"><code>
         <span className="code__with-order">/*&nbsp;Safari&nbsp;のみ&nbsp;*/</span><br />
-        <span className="code__with-order">_::-webkit-full-page-media&nbsp;_:future&nbsp;:root&nbsp;.diary&nbsp;&#123;</span><br />
+        <span className="code__with-order">_::-webkit-full-page-media&nbsp;_:future&nbsp;:root&nbsp;.diary&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;color:&nbsp;red;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">/*&nbsp;Firefox&nbsp;のみ&nbsp;*/</span><br />
-        <span className="code__with-order">@-moz-document&nbsp;url-prefix()&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;.diary&nbsp;&#123;</span><br />
+        <span className="code__with-order">@-moz-<span className="syntax--document">document</span>&nbsp;url-prefix()&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;.diary&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         みたいな感じで対応した

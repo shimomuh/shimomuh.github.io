@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190723: React.FC = () => {
   return (
@@ -26,37 +27,37 @@ const Diary20190723: React.FC = () => {
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/4aaf58453bc79eea53ca971eb4a07b5e240fd468">→成果</a>
         <br />
         <p className="code json"><code>
-        <span className="code__with-order">&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&quot;extends&quot;:&nbsp;[&quot;tslint:latest&quot;&nbsp;&quot;tslint-react&quot;]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&quot;rules&quot;:&nbsp;&#123;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&quot;ext<span className="syntax--end">end</span>s&quot;:&nbsp;<span className="syntax--brackets">[</span>&quot;tslint:latest&quot;&nbsp;&quot;tslint-react&quot;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&quot;rules&quot;:&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;jsx-wrap-multiline&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-quotemark&quot;:&nbsp;&quot;quote&nbsp;は&nbsp;single&nbsp;だろうが&nbsp;double&nbsp;だろうが許容する&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-quotemark&quot;:&nbsp;&quot;quote&nbsp;は&nbsp;single&nbsp;だろうが<span className="syntax--do">&nbsp;do</span>uble&nbsp;だろうが許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;quotemark&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-ordered-imports&quot;:&nbsp;&quot;import&nbsp;はアルファベット順&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-ordered-imports&quot;:&nbsp;&quot;<span className="syntax--import">import&nbsp;</span>はアルファベット順&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;ordered-imports&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-submodule-imports&quot;:&nbsp;&quot;import&nbsp;されるファイルは&nbsp;submodule&nbsp;(/&nbsp;を使うもの</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-submodule-imports&quot;:&nbsp;&quot;<span className="syntax--import">import&nbsp;</span>されるファイルは&nbsp;submodule&nbsp;(/&nbsp;を使うもの</span><br />
         <span className="code__with-order">)&nbsp;も許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;no-submodule-imports&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-implicit-dependencies&quot;:&nbsp;&quot;tsconfig&nbsp;の&nbsp;path&nbsp;alias&nbsp;を無視したいので許容</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-implicit-dep<span className="syntax--end">end</span>encies&quot;:&nbsp;&quot;tsconfig&nbsp;の&nbsp;path&nbsp;alias&nbsp;を無視したいので許容</span><br />
         <span className="code__with-order">する&quot;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;no-implicit-dependencies&quot;:&nbsp;false</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;no-implicit-dep<span className="syntax--end">end</span>encies&quot;:&nbsp;false</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-trailing-comma&quot;:&nbsp;&quot;文末のコンマは無視しよう&nbsp;fyi:&nbsp;https://selmertsx.hatenablog.com/entry/2018/02/06/201945&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;trailing-comma&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-max-classes-per-file&quot;:&nbsp;&quot;1つのファイルに&nbsp;private&nbsp;な小さなクラスの宣言を&gt;許容する&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-max-classes-per-file&quot;:&nbsp;&quot;1つのファイルに&nbsp;<span className="syntax--private">private&nbsp;</span>な小さなクラスの宣言を&gt;許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;max-classes-per-file&quot;:&nbsp;false</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-jsx-no-multiline-js&quot;:&nbsp;&quot;関数埋め込みを許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;jsx-no-multiline-js&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&quot;linterOptions&quot;:&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;exclude&quot;:&nbsp;[</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/components/tag/*.ts&#123;x&#125;&quot;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/components/diary/*.ts&#123;x&#125;&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&quot;linterOptions&quot;:&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;exclude&quot;:&nbsp;<span className="syntax--brackets">[</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/components/tag/*.ts<span className="syntax--braces">&#123;</span>x<span className="syntax--braces">&#125;</span>&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/components/diary/*.ts<span className="syntax--braces">&#123;</span>x<span className="syntax--braces">&#125;</span>&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/react-app-env.d.ts&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/serviceWorker.ts&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src/components/router.tsx&quot;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;]</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         警告されたものについてはコメント付きでどういうものかを説明しつつ、無理ゲーなら許容したり、重要ではなさそうなものについてはスルーするようにした

@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190711: React.FC = () => {
   return (
@@ -33,15 +34,15 @@ const Diary20190711: React.FC = () => {
         もし&nbsp;circleci&nbsp;や&nbsp;jenkins&nbsp;で&nbsp;job&nbsp;を実行して&nbsp;test&nbsp;をしている人なんかは標準出力が出ないように以下で工夫してみてもいいかもしれない
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">class&nbsp;Model</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;def&nbsp;initialize</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
+        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Model</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;def&nbsp;exec</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>exec</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;...(なんか処理)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;puts&nbsp;&#39;exec!&#39;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
         
         これをテストすると
@@ -57,14 +58,14 @@ const Diary20190711: React.FC = () => {
         そこで
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">class&nbsp;Model</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;def&nbsp;initialize</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
+        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Model</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;def&nbsp;exec</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;&#39;exec!&#39;&nbsp;if&nbsp;given_block?</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;end</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>exec</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;&#39;exec!&#39;&nbsp;<span className="syntax--if">if&nbsp;</span>given_block?</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
         
         こうすることで、、テスト時や&nbsp;api&nbsp;利用などの標準出力をさけたいときは
@@ -76,7 +77,7 @@ const Diary20190711: React.FC = () => {
         rake&nbsp;task&nbsp;のように実行を標準結果に出したいときは
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">Model.new.exec&nbsp;&#123;&nbsp;|message|&nbsp;puts&nbsp;message&nbsp;&#125;</span><br />
+        <span className="code__with-order">Model.new.exec&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;|message|&nbsp;puts&nbsp;message&nbsp;<span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         とすればよい
@@ -84,8 +85,8 @@ const Diary20190711: React.FC = () => {
         このメリットは標準出力に限らず内部処理の途中経過を外に出せることにあるので
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">Model.new.exec&nbsp;&#123;&nbsp;|m|&nbsp;STDERR.puts&nbsp;m&nbsp;&#125;</span><br />
-        <span className="code__with-order">Model.new.exec&nbsp;&#123;&nbsp;|m|&nbsp;OtherModel.new(m)&nbsp;&#125;</span><br />
+        <span className="code__with-order">Model.new.exec&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;|m|&nbsp;STDERR.puts&nbsp;m&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">Model.new.exec&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;|m|&nbsp;OtherModel.new(m)&nbsp;<span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
         のようにすることで標準エラー出力に吐いたり処理を他に渡せるのも魅力である

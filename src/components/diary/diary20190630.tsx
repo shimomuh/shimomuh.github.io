@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190630: React.FC = () => {
   return (
@@ -71,9 +72,9 @@ const Diary20190630: React.FC = () => {
         <p className="code html"><code>
         <span className="code__with-order">&lt;p&nbsp;class=&quot;code&quot;&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&lt;code&nbsp;class=&quot;code__block&quot;&gt;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;code__block--element&quot;&gt;function&nbsp;plus&nbsp;(a&nbsp;b)&nbsp;&#123;&lt;/span&gt;&lt;br&gt;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;code__block--element&quot;&gt;&amp;nbsp;&amp;nbsp;return&nbsp;a&nbsp;+&nbsp;b;&lt;/span&gt;&lt;br&gt;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;code__block--element&quot;&gt;&#125;&lt;/span&gt;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;code__block--element&quot;&gt;<span className="syntax--function">function</span>&nbsp;plus&nbsp;(a&nbsp;b)&nbsp;<span className="syntax--braces">&#123;</span>&lt;/span&gt;&lt;br&gt;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;code__block--element&quot;&gt;&amp;nbsp;&amp;nbsp;<span className="syntax--return">return</span>&nbsp;a&nbsp;+&nbsp;b;&lt;/span&gt;&lt;br&gt;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;code__block--element&quot;&gt;<span className="syntax--braces">&#125;</span>&lt;/span&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&lt;/code&nbsp;class=&quot;code_block&quot;&gt;</span><br />
         <span className="code__with-order">&lt;/p&gt;</span><br />
         </code></p>
@@ -86,15 +87,15 @@ const Diary20190630: React.FC = () => {
         <br />
         <p className="code css"><code>
         <span className="code__with-order">/*&nbsp;ナンバリングの部分は含まない右側&nbsp;*/</span><br />
-        <span className="code__with-order">.code&nbsp;&#123;</span><br />
+        <span className="code__with-order">.code&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;color:&nbsp;white;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;background-color:&nbsp;black;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;border-radius:&nbsp;0&nbsp;4px&nbsp;4px&nbsp;0;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;margin-left:&nbsp;30px;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;counter-reset:&nbsp;num;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&amp;__block&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&amp;__block&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&amp;:before&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&amp;:before&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;30px;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;4px&nbsp;0&nbsp;0&nbsp;4px;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;black;</span><br />
@@ -103,10 +104,10 @@ const Diary20190630: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-left:&nbsp;-30px;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding-top:&nbsp;2px;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&amp;--element&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&amp;--element&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:befor&nbsp;&#123;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:be<span className="syntax--for">for&nbsp;</span><span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter-increment:&nbsp;num;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;counter(num);</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;</span><br />
@@ -114,10 +115,10 @@ const Diary20190630: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;20px;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-left:&nbsp;-30px;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&#125;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
       <br /><br />
       <div>

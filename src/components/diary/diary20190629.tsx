@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'components/diary.scss';
+import 'components/syntaxHighlight.scss';
 
 const Diary20190629: React.FC = () => {
   return (
@@ -48,37 +49,37 @@ const Diary20190629: React.FC = () => {
         たとえば、出力後が以下のファイルを作りたいとする
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order">import&nbsp;Index1&nbsp;from&nbsp;&#39;./index1&#39;;</span><br />
-        <span className="code__with-order">import&nbsp;Index2&nbsp;from&nbsp;&#39;./index2&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>Index1&nbsp;from&nbsp;&#39;./index1&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>Index2&nbsp;from&nbsp;&#39;./index2&#39;;</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index1&nbsp;/&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index2&nbsp;/&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">export&nbsp;default&nbsp;Root;</span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--default">default</span>&nbsp;Root;</span><br />
         </code></p>
         
         僕が頑張った時はこう
         <br />
         <p className="code bash"><code>
         <span className="code__with-order">cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&nbsp;src/root.tsx</span><br />
-        <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
         <span className="code__with-order">EOS</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">for&nbsp;i&nbsp;in&nbsp;(1&nbsp;2)</span><br />
+        <span className="code__with-order"><span className="syntax--for">for&nbsp;</span>i&nbsp;in&nbsp;(1&nbsp;2)</span><br />
         <span className="code__with-order">do</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;echo&nbsp;&quot;import&nbsp;Index$&#123;i&#125;&nbsp;from&nbsp;&#39;./index$&#123;i&#125;&#39;;&quot;&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;echo&nbsp;&quot;<span className="syntax--import">import&nbsp;</span>Index$<span className="syntax--braces">&#123;</span>i<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;./index$<span className="syntax--braces">&#123;</span>i<span className="syntax--braces">&#125;</span>&#39;;&quot;&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
         <span className="code__with-order">done</span><br />
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">cat&nbsp;-&nbsp;&lt;&lt;&nbsp;EOS&nbsp;&gt;&gt;&nbsp;src/root.tsx</span><br />
-        <span className="code__with-order">const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
         <span className="code__with-order">EOS</span><br />
         <span className="code__with-order"><br /></span><br />
@@ -99,28 +100,28 @@ const Diary20190629: React.FC = () => {
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">template&nbsp;=&nbsp;&lt;&lt;EOS</span><br />
-        <span className="code__with-order">import&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order">&lt;%-&nbsp;[1&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;</span><br />
-        <span className="code__with-order">import&nbsp;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;from&nbsp;&#39;./index&lt;%=&nbsp;i&nbsp;%&gt;&#39;;</span><br />
-        <span className="code__with-order">&lt;%-&nbsp;end&nbsp;-%&gt;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order">&lt;%-&nbsp;<span className="syntax--brackets">[</span>1&nbsp;2<span className="syntax--brackets">]</span>.each<span className="syntax--do">&nbsp;do</span>&nbsp;|i|&nbsp;-%&gt;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;from&nbsp;&#39;./index&lt;%=&nbsp;i&nbsp;%&gt;&#39;;</span><br />
+        <span className="code__with-order">&lt;%-&nbsp;<span className="syntax--end">end</span>&nbsp;-%&gt;</span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">const&nbsp;Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;&#123;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;return&nbsp;(</span><br />
+        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Root:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;[1&nbsp;2].each&nbsp;do&nbsp;|i|&nbsp;-%&gt;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;<span className="syntax--brackets">[</span>1&nbsp;2<span className="syntax--brackets">]</span>.each<span className="syntax--do">&nbsp;do</span>&nbsp;|i|&nbsp;-%&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Index&lt;%=&nbsp;i&nbsp;%&gt;&nbsp;/&gt;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;end&nbsp;-%&gt;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%-&nbsp;<span className="syntax--end">end</span>&nbsp;-%&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">export&nbsp;default&nbsp;Root;</span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--default">default</span>&nbsp;Root;</span><br />
         <span className="code__with-order">EOS</span><br />
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">erb&nbsp;=&nbsp;ERB.new(template&nbsp;nil&nbsp;&#39;-&#39;)</span><br />
-        <span className="code__with-order">File.open(&#39;src/root.tsx&#39;&nbsp;&#39;w&#39;)&nbsp;do&nbsp;|f|</span><br />
+        <span className="code__with-order">File.open(&#39;src/root.tsx&#39;&nbsp;&#39;w&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;f.write&nbsp;erb.result(binding)</span><br />
-        <span className="code__with-order">end</span><br />
+        <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
         
         これで元のテンプレートがどんなのだったかもわからなくなるくらい壊滅的な書き方にならなくてハッピー！
@@ -171,7 +172,7 @@ const Diary20190629: React.FC = () => {
         ちなみに一番書き方で悩んだのは
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">&quot;**強調！**&quot;.gsub!(/\*\*([^\*]+)\*\*/&nbsp;&#39;&lt;b&gt;\1&lt;/b&gt;&#39;)</span><br />
+        <span className="code__with-order">&quot;**強調！**&quot;.gsub!(/\*\*(<span className="syntax--brackets">[</span>^\*<span className="syntax--brackets">]</span>+)\*\*/&nbsp;&#39;&lt;b&gt;\1&lt;/b&gt;&#39;)</span><br />
         </code></p>
         
         こういうやつ
@@ -183,9 +184,9 @@ const Diary20190629: React.FC = () => {
         そこで先程自前で書いたのが活きてくる
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">EMOJI_TABLE&nbsp;=&nbsp;&#123;</span><br />
+        <span className="code__with-order">EMOJI_TABLE&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&#39;:tada:&#39;&nbsp;=&gt;&nbsp;&#39;&amp;#x1f389;&#39;</span><br />
-        <span className="code__with-order">&#125;</span><br />
+        <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><br /></span><br />
         <span className="code__with-order">&quot;おめでとう&nbsp;:tada:&quot;.gsub(/:tada:/&nbsp;EMOJI_TABLE)</span><br />
         </code></p>
