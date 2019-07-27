@@ -66,9 +66,9 @@ module SubDomain
 
       def parse_along_flow
         escape_about_html
-        br_tag_if_blank
         return if option[:code_block]
 
+        br_tag_if_blank
         escape_about_emoji
         replace_beginning_tag
         mask_ignore_inner_tag
