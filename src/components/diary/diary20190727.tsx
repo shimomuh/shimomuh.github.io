@@ -27,12 +27,12 @@ const Diary20190727: React.FC = () => {
         <b>ruby</b>
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>A</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize(value)</span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;A</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;initialize(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@value&nbsp;=&nbsp;value</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>call</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;call</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@value</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />

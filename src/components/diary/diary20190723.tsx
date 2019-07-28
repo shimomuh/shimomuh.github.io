@@ -28,22 +28,22 @@ const Diary20190723: React.FC = () => {
         <br />
         <p className="code json"><code>
         <span className="code__with-order"><span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&quot;ext<span className="syntax--end">end</span>s&quot;:&nbsp;<span className="syntax--brackets">[</span>&quot;tslint:latest&quot;&nbsp;&quot;tslint-react&quot;<span className="syntax--brackets">]</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&quot;extends&quot;:&nbsp;<span className="syntax--brackets">[</span>&quot;tslint:latest&quot;&nbsp;&quot;tslint-react&quot;<span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&quot;rules&quot;:&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;jsx-wrap-multiline&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-quotemark&quot;:&nbsp;&quot;quote&nbsp;は&nbsp;single&nbsp;だろうが<span className="syntax--do">&nbsp;do</span>uble&nbsp;だろうが許容する&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-quotemark&quot;:&nbsp;&quot;quote&nbsp;は&nbsp;single&nbsp;だろうが&nbsp;double&nbsp;だろうが許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;quotemark&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-ordered-imports&quot;:&nbsp;&quot;<span className="syntax--import">import&nbsp;</span>はアルファベット順&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-ordered-imports&quot;:&nbsp;&quot;<span className="syntax--import">import</span>&nbsp;はアルファベット順&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;ordered-imports&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-submodule-imports&quot;:&nbsp;&quot;<span className="syntax--import">import&nbsp;</span>されるファイルは&nbsp;submodule&nbsp;(/&nbsp;を使うもの</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-submodule-imports&quot;:&nbsp;&quot;<span className="syntax--import">import</span>&nbsp;されるファイルは&nbsp;submodule&nbsp;(/&nbsp;を使うもの</span><br />
         <span className="code__with-order">)&nbsp;も許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;no-submodule-imports&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-implicit-dep<span className="syntax--end">end</span>encies&quot;:&nbsp;&quot;tsconfig&nbsp;の&nbsp;path&nbsp;alias&nbsp;を無視したいので許容</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-no-implicit-dependencies&quot;:&nbsp;&quot;tsconfig&nbsp;の&nbsp;path&nbsp;alias&nbsp;を無視したいので許容</span><br />
         <span className="code__with-order">する&quot;</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;no-implicit-dep<span className="syntax--end">end</span>encies&quot;:&nbsp;false</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;no-implicit-dependencies&quot;:&nbsp;false</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-trailing-comma&quot;:&nbsp;&quot;文末のコンマは無視しよう&nbsp;fyi:&nbsp;https://selmertsx.hatenablog.com/entry/2018/02/06/201945&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;trailing-comma&quot;:&nbsp;false</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-max-classes-per-file&quot;:&nbsp;&quot;1つのファイルに&nbsp;<span className="syntax--private">private&nbsp;</span>な小さなクラスの宣言を&gt;許容する&quot;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-max-classes-per-file&quot;:&nbsp;&quot;1つのファイルに&nbsp;<span className="syntax--private">private</span>&nbsp;な小さなクラスの宣言を&gt;許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;max-classes-per-file&quot;:&nbsp;false</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;_comment-jsx-no-multiline-js&quot;:&nbsp;&quot;関数埋め込みを許容する&quot;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&quot;jsx-no-multiline-js&quot;:&nbsp;false</span><br />

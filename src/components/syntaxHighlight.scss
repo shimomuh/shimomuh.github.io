@@ -6,13 +6,15 @@ $magenta: #f0f;
   &.ruby {
     .syntax {
       &--class,
+      &--module,
       &--def {
         color: $cyan;
       }
       &--self {
         color: $magenta;
       }
-      &--end {
+      &--end,
+      &--private {
         color: $yellow;
       }
     }

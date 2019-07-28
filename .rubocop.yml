@@ -17,6 +17,9 @@ Metrics/ClassLength:
 Metrics/LineLength:
   Max: 200
 
+Metrics/ModuleLength:
+  Max: 200
+
 # 割と危険度が高いと判断されたものも許容する
 Metrics/AbcSize:
   Max: 50

@@ -74,10 +74,10 @@ const Diary20190707: React.FC = () => {
         <b>Typescript</b>
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>json.key<span className="syntax--braces">&#125;</span>&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
@@ -105,15 +105,15 @@ const Diary20190707: React.FC = () => {
         <i>多分もっとうまい方法はある</i>
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;json&nbsp;from&nbsp;&#39;data.json&#39;;</span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;\<span className="syntax--brackets">[</span>key:&nbsp;string<span className="syntax--brackets">]</span>:&nbsp;string;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;\<span className="syntax--brackets">[</span>key:&nbsp;<span className="syntax--string">string</span><span className="syntax--brackets">]</span>:&nbsp;<span className="syntax--string">string</span>;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--const">const&nbsp;</span>config:&nbsp;Props&nbsp;=&nbsp;json</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;Component:&nbsp;React.RC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--const">const</span>&nbsp;config:&nbsp;Props&nbsp;=&nbsp;json</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>config.key<span className="syntax--braces">&#125;</span>&lt;/p&gt;&nbsp;//&nbsp;=&gt;&nbsp;&quot;&lt;p&gt;value&lt;/p&gt;&quot;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
@@ -126,11 +126,11 @@ const Diary20190707: React.FC = () => {
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">hash&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order">files.each<span className="syntax--do">&nbsp;do</span>&nbsp;|file|</span><br />
+        <span className="code__with-order">files.each&nbsp;<span className="syntax--do">do</span>&nbsp;|file|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;date&nbsp;=&nbsp;extract_date(file.path)</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;File.open(input_file&nbsp;&#39;r&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;f.each_line.with_inedx<span className="syntax--do">&nbsp;do</span>&nbsp;|line&nbsp;index|</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hash<span className="syntax--brackets">[</span>date<span className="syntax--brackets">]</span>&nbsp;=&nbsp;line<span className="syntax--brackets">[</span>index<span className="syntax--brackets">]</span>&nbsp;<span className="syntax--if">if&nbsp;</span>index.zero?</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;File.open(input_file&nbsp;&#39;r&#39;)&nbsp;<span className="syntax--do">do</span>&nbsp;|f|</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;f.each_line.with_inedx&nbsp;<span className="syntax--do">do</span>&nbsp;|line&nbsp;index|</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hash<span className="syntax--brackets">[</span>date<span className="syntax--brackets">]</span>&nbsp;=&nbsp;line<span className="syntax--brackets">[</span>index<span className="syntax--brackets">]</span>&nbsp;<span className="syntax--if">if</span>&nbsp;index.zero?</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />

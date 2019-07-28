@@ -289,8 +289,8 @@ RSpec.describe SubDomain::GeneralDomain::StringArrayParser do
             '<span className="code__with-order">&lt;html&gt;</span><br />',
             '<span className="code__with-order">#&nbsp;ヘッダー</span><br />',
             '<span className="code__with-order">**太字**</span><br />',
-            '<span className="code__with-order">![](画像)</span><br />',
-            '<span className="code__with-order">[https://...](リンク)</span><br />',
+            '<span className="code__with-order">!<span className="syntax--brackets">[</span><span className="syntax--brackets">]</span>(画像)</span><br />',
+            '<span className="code__with-order"><span className="syntax--brackets">[</span>https://...<span className="syntax--brackets">]</span>(リンク)</span><br />',
             '<span className="code__with-order">&lt;/html&gt;</span><br />',
             '</code></p>'
           ]

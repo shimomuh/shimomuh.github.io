@@ -63,50 +63,50 @@ const Diary20190725: React.FC = () => {
         <b>今回の成果の抜粋と解説のため一部改変</b>
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>parse_along_flow</span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;parse_along_flow</span><br />
         <span className="code__with-order">&nbsp;&nbsp;escape_about_html&nbsp;#&nbsp;HTML&nbsp;特殊文字のエスケープ</span><br />
         <span className="code__with-order">&nbsp;&nbsp;br_tag_if_blank&nbsp;#&nbsp;空行の場合は&nbsp;&lt;br&nbsp;/&gt;&nbsp;タグ挿入</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;<span className="syntax--if">if&nbsp;</span>option<span className="syntax--brackets">[</span>:code_block<span className="syntax--brackets">]</span>&nbsp;#&nbsp;コードブロック中はここで&nbsp;<span className="syntax--return">return</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;<span className="syntax--if">if</span>&nbsp;option<span className="syntax--brackets">[</span>:code_block<span className="syntax--brackets">]</span>&nbsp;#&nbsp;コードブロック中はここで&nbsp;<span className="syntax--return">return</span></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">&nbsp;&nbsp;escape_about_emoji&nbsp;#&nbsp;絵文字を置換</span><br />
         <span className="code__with-order">&nbsp;&nbsp;replace_beginning_tag&nbsp;#&nbsp;h&nbsp;や&nbsp;q&nbsp;など一度しか置換されない文頭処理</span><br />
         <span className="code__with-order">&nbsp;&nbsp;mask_ignore_inner_tag&nbsp;#&nbsp;内部を書き換えられたくない&nbsp;a&nbsp;タグなどをマスキング</span><br />
         <span className="code__with-order">&nbsp;&nbsp;replace_simple_tag&nbsp;#&nbsp;i&nbsp;タグなどは全体的に雑に置換</span><br />
         <span className="code__with-order">&nbsp;&nbsp;replace_mask_tag&nbsp;#&nbsp;最後にマスキングしたものをあるべきタグに置換し直す</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>mask_ignore_inner_tag</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;mask_ignore_inner_tag</span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;...(略)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;mask_a_tag</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>mask_a_tag</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;<span className="syntax--if">if&nbsp;</span>@a_tag.size&nbsp;&gt;&nbsp;AVOID_STACK_LEVEL_TOO_DEEP&nbsp;#&nbsp;stack&nbsp;level&nbsp;too&nbsp;depp&nbsp;で怒られるので。</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;mask_a_tag</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;<span className="syntax--if">if</span>&nbsp;@a_tag.size&nbsp;&gt;&nbsp;AVOID_STACK_LEVEL_TOO_DEEP&nbsp;#&nbsp;stack&nbsp;level&nbsp;too&nbsp;depp&nbsp;で怒られるので。</span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">&nbsp;&nbsp;matcher&nbsp;=&nbsp;/\<span className="syntax--brackets">[</span>(<span className="syntax--brackets">[</span>^\<span className="syntax--brackets">]</span><span className="syntax--brackets">]</span><span className="syntax--brackets">[</span>^\(<span className="syntax--brackets">]</span>*)\<span className="syntax--brackets">]</span>\((<span className="syntax--brackets">[</span>^\)<span className="syntax--brackets">]</span>*)\)/.match(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;unless&nbsp;matcher&nbsp;#&nbsp;一致するものがなければ&nbsp;<span className="syntax--return">return</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">&nbsp;&nbsp;@a_tag.push(href:&nbsp;matcher<span className="syntax--brackets">[</span>2<span className="syntax--brackets">]</span>&nbsp;text:&nbsp;matcher<span className="syntax--brackets">[</span>1<span className="syntax--brackets">]</span>)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;@value.gsub!(matcher<span className="syntax--brackets">[</span>0<span className="syntax--brackets">]</span>&nbsp;&quot;<span className="syntax--braces">&#123;</span>A#<span className="syntax--braces">&#123;</span>@a_tag.size&nbsp;-&nbsp;1<span className="syntax--braces">&#125;</span><span className="syntax--braces">&#125;</span>&quot;)&nbsp;#&nbsp;<span className="syntax--braces">&#123;</span>A0<span className="syntax--braces">&#125;</span>&nbsp;のようにマスキング</span><br />
         <span className="code__with-order">&nbsp;&nbsp;mask_include_text_a_tag&nbsp;#&nbsp;match&nbsp;メソッドでは前方一致しかできないため再帰的に処理</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>replace_simple_tag</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;replace_simple_tag</span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;...(略)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;replace_i_tag&nbsp;#&nbsp;マスキング後の処理のため&nbsp;a&nbsp;タグの内部は影響を受けない</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>replace_i_tag</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;replace_i_tag</span><br />
         <span className="code__with-order">&nbsp;&nbsp;@value.gsub!(/__(<span className="syntax--brackets">[</span>^_<span className="syntax--brackets">]</span><span className="syntax--brackets">[</span>^_<span className="syntax--brackets">]</span>+)__/&nbsp;&#39;&lt;i&gt;\1&lt;/i&gt;&#39;)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;@value.gsub!(/_(<span className="syntax--brackets">[</span>^_<span className="syntax--brackets">]</span>+)_/&nbsp;&#39;&lt;i&gt;\1&lt;/i&gt;&#39;)</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>replace_mask_tag</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;replace_mask_tag</span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;...(略)...</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--def">def&nbsp;</span>replace_a_tag</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;@a_tag.each_with_index<span className="syntax--do">&nbsp;do</span>&nbsp;|a&nbsp;index|</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--def">def</span>&nbsp;replace_a_tag</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;@a_tag.each_with_index&nbsp;<span className="syntax--do">do</span>&nbsp;|a&nbsp;index|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@value.gsub!(/<span className="syntax--braces">&#123;</span>A#<span className="syntax--braces">&#123;</span>index<span className="syntax--braces">&#125;</span><span className="syntax--braces">&#125;</span>/&nbsp;&quot;&lt;a&nbsp;href=\&quot;#<span className="syntax--braces">&#123;</span>a<span className="syntax--brackets">[</span>:href<span className="syntax--brackets">]</span><span className="syntax--braces">&#125;</span>\&quot;&gt;#<span className="syntax--braces">&#123;</span>a<span className="syntax--brackets">[</span>:text<span className="syntax--brackets">]</span><span className="syntax--braces">&#125;</span>&lt;/a&gt;&quot;)&nbsp;#&nbsp;置換して戻してあげる</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />

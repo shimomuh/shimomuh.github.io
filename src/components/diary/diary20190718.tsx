@@ -40,7 +40,7 @@ const Diary20190718: React.FC = () => {
         加えて、この処理方法の欠点としてページの終わりが表を表すタグだった場合閉じタグ処理が実行されないので、文末だったらフラグをみて未処理の文法があればその終了処理をした
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order">texts.each<span className="syntax--do">&nbsp;do</span>&nbsp;|text|</span><br />
+        <span className="code__with-order">texts.each&nbsp;<span className="syntax--do">do</span>&nbsp;|text|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;flag_table_tag(text)&nbsp;#&nbsp;テキストをみてフラグを立てる</span><br />
         <span className="code__with-order">&nbsp;&nbsp;#&nbsp;...他のタグ処理やエスケープ処理...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;replace_table_tag(text)&nbsp;#&nbsp;フラグをみて&nbsp;`|`&nbsp;を置換する</span><br />
