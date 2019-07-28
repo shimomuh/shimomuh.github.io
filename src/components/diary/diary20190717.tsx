@@ -38,11 +38,11 @@ const Diary20190717: React.FC = () => {
         <q>Or&nbsp;if&nbsp;you&nbsp;are&nbsp;running&nbsp;React&nbsp;16.8&nbsp;and&nbsp;above&nbsp;you&nbsp;can&nbsp;use&nbsp;hooks:</q>
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>ScrollToTop&nbsp;=&nbsp;(<span className="syntax--braces">&#123;</span>&nbsp;children&nbsp;location:&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;pathname&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;<span className="syntax--braces">&#125;</span>)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;ScrollToTop&nbsp;=&nbsp;(<span className="syntax--braces">&#123;</span>&nbsp;children&nbsp;location:&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;pathname&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;<span className="syntax--braces">&#125;</span>)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;useEffect(()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;window.scrollTo(0&nbsp;0);</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;<span className="syntax--brackets">[</span>pathname<span className="syntax--brackets">]</span>);</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;children;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span>;</span><br />
         </code></p>

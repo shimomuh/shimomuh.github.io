@@ -92,7 +92,7 @@ const Diary20190626: React.FC = () => {
         イメージ的には以下を返すような関数
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>getCal<span className="syntax--end">end</span>ar&nbsp;=&nbsp;(year:&nbsp;number&nbsp;month:&nbsp;number):&nbsp;any&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;getCalendar&nbsp;=&nbsp;(year:&nbsp;number&nbsp;month:&nbsp;number):&nbsp;any&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;<span className="syntax--brackets">[</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--brackets">[</span>&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;6&nbsp;&nbsp;7&nbsp;&nbsp;8<span className="syntax--brackets">]</span></span><br />
@@ -127,26 +127,26 @@ const Diary20190626: React.FC = () => {
         そこで、前者はどうしようもないので&nbsp;DateCell&nbsp;という名前にして&nbsp;Calendar&nbsp;はコンテキストマッピングとして処理することでクラス実装時は&nbsp;Calendar&nbsp;として実装すればよいので助かった
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Cal<span className="syntax--end">end</span>ar&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;Calendar&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;Cal<span className="syntax--end">end</span>ar&nbsp;as&nbsp;Cal<span className="syntax--end">end</span>arModel&nbsp;<span className="syntax--braces">&#125;</span>;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;Calendar&nbsp;as&nbsp;CalendarModel&nbsp;<span className="syntax--braces">&#125;</span>;</span><br />
         </code></p>
         
         これで衝突を避けられる。本音を言うと
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order">//&nbsp;src/models/cal<span className="syntax--end">end</span>ar.tsx</span><br />
-        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--class">class&nbsp;</span>Cal<span className="syntax--end">end</span>ar&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">//&nbsp;src/components/adventCal<span className="syntax--end">end</span>ar/cal<span className="syntax--end">end</span>ar.tsx</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;Cal<span className="syntax--end">end</span>ar&nbsp;as&nbsp;Model&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;models/cal<span className="syntax--end">end</span>ar&#39;;</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--const">const&nbsp;</span>Cal<span className="syntax--end">end</span>ar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--var">var&nbsp;</span>model&nbsp;=&nbsp;new&nbsp;Model();</span><br />
+        <span className="code__with-order">//&nbsp;src/models/calendar.tsx</span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--class">class</span>&nbsp;Calendar&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span></span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">//&nbsp;src/components/adventCalendar/calendar.tsx</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;Calendar&nbsp;as&nbsp;Model&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;models/calendar&#39;;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--const">const</span>&nbsp;Calendar:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--var">var</span>&nbsp;model&nbsp;=&nbsp;new&nbsp;Model();</span><br />
         <span className="code__with-order">&nbsp;&nbsp;//&nbsp;...(略)...</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         </code></p>
         
         みたいな感じにしたかったが、うまい方法が見つからず今は前者を選んでいる

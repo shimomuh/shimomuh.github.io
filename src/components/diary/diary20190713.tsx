@@ -22,8 +22,8 @@ const Diary20190713: React.FC = () => {
         
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;json&#39;</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">File.open(&#39;file.json&#39;&nbsp;&#39;w&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">File.open(&#39;file.json&#39;&nbsp;&#39;w&#39;)&nbsp;<span className="syntax--do">do</span>&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;f.write&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;hoge:&nbsp;1&nbsp;huga:&nbsp;2&nbsp;<span className="syntax--braces">&#125;</span>.to_json</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
@@ -46,8 +46,8 @@ const Diary20190713: React.FC = () => {
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;json&#39;</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">File.open(&#39;file.json&#39;&nbsp;&#39;w&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">File.open(&#39;file.json&#39;&nbsp;&#39;w&#39;)&nbsp;<span className="syntax--do">do</span>&nbsp;|f|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;f.write&nbsp;JSON.pretty_generate(<span className="syntax--braces">&#123;</span>&nbsp;hoge:&nbsp;1&nbsp;huga:&nbsp;2&nbsp;<span className="syntax--braces">&#125;</span>)</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>

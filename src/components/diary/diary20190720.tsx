@@ -28,25 +28,25 @@ const Diary20190720: React.FC = () => {
         <br />
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;fileutils&#39;&nbsp;#&nbsp;ファイル操作をするのに必要なやーつ</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">#&nbsp;正規表現で対応するファイルを決める</span><br />
         <span className="code__with-order">#&nbsp;sort&nbsp;しているのは&nbsp;Dir.glob&nbsp;が順序を保証しないため</span><br />
         <span className="code__with-order">image_file_paths&nbsp;=&nbsp;Dir.glob(&#39;diary/**/*\.<span className="syntax--braces">&#123;</span>pngjpgjpeggifsvg<span className="syntax--braces">&#125;</span>&#39;).sort</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">dirs&nbsp;=&nbsp;<span className="syntax--brackets">[</span><span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">files&nbsp;=&nbsp;<span className="syntax--brackets">[</span><span className="syntax--brackets">]</span></span><br />
-        <span className="code__with-order">Dir.glob(&#39;diary/**/*\.<span className="syntax--braces">&#123;</span>pngjpgjpeggifsvg<span className="syntax--braces">&#125;</span>&#39;)<span className="syntax--do">&nbsp;do</span>&nbsp;|f|&nbsp;#&nbsp;はじめにファイルを読み込み</span><br />
+        <span className="code__with-order">Dir.glob(&#39;diary/**/*\.<span className="syntax--braces">&#123;</span>pngjpgjpeggifsvg<span className="syntax--braces">&#125;</span>&#39;)&nbsp;<span className="syntax--do">do</span>&nbsp;|f|&nbsp;#&nbsp;はじめにファイルを読み込み</span><br />
         <span className="code__with-order">&nbsp;&nbsp;files.push&nbsp;f</span><br />
         <span className="code__with-order">&nbsp;&nbsp;dirs.push&nbsp;File.dirname(f)</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">dirs.uniq.sort.each<span className="syntax--do">&nbsp;do</span>&nbsp;|dir|</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">dirs.uniq.sort.each&nbsp;<span className="syntax--do">do</span>&nbsp;|dir|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;puts&nbsp;dir</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;FileUtils.mkdir_p(&quot;public/static/#<span className="syntax--braces">&#123;</span>dir<span className="syntax--braces">&#125;</span>&quot;)&nbsp;#&nbsp;存在しないディレクトリにコピーしないように&nbsp;mkdir&nbsp;-p&nbsp;して</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;FileUtils.mkdir_p(&quot;<span className="syntax--public">public</span>/static/#<span className="syntax--braces">&#123;</span>dir<span className="syntax--braces">&#125;</span>&quot;)&nbsp;#&nbsp;存在しないディレクトリにコピーしないように&nbsp;mkdir&nbsp;-p&nbsp;して</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">files.each<span className="syntax--do">&nbsp;do</span>&nbsp;|file|</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;FileUtils.cp&nbsp;file&nbsp;&quot;public/static/#<span className="syntax--braces">&#123;</span>file<span className="syntax--braces">&#125;</span>&quot;&nbsp;#&nbsp;ファイルをコピーする</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">files.each&nbsp;<span className="syntax--do">do</span>&nbsp;|file|</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;FileUtils.cp&nbsp;file&nbsp;&quot;<span className="syntax--public">public</span>/static/#<span className="syntax--braces">&#123;</span>file<span className="syntax--braces">&#125;</span>&quot;&nbsp;#&nbsp;ファイルをコピーする</span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
       <br /><br />

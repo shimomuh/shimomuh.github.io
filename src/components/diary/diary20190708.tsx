@@ -65,7 +65,7 @@ const Diary20190708: React.FC = () => {
         <b>DOM</b>
         <br />
         <p className="code html"><code>
-        <span className="code__with-order">&lt;ul&nbsp;class=&quot;table-header&quot;&gt;</span><br />
+        <span className="code__with-order">&lt;ul&nbsp;<span className="syntax--class">class</span>=&quot;table-header&quot;&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&lt;li&gt;日&lt;/li&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&lt;li&gt;月&lt;/li&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&lt;li&gt;火&lt;/li&gt;</span><br />
@@ -96,18 +96,18 @@ const Diary20190708: React.FC = () => {
         <br />
         <p className="code css"><code>
         <span className="code__with-order">/*&nbsp;スマホサイズはそのまま&nbsp;*/</span><br />
-        <span className="code__with-order"><span className="syntax--media">@media&nbsp;</span>screen&nbsp;and&nbsp;(max-width:&nbsp;1024px)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--media">@media</span>&nbsp;screen&nbsp;and&nbsp;(max-width:&nbsp;1024px)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;.table-header&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;display:&nbsp;none;&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;/*&nbsp;テーブルレイアウト時のヘッダーにあたる曜日は隠す&nbsp;*/</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">/*&nbsp;PC&nbsp;サイズは少し工夫&nbsp;*/</span><br />
-        <span className="code__with-order"><span className="syntax--media">@media&nbsp;</span>screen&nbsp;and&nbsp;(min-width:&nbsp;1024px)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--media">@media</span>&nbsp;screen&nbsp;and&nbsp;(min-width:&nbsp;1024px)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;li&nbsp;span&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;display:&nbsp;none;&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;/*&nbsp;曜日は隠す&nbsp;*/</span><br />
         <span className="code__with-order">&nbsp;&nbsp;ul&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;&nbsp;/*&nbsp;flex&nbsp;style&nbsp;を使う&nbsp;*/</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;flex-wrap:&nbsp;wrap;&nbsp;/*&nbsp;いい塩梅で折り返す&nbsp;*/</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;li&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;14%;&nbsp;/*&nbsp;(int)(100&nbsp;/&nbsp;7)&nbsp;=&nbsp;14&nbsp;*/</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;14%;&nbsp;/*&nbsp;(<span className="syntax--int">int</span>)(100&nbsp;/&nbsp;7)&nbsp;=&nbsp;14&nbsp;*/</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;:nth-child(7n&nbsp;+&nbsp;1)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;&nbsp;/*&nbsp;日曜&nbsp;*/</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />

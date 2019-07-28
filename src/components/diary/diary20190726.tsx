@@ -44,66 +44,66 @@ const Diary20190726: React.FC = () => {
         <b>before</b>
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Parser</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize(value)</span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;Parser</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;initialize(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@value&nbsp;=&nbsp;value</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@masks&nbsp;=&nbsp;<span className="syntax--brackets">[</span><span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span><span className="syntax--self">self</span>.parse(value)</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;<span className="syntax--self">self</span>.parse(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;instance&nbsp;=&nbsp;new(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;instance.escape</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;instance.parse_something</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;instance.unescape</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;private</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>escape</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--private">private</span></span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;escape</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;matcher&nbsp;=&nbsp;/PATTERN/.match(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;unless&nbsp;matcher</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@masks.push&nbsp;matcher<span className="syntax--brackets">[</span>0<span className="syntax--brackets">]</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@value.gsub!(matcher<span className="syntax--brackets">[</span>0<span className="syntax--brackets">]</span>&nbsp;&quot;%MASK#<span className="syntax--braces">&#123;</span>@masks.size&nbsp;-&nbsp;1<span className="syntax--braces">&#125;</span>%&quot;)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>unescape</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@masks.each_with_index<span className="syntax--do">&nbsp;do</span>&nbsp;|esc&nbsp;index|</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;unescape</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;@masks.each_with_index&nbsp;<span className="syntax--do">do</span>&nbsp;|esc&nbsp;index|</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@value.gsub!(&quot;%MASK#<span className="syntax--braces">&#123;</span>index<span className="syntax--braces">&#125;</span>%&quot;&nbsp;esc)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">Parser.parse(value)</span><br />
         </code></p>
         
         <b>after</b>
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Parser</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize(value)</span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;Parser</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;initialize(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;...(上記と一緒)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span><span className="syntax--self">self</span>.parse(value)</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;<span className="syntax--self">self</span>.parse(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;instance&nbsp;=&nbsp;new(value)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;instance.parse_something&nbsp;#&nbsp;従来のやり方は残す</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;#&nbsp;クラスメソッドとして単発利用するときはインスタンスは返さず値だけ返す</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>parse&nbsp;#&nbsp;インスタンスメソッドとしてもパースを利用できるようにする</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;parse&nbsp;#&nbsp;インスタンスメソッドとしてもパースを利用できるようにする</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;parse_something</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>escape</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;escape</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;...(上記と一緒)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>unescape</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;unescape</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;...(上記と一緒)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">instance&nbsp;=&nbsp;Parser.new</span><br />
         <span className="code__with-order">instance.escape</span><br />
         <span className="code__with-order">instance.parse</span><br />

@@ -16,6 +16,12 @@ const Tag1: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-28'>
+            <span className='tag__article--date'>2019-07-28</span>
+            <span className='tag__article--title'>正規のシンタックスハイライトを実現する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-27'>
             <span className='tag__article--date'>2019-07-27</span>
             <span className='tag__article--title'>雑なシンタックスハイライトをつける</span>

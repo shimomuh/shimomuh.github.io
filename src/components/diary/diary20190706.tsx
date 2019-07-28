@@ -71,21 +71,21 @@ const Diary20190706: React.FC = () => {
         Component&nbsp;は&nbsp;Container&nbsp;に接続され&nbsp;store&nbsp;の更新を&nbsp;dispatch&nbsp;している前提とする
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">type&nbsp;Props&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;store:&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;cal<span className="syntax--end">end</span>ar:&nbsp;Cal<span className="syntax--end">end</span>arModel;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;calendar:&nbsp;CalendarModel;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span></span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">Component:&nbsp;React.RC&lt;Props&gt;&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;console.log(props.store.cal<span className="syntax--end">end</span>ar.year)&nbsp;//&nbsp;(1)</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;reutnr&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>props.store.cal<span className="syntax--end">end</span>ar.year<span className="syntax--braces">&#125;</span>&lt;/p&gt;&nbsp;//&nbsp;(2)</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;console.log(props.store.calendar.year)&nbsp;//&nbsp;(1)</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;reutnr&nbsp;&lt;p&gt;<span className="syntax--braces">&#123;</span>props.store.calendar.year<span className="syntax--braces">&#125;</span>&lt;/p&gt;&nbsp;//&nbsp;(2)</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Cal<span className="syntax--end">end</span>arModel&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--public">public&nbsp;</span>year:&nbsp;number;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;CalendarModel&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--public">public</span>&nbsp;year:&nbsp;number;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         
@@ -99,32 +99,32 @@ const Diary20190706: React.FC = () => {
         <br />
         <p className="code javascript"><code>
         <span className="code__with-order">//&nbsp;reducer</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;reducerWithInitialState&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;typescript-fsa-reducers&#39;;</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>actionCreatorFactory&nbsp;from&nbsp;&#39;typescript-fsa&#39;;</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--interface">interface&nbsp;</span>Cal<span className="syntax--end">end</span>arState&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;cal<span className="syntax--end">end</span>ar:&nbsp;Cal<span className="syntax--end">end</span>arModel</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;reducerWithInitialState&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;typescript-fsa-reducers&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;actionCreatorFactory&nbsp;from&nbsp;&#39;typescript-fsa&#39;;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--interface">interface</span>&nbsp;CalendarState&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;calendar:&nbsp;CalendarModel</span><br />
         <span className="code__with-order">&nbsp;&nbsp;year:&nbsp;number;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>state:&nbsp;Cal<span className="syntax--end">end</span>arState&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;cal<span className="syntax--end">end</span>ar:&nbsp;new&nbsp;Cal<span className="syntax--end">end</span>er()</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;year:&nbsp;new&nbsp;Cal<span className="syntax--end">end</span>er().year</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;state:&nbsp;CalendarState&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;calendar:&nbsp;new&nbsp;Calender()</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;year:&nbsp;new&nbsp;Calender().year</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>actionCreator&nbsp;=&nbsp;actionCreatorFactory();</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>cal<span className="syntax--end">end</span>arActions&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;nextYear:&nbsp;actionCreator&lt;Cal<span className="syntax--end">end</span>arModel&gt;(&#39;NEXT_YEAR&#39;)</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;actionCreator&nbsp;=&nbsp;actionCreatorFactory();</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;calendarActions&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;nextYear:&nbsp;actionCreator&lt;CalendarModel&gt;(&#39;NEXT_YEAR&#39;)</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--const">const&nbsp;</span>cal<span className="syntax--end">end</span>arReducer&nbsp;=&nbsp;reducerWithInitialState(state)</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;.case(cal<span className="syntax--end">end</span>arActions.nextYear&nbsp;(state&nbsp;model)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;Object.assign(<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span>&nbsp;state&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;cal<span className="syntax--end">end</span>ar:&nbsp;model&nbsp;year:&nbsp;model.year&nbsp;<span className="syntax--braces">&#125;</span>)</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--export">export</span>&nbsp;<span className="syntax--const">const</span>&nbsp;calendarReducer&nbsp;=&nbsp;reducerWithInitialState(state)</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;.case(calendarActions.nextYear&nbsp;(state&nbsp;model)&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;Object.assign(<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span>&nbsp;state&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;calendar:&nbsp;model&nbsp;year:&nbsp;model.year&nbsp;<span className="syntax--braces">&#125;</span>)</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--braces">&#125;</span>);</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Cal<span className="syntax--end">end</span>arModel&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--public">public&nbsp;</span>year:&nbsp;number;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;CalendarModel&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--public">public</span>&nbsp;year:&nbsp;number;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
         </code></p>
         

@@ -97,8 +97,8 @@ const Diary20190705: React.FC = () => {
         ほぼ全容は以下の通りである
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--var">var&nbsp;</span>segmentCount&nbsp;=&nbsp;0;</span><br />
-        <span className="code__with-order"><span className="syntax--var">var&nbsp;</span>l&nbsp;=&nbsp;window.location;</span><br />
+        <span className="code__with-order"><span className="syntax--var">var</span>&nbsp;segmentCount&nbsp;=&nbsp;0;</span><br />
+        <span className="code__with-order"><span className="syntax--var">var</span>&nbsp;l&nbsp;=&nbsp;window.location;</span><br />
         <span className="code__with-order">l.replace(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;l.protocol&nbsp;+&nbsp;&#39;//&#39;&nbsp;+&nbsp;l.hostname&nbsp;+&nbsp;(l.port&nbsp;?&nbsp;&#39;:&#39;&nbsp;+&nbsp;l.port&nbsp;:&nbsp;&#39;&#39;)&nbsp;+</span><br />
         <span className="code__with-order">&nbsp;&nbsp;l.pathname.split(&#39;/&#39;).slice(0&nbsp;1&nbsp;+&nbsp;segmentCount).join(&#39;/&#39;)&nbsp;+&nbsp;&#39;/?p=/&#39;&nbsp;+</span><br />
@@ -152,13 +152,13 @@ const Diary20190705: React.FC = () => {
         <br />
         <p className="code javascript"><code>
         <span className="code__with-order">(<span className="syntax--function">function</span>(l)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--if">if&nbsp;</span>(l.search)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--var">var&nbsp;</span>q&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span>;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--if">if</span>&nbsp;(l.search)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--var">var</span>&nbsp;q&nbsp;=&nbsp;<span className="syntax--braces">&#123;</span><span className="syntax--braces">&#125;</span>;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;l.search.slice(1).split(&#39;&amp;&#39;).forEach(<span className="syntax--function">function</span>(v)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--var">var&nbsp;</span>a&nbsp;=&nbsp;v.split(&#39;=&#39;);</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--var">var</span>&nbsp;a&nbsp;=&nbsp;v.split(&#39;=&#39;);</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q<span className="syntax--brackets">[</span>a<span className="syntax--brackets">[</span>0<span className="syntax--brackets">]</span><span className="syntax--brackets">]</span>&nbsp;=&nbsp;a.slice(1).join(&#39;=&#39;).replace(/~and~/g&nbsp;&#39;&amp;&#39;);</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--braces">&#125;</span>);</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--if">if&nbsp;</span>(q.p&nbsp;!==&nbsp;<span className="syntax--undefined">undefined</span>)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;<span className="syntax--if">if</span>&nbsp;(q.p&nbsp;!==&nbsp;<span className="syntax--undefined">undefined</span>)&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.history.replaceState(null&nbsp;null</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l.pathname.slice(0&nbsp;-1)&nbsp;+&nbsp;(q.p&nbsp;||&nbsp;&#39;&#39;)&nbsp;+</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(q.q&nbsp;?&nbsp;(&#39;?&#39;&nbsp;+&nbsp;q.q)&nbsp;:&nbsp;&#39;&#39;)&nbsp;+</span><br />

@@ -45,7 +45,7 @@ const Diary20190704: React.FC = () => {
         <span className="code__with-order">_::-webkit-full-page-media&nbsp;_:future&nbsp;:root&nbsp;.diary&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;color:&nbsp;red;</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">/*&nbsp;Firefox&nbsp;のみ&nbsp;*/</span><br />
         <span className="code__with-order">@-moz-<span className="syntax--document">document</span>&nbsp;url-prefix()&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;.diary&nbsp;<span className="syntax--braces">&#123;</span></span><br />

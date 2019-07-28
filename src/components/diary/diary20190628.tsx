@@ -37,11 +37,11 @@ const Diary20190628: React.FC = () => {
         <b>呼び出し側</b>
         <br />
         <p className="code javascript"><code>
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span>ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
-        <span className="code__with-order"><span className="syntax--import">import&nbsp;</span><span className="syntax--braces">&#123;</span>&nbsp;BrowserRouter&nbsp;Route&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;react-router-dom&#39;;</span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Router:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;React&nbsp;from&nbsp;&#39;react&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;ReactDOM&nbsp;from&nbsp;&#39;react-dom&#39;;</span><br />
+        <span className="code__with-order"><span className="syntax--import">import</span>&nbsp;<span className="syntax--braces">&#123;</span>&nbsp;BrowserRouter&nbsp;Route&nbsp;<span className="syntax--braces">&#125;</span>&nbsp;from&nbsp;&#39;react-router-dom&#39;;</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;Router:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;BrowserRouter&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
@@ -51,24 +51,24 @@ const Diary20190628: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/BrowserRouter&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Index:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;Index:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Index&lt;/h1&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order"><span className="syntax--const">const&nbsp;</span>Home:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order"><span className="syntax--const">const</span>&nbsp;Home:&nbsp;React.FC&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span className="syntax--braces">&#123;</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--return">return</span>&nbsp;(</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Home&lt;/h1&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;);</span><br />
         <span className="code__with-order"><span className="syntax--braces">&#125;</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">ReactDOM.r<span className="syntax--end">end</span>er(&lt;Router&nbsp;/&gt;<span className="syntax--do">&nbsp;do</span>cument.getElementById(&#39;#app&#39;));</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">ReactDOM.render(&lt;Router&nbsp;/&gt;&nbsp;<span className="syntax--document">document</span>.getElementById(&#39;#app&#39;));</span><br />
         </code></p>
         
         本当は他にも&nbsp;History&nbsp;対応だったり&nbsp;state&nbsp;を使ってページまたぎでデータを使ったりできるのだが、それはこの&nbsp;Web&nbsp;サイトではﾀﾌﾞﾝやらない

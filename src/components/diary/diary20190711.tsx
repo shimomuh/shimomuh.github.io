@@ -34,11 +34,11 @@ const Diary20190711: React.FC = () => {
         もし&nbsp;circleci&nbsp;や&nbsp;jenkins&nbsp;で&nbsp;job&nbsp;を実行して&nbsp;test&nbsp;をしている人なんかは標準出力が出ないように以下で工夫してみてもいいかもしれない
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Model</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize</span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;Model</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;initialize</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>exec</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;exec</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;...(なんか処理)...</span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;puts&nbsp;&#39;exec!&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
@@ -58,12 +58,12 @@ const Diary20190711: React.FC = () => {
         そこで
         <br />
         <p className="code ruby"><code>
-        <span className="code__with-order"><span className="syntax--class">class&nbsp;</span>Model</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>initialize</span><br />
+        <span className="code__with-order"><span className="syntax--class">class</span>&nbsp;Model</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;initialize</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
-        <span className="code__with-order"><br /></span><br />
-        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def&nbsp;</span>exec</span><br />
-        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;&#39;exec!&#39;&nbsp;<span className="syntax--if">if&nbsp;</span>given_block?</span><br />
+        <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--def">def</span>&nbsp;exec</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;&#39;exec!&#39;&nbsp;<span className="syntax--if">if</span>&nbsp;given_block?</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"><span className="syntax--end">end</span></span><br />
         </code></p>
