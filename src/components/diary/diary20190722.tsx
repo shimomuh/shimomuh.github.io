@@ -12,7 +12,7 @@ const Diary20190722: React.FC = () => {
     <div className='diary'>
         <h1>rubocop&nbsp;を使って&nbsp;ruby&nbsp;コードに秩序を！</h1>
         
-        タグ&nbsp;<Link to='/tag/7'><span className='inline-code'>Ruby</span></Link>
+        タグ&nbsp;<Link to='/tag/1'><span className='inline-code'>このサイトの生い立ち</span></Link>&nbsp;<Link to='/tag/7'><span className='inline-code'>Ruby</span></Link>
         <br />
         <h2>対象者</h2>
         
