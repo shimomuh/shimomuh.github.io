@@ -74,6 +74,10 @@ const Diary20190728: React.FC = () => {
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;&#39;意図した通りに&nbsp;span&nbsp;タグが挿入される&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
         <span className="code__with-order"></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;context&nbsp;&#39;前に許容できる文字がきた場合&#39;&nbsp;<span className="syntax--do">do</span></span><br />
+        <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;&#39;意図した通りに&nbsp;span&nbsp;タグが挿入される&#39;</span><br />
+        <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />
+        <span className="code__with-order"></span><br />
         <span className="code__with-order">&nbsp;&nbsp;context&nbsp;&#39;後ろに許容できる文字がきた場合&#39;&nbsp;<span className="syntax--do">do</span></span><br />
         <span className="code__with-order">&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;&#39;意図した通りに&nbsp;span&nbsp;タグが挿入される&#39;</span><br />
         <span className="code__with-order">&nbsp;&nbsp;<span className="syntax--end">end</span></span><br />

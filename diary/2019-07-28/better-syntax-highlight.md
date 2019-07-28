@@ -62,6 +62,10 @@ shared_examples '(\b)(trigger)(\b)' do |trigger, klass|
     it '意図した通りに span タグが挿入される'
   end
 
+  context '前に許容できる文字がきた場合' do
+    it '意図した通りに span タグが挿入される'
+  end
+
   context '後ろに許容できる文字がきた場合' do
     it '意図した通りに span タグが挿入される'
   end
