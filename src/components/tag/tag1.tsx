@@ -40,6 +40,24 @@ const Tag1: React.FC = () => {
           </Link>
         </li>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-24'>
+            <span className='tag__article--date'>2019-07-24</span>
+            <span className='tag__article--title'>プロジェクトの途中から膨大なコードの品質を保証したくて rspec を導入する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-23'>
+            <span className='tag__article--date'>2019-07-23</span>
+            <span className='tag__article--title'>tslint を使って TypeScript にも秩序を！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
+          <Link to='/diary/2019-07-22'>
+            <span className='tag__article--date'>2019-07-22</span>
+            <span className='tag__article--title'>rubocop を使って ruby コードに秩序を！</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-21'>
             <span className='tag__article--date'>2019-07-21</span>
             <span className='tag__article--title'>Google Analytics のタグを埋め込んで訪問者を分析しよう</span>

@@ -1,3 +1,4 @@
+$white: #fff;
 $black: #222;
 
 $code-bg: #233;
@@ -18,6 +19,8 @@ $link: #4aac00;
   /* 可読性のため 800px を max にしてみた */
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: $white;
 
   .code {
     color: $code-txt;

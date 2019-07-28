@@ -12,7 +12,7 @@ const Diary20190723: React.FC = () => {
     <div className='diary'>
         <h1>tslint&nbsp;を使って&nbsp;TypeScript&nbsp;にも秩序を！</h1>
         
-        タグ&nbsp;<Link to='/tag/5'><span className='inline-code'>TypeScript</span></Link>
+        タグ&nbsp;<Link to='/tag/1'><span className='inline-code'>このサイトの生い立ち</span></Link>&nbsp;<Link to='/tag/5'><span className='inline-code'>TypeScript</span></Link>
         <br />
         <h2>対象者</h2>
         

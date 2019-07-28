@@ -12,7 +12,7 @@ const Diary20190724: React.FC = () => {
     <div className='diary'>
         <h1>プロジェクトの途中から膨大なコードの品質を保証したくて&nbsp;rspec&nbsp;を導入する</h1>
         
-        タグ&nbsp;<Link to='/tag/7'><span className='inline-code'>Ruby</span></Link>&nbsp;<Link to='/tag/12'><span className='inline-code'>設計</span></Link>
+        タグ&nbsp;<Link to='/tag/1'><span className='inline-code'>このサイトの生い立ち</span></Link>&nbsp;<Link to='/tag/7'><span className='inline-code'>Ruby</span></Link>&nbsp;<Link to='/tag/12'><span className='inline-code'>設計</span></Link>
         <br />
         <h2>対象者</h2>
         
