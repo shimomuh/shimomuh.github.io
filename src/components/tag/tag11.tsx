@@ -16,6 +16,12 @@ const Tag11: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-07-30'>
+            <span className='tag__article--date'>2019-07-30</span>
+            <span className='tag__article--title'>アイコンを作ろう</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-07-16'>
             <span className='tag__article--date'>2019-07-16</span>
             <span className='tag__article--title'>Google Calendar っぽくシンプルなデザインを適応する</span>
