@@ -44,6 +44,7 @@ import Diary20190727 from 'components/diary/diary20190727';
 import Diary20190728 from 'components/diary/diary20190728';
 import Diary20190729 from 'components/diary/diary20190729';
 import Diary20190730 from 'components/diary/diary20190730';
+import Diary20190731 from 'components/diary/diary20190731';
 import Tag1 from 'components/tag/tag1';
 import Tag2 from 'components/tag/tag2';
 import Tag3 from 'components/tag/tag3';
@@ -60,6 +61,8 @@ import Tag13 from 'components/tag/tag13';
 import Tag14 from 'components/tag/tag14';
 import Tag15 from 'components/tag/tag15';
 import Tag16 from 'components/tag/tag16';
+import Tag17 from 'components/tag/tag17';
+import Tag18 from 'components/tag/tag18';
 
 const Router: React.FC = () => {
   return (
@@ -104,6 +107,7 @@ const Router: React.FC = () => {
             <Route path='/diary/2019-07-28' component={Diary20190728} />
             <Route path='/diary/2019-07-29' component={Diary20190729} />
             <Route path='/diary/2019-07-30' component={Diary20190730} />
+            <Route path='/diary/2019-07-31' component={Diary20190731} />
             <Route path='/tag/1' component={Tag1} />
             <Route path='/tag/2' component={Tag2} />
             <Route path='/tag/3' component={Tag3} />
@@ -120,6 +124,8 @@ const Router: React.FC = () => {
             <Route path='/tag/14' component={Tag14} />
             <Route path='/tag/15' component={Tag15} />
             <Route path='/tag/16' component={Tag16} />
+            <Route path='/tag/17' component={Tag17} />
+            <Route path='/tag/18' component={Tag18} />
             <Route component={NotFound} />
           </Switch>
         </div>
