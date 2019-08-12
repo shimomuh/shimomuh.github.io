@@ -16,6 +16,12 @@ const Tag15: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-08-13'>
+            <span className='tag__article--date'>2019-08-13</span>
+            <span className='tag__article--title'>関節部のポリゴン数を減らした時にどうなるか実験する</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-08-01'>
             <span className='tag__article--date'>2019-08-01</span>
             <span className='tag__article--title'>モデルに自動のウェイトペイントを付与した際の挙動を確かめる</span>
