@@ -7,30 +7,18 @@ import { Link } from 'react-router-dom';
 import 'components/tag.scss';
 import tagIcon from 'config/tag_icon.json';
 
-const Tag18: React.FC = () => {
+const Tag19: React.FC = () => {
   return (
     <div className='tag'>
       <div className='tag__header'>
-        <img src={`/static/tag/${tagIcon[18]}`} alt="" />
-        <h1>「Blender」がついている日記一覧</h1>
+        <img src={`/static/tag/${tagIcon[19]}`} alt="" />
+        <h1>「実験」がついている日記一覧</h1>
       </div>
       <ul>
         <li className='tag__article'>
           <Link to='/diary/2019-08-13'>
             <span className='tag__article--date'>2019-08-13</span>
             <span className='tag__article--title'>関節部のポリゴン数を減らした時にどうなるか実験する</span>
-          </Link>
-        </li>
-        <li className='tag__article'>
-          <Link to='/diary/2019-08-01'>
-            <span className='tag__article--date'>2019-08-01</span>
-            <span className='tag__article--title'>モデルに自動のウェイトペイントを付与した際の挙動を確かめる</span>
-          </Link>
-        </li>
-        <li className='tag__article'>
-          <Link to='/diary/2019-07-31'>
-            <span className='tag__article--date'>2019-07-31</span>
-            <span className='tag__article--title'>ベースのモデルについて</span>
           </Link>
         </li>
       </ul>
@@ -42,4 +30,4 @@ const Tag18: React.FC = () => {
   )
 }
 
-export default Tag18
+export default Tag19
