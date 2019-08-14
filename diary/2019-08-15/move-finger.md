@@ -14,13 +14,15 @@
 
  
 
-|人差指と中指を模した第三関節の動き|
-|---|
-|![](https://raw.githubusercontent.com/shimomuh/model-base/master/finger/finger.gif)|
+![](https://raw.githubusercontent.com/shimomuh/model-base/master/finger/finger.gif)
+
+ 
 
 単純に関節部分を前回を踏まえて最小の構成にして動作させてみたところ、実際の指の動きに近くなった（周囲のポリゴンが引っ張られる様子もほぼ現実と同様だった）
 
 このことから、なるべくシンプルに作れそうだったのでこのモデルを参考に作る
+
+ 
 
 次回は親指の動きについて書く予定
 

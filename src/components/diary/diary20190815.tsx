@@ -26,13 +26,15 @@ const Diary20190815: React.FC = () => {
         <br />
         &nbsp;
         <br />
-        <table><tr><th>人差指と中指を模した第三関節の動き</th></tr>
-        
-        <tr><td><img src="https://raw.githubusercontent.com/shimomuh/model-base/master/finger/finger.gif" alt="" /></td></tr>
-        </table>
+        <img src="https://raw.githubusercontent.com/shimomuh/model-base/master/finger/finger.gif" alt="" />
+        <br />
+        &nbsp;
+        <br />
         単純に関節部分を前回を踏まえて最小の構成にして動作させてみたところ、実際の指の動きに近くなった（周囲のポリゴンが引っ張られる様子もほぼ現実と同様だった）
         <br />
         このことから、なるべくシンプルに作れそうだったのでこのモデルを参考に作る
+        <br />
+        &nbsp;
         <br />
         次回は親指の動きについて書く予定
         <br />
