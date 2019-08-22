@@ -14,7 +14,7 @@ markdown で日記書いてるんだから、 xxx.github.io の上で自分の�
 
 せっかく `Link` 使っているのに github の markdown reviewer 使うのが癪だったというのもある
 
-## 結果
+## 結論
 
 `bin/make-tsx` という、めちゃくちゃ汚いコンバーターができた
 

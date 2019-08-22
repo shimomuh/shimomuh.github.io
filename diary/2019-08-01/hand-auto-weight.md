@@ -10,7 +10,7 @@
 
 [関節のボーンとポリゴンフローに関するTIPS](https://dskjal.com/blender/the-tips-of-joint.html) という良サイトに出会ったので、なるべくいい感じでオートウェイトを付与していい感じに動くものを作りたい
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/model-base/commit/fbcb8de87a14c2e4489236bee49199485adeb0b4)
 

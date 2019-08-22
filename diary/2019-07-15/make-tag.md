@@ -10,7 +10,7 @@
 
 今までの知識の複合でこのマークダウン記事3段目のタグを自動で抽出して記録し、リンク集として機能するようにした
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/8ab2f6bd3a654ed4fbaf176049d4480613fb9ef2)
 

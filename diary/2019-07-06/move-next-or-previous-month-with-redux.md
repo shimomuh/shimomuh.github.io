@@ -13,7 +13,7 @@
 
 カレンダーなので先月/来月には遷移したいよなと思ったのだが、 state を使う実装は Stateless Function に反するし、なにより普段から React x Redux には慣れていたので、せっかくなら Typescript でも試したいと思った
 
-## 結果
+## 結論
 
 redux を使って VirtualDOM 特有の再描画で URL が変わらない遷移を実現した
 

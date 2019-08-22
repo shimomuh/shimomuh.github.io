@@ -24,7 +24,7 @@ const Diary20190722: React.FC = () => {
         <br />
         あと、スピード重視で&nbsp;rubocop&nbsp;をやめてたけどそろそろ入れたい感が出てきた
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/b0bfa1f4c30137969d1bdc0d22f59b424946258b">→成果</a>
         <br />

@@ -6,7 +6,7 @@
 
 指の動きを確認したい人
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/model-base/commit/ab9f9e1cb0d827be1506317fc15c9819e57ae4cd)
 

@@ -27,7 +27,7 @@ const Diary20190710: React.FC = () => {
         <br />
         せっかくなので、テンプレート部分もファイルとして書き出してファイルとして読み込む部分も汎用ドメインとして定義して利用する形にしたかった
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/c143c49e64f943cd244107dbea252d05a400615d">→成果</a>
         <br />

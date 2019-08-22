@@ -18,7 +18,7 @@ const Diary20190718: React.FC = () => {
         
         マークダウンの&nbsp;Table&nbsp;を自前で実装しようと検討している人（そんな車輪の再開発大好きな人いない気がするけど）
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/1c1fedc9afffdffed79f303545053cc809af7e57">→成果</a>
         <br />

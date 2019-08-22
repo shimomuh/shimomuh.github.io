@@ -25,7 +25,7 @@ const Diary20190706: React.FC = () => {
         
         カレンダーなので先月/来月には遷移したいよなと思ったのだが、&nbsp;state&nbsp;を使う実装は&nbsp;Stateless&nbsp;Function&nbsp;に反するし、なにより普段から&nbsp;React&nbsp;x&nbsp;Redux&nbsp;には慣れていたので、せっかくなら&nbsp;Typescript&nbsp;でも試したいと思った
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         redux&nbsp;を使って&nbsp;VirtualDOM&nbsp;特有の再描画で&nbsp;URL&nbsp;が変わらない遷移を実現した
         <br />

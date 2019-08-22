@@ -29,7 +29,7 @@ const Diary20190626: React.FC = () => {
         <br />
         せっかくなら汎用的に作りたいよね
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://qiita.com/kan_dai/items/b1850750b883f83b9bee">JavaScriptでカレンダーを自作したら勉強になった</a>
         <br />

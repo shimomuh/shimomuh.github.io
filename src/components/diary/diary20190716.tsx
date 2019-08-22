@@ -18,7 +18,7 @@ const Diary20190716: React.FC = () => {
         
         このサイトの生い立ちを読んでいていて&nbsp;Web&nbsp;サイトのデザインに興味がある人
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <img src="/static/diary/2019-07-16/like-google-calendar-design.gif" alt="" />
         <br />

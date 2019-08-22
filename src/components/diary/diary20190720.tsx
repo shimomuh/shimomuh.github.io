@@ -18,7 +18,7 @@ const Diary20190720: React.FC = () => {
         
         create-react-app&nbsp;を進めてきた人のうち&nbsp;src&nbsp;以外のディレクトリに配置したファイルを&nbsp;public&nbsp;以下に配置して参照できるようにしたい
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         ディスク容量効率はよくないが、シンボリックリンクだとダメだったのでやむなくファイルをコピーして&nbsp;public&nbsp;以下に配置するスクリプトを書くことにした
         <br />

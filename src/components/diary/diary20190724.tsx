@@ -34,7 +34,7 @@ const Diary20190724: React.FC = () => {
         <br />
         僕もまずは完成を優先させたかったので今まで書いてこなかったが、少し落ち着いたのと、ちょうど帰省中の新幹線の中でネットワークなしにできそうなことを考えて今回のテスト実施に至った
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/8a2d40362a68a0b68d606bc5810df892529b4c21">→成果</a>
         <br />

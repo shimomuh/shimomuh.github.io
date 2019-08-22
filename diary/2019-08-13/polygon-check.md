@@ -6,7 +6,7 @@
 
 モデルの基礎を理解したい人
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/model-base/commit/47fab2c9a50a566441e37d14577b1aa4d5e51eec)
 

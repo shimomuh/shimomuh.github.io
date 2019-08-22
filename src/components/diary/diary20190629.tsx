@@ -26,7 +26,7 @@ const Diary20190629: React.FC = () => {
         <br />
         せっかく&nbsp;<span className="inline-code">Link</span>&nbsp;使っているのに&nbsp;github&nbsp;の&nbsp;markdown&nbsp;reviewer&nbsp;使うのが癪だったというのもある
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <span className="inline-code">bin/make-tsx</span>&nbsp;という、めちゃくちゃ汚いコンバーターができた
         <br />

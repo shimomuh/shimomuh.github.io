@@ -44,7 +44,7 @@ const Diary20190708: React.FC = () => {
         <br />
         とはいえ、無理にメディアクエリを濫用すると、&nbsp;DOM&nbsp;構造が崩れたり&nbsp;<span className="inline-code">display:&nbsp;none;</span>&nbsp;でも&nbsp;html&nbsp;として出力してはいけないような機微情報やセキュリティ情報はサーバ側で&nbsp;render&nbsp;すら制約した方が無難なので使えない場面もある
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         今回は&nbsp;PC&nbsp;サイズをテーブルレイアウト、&nbsp;SP&nbsp;サイズをリストレイアウトに見せることで実現した
         <br />

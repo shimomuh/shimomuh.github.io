@@ -18,7 +18,7 @@ const Diary20190813: React.FC = () => {
         
         モデルの基礎を理解したい人
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/model-base/commit/47fab2c9a50a566441e37d14577b1aa4d5e51eec">→成果</a>
         <br />

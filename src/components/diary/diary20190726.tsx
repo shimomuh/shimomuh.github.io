@@ -22,7 +22,7 @@ const Diary20190726: React.FC = () => {
         
         前回テストを書いたが一部対応ができていなかったのでそれを補足した
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/30d432b7f06c1bd9654671130ebcf166e2bd538b">→成果</a>
         <br />

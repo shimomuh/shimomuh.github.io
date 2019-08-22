@@ -14,7 +14,7 @@ React on Github Pages を使っている/興味がある人
 
 そこで、slack overflow の [getting 404 for links with create-react-app deployed to github pages](https://stackoverflow.com/questions/46056414/getting-404-for-links-with-create-react-app-deployed-to-github-pages) を参考にさせてもらった :pray:
 
-## 結果
+## 結論
 
 Github Pages の特性を使って問題を解決した。
 

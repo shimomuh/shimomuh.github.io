@@ -18,7 +18,7 @@ bin/make-tsx.rb というファイルですでに Markdown to TypeScript なコ�
 
 そこで、今回はクラスに分けて責務を分散しあとあとテストしやすくかつ品質を担保しやすくすることを目的にリファクタする
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/d2c49b293127bcb8f51b9dd4d03a03ab934bf5ad)
 

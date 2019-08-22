@@ -10,7 +10,7 @@
 
 タイトルの通り、タグをリンクにしてタグに関する記事をまとめたいなと思ったのでその JSON を生成する仕組みとエンドポイントの見直しを行った
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/b2150ce16dfd0c9132280e29d8bf0e267c5ecf4a)
 

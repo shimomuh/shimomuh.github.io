@@ -13,7 +13,7 @@
 
 モデルクラスが rake task でもないのに標準出力に依存しているのが気持ち悪かったので分離した
 
-## 成果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/4c87dbb180a1c008e266b77a0bb858d4f7278c15)
 

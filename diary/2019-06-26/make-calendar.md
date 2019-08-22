@@ -17,7 +17,7 @@
 
 せっかくなら汎用的に作りたいよね
 
-## 結果
+## 結論
 
 [JavaScriptでカレンダーを自作したら勉強になった](https://qiita.com/kan_dai/items/b1850750b883f83b9bee)
 

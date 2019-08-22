@@ -18,7 +18,7 @@ const Diary20190721: React.FC = () => {
         
         Google&nbsp;Analytics&nbsp;を知らない、忘れたという人たち
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         最終的に&nbsp;html&nbsp;に以下のようなタグを埋め込むのがゴール
         <br />
