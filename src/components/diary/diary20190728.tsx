@@ -22,7 +22,7 @@ const Diary20190728: React.FC = () => {
         
         昨日雑多なシンタックスハイライトを作ったが、やっぱよりよい方法に直したかった
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/75a350a72ee0f28cfa47fa8c643245e648684241">→成果</a>
         <br />

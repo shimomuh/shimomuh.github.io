@@ -22,7 +22,7 @@ const Diary20190628: React.FC = () => {
         
         今書いてるこの&nbsp;markdown&nbsp;ファイルを&nbsp;tsx&nbsp;に置換するスクリプトを書いて、それをルーティングすれば&nbsp;github&nbsp;のページに飛ばさなくてもあたかも自分のページのように表現できるんじゃね？と思ったのがきっかけ
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <p className="code bash"><code>
         <span className="code__with-order">npm&nbsp;i&nbsp;--save&nbsp;react-douter-dom&nbsp;@types/react-router-dom</span><br />

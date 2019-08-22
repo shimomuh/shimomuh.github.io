@@ -10,7 +10,7 @@
 
 昨日の rubocop 同様 TypeScript にも lint くらい入れようという話
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/4aaf58453bc79eea53ca971eb4a07b5e240fd468)
 

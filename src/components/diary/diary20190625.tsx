@@ -44,7 +44,7 @@ const Diary20190625: React.FC = () => {
         <br />
         そこで、ローカルで&nbsp;最新の&nbsp;create-react-app&nbsp;で&nbsp;my-app&nbsp;的なやつをビルドしながら、怒られない程度に美味しい蜜を吸おうと考えたわけだ。
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         ここに<a href="https://shimomuh.github.io">このホームページ</a>が誕生した。
         <br />

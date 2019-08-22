@@ -26,7 +26,7 @@ const Diary20190705: React.FC = () => {
         <br />
         そこで、slack&nbsp;overflow&nbsp;の&nbsp;<a href="https://stackoverflow.com/questions/46056414/getting-404-for-links-with-create-react-app-deployed-to-github-pages">getting&nbsp;404&nbsp;for&nbsp;links&nbsp;with&nbsp;create-react-app&nbsp;deployed&nbsp;to&nbsp;github&nbsp;pages</a>&nbsp;を参考にさせてもらった&nbsp;&#x1f64f;
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         Github&nbsp;Pages&nbsp;の特性を使って問題を解決した。
         <br />

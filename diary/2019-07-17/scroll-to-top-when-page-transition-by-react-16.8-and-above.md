@@ -6,7 +6,7 @@
 
 react-router を使っていて、ページ遷移後にスクロール位置が遷移前と同じ場所になっていて困っている人
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/638a25b6e9aa4d6fc39187583a98c579427256a0)
 

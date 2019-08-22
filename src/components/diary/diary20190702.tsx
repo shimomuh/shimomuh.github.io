@@ -22,7 +22,7 @@ const Diary20190702: React.FC = () => {
         
         npm&nbsp;run&nbsp;build&nbsp;のたびに削除されないファイルが溜まってきて定期的に&nbsp;rm&nbsp;してたけど、面倒なのでスクリプトとして書きたかった
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <span className="inline-code">bin/remove-old-file.rb</span>&nbsp;に書いた
         <br />

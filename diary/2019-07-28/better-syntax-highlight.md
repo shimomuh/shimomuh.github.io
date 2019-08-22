@@ -10,7 +10,7 @@
 
 昨日雑多なシンタックスハイライトを作ったが、やっぱよりよい方法に直したかった
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/75a350a72ee0f28cfa47fa8c643245e648684241)
 

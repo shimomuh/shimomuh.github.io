@@ -30,7 +30,7 @@ const Diary20190709: React.FC = () => {
         <br />
         そこで、今回はクラスに分けて責務を分散しあとあとテストしやすくかつ品質を担保しやすくすることを目的にリファクタする
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/d2c49b293127bcb8f51b9dd4d03a03ab934bf5ad">→成果</a>
         <br />

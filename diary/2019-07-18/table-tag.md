@@ -6,7 +6,7 @@
 
 マークダウンの Table を自前で実装しようと検討している人（そんな車輪の再開発大好きな人いない気がするけど）
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/1c1fedc9afffdffed79f303545053cc809af7e57)
 

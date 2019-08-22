@@ -32,7 +32,7 @@ const Diary20190704: React.FC = () => {
         スタイルはあくまで&nbsp;CSS&nbsp;が担当すべき派の僕としては&nbsp;CSS&nbsp;をハックしてでも頑張るという方向で対処することにした
         <br />
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <ul><li>Firefox&nbsp;は&nbsp;<span className="inline-code">height</span>&nbsp;がうまくとれないので諦めてデザイン自体を変更する方向に</li>
         <li>Safari&nbsp;は微調整</li>

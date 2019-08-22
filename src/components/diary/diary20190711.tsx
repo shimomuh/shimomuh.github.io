@@ -25,7 +25,7 @@ const Diary20190711: React.FC = () => {
         
         モデルクラスが&nbsp;rake&nbsp;task&nbsp;でもないのに標準出力に依存しているのが気持ち悪かったので分離した
         <br />
-        <h2>成果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/4c87dbb180a1c008e266b77a0bb858d4f7278c15">→成果</a>
         <br />

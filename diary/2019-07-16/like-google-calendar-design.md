@@ -6,7 +6,7 @@
 
 このサイトの生い立ちを読んでいていて Web サイトのデザインに興味がある人
 
-## 結果
+## 結論
 
 ![](/static/diary/2019-07-16/like-google-calendar-design.gif)
 

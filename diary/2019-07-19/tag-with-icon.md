@@ -6,7 +6,7 @@
 
 ここまでサイトの生い立ちを見てきてくださった方々
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/05c7e8ae1e11488359d72d692f8c4ac4cb8a8121)
 

@@ -10,7 +10,7 @@ react-router-dom 何ソレ美味しいの？という人向け
 
 今書いてるこの markdown ファイルを tsx に置換するスクリプトを書いて、それをルーティングすれば github のページに飛ばさなくてもあたかも自分のページのように表現できるんじゃね？と思ったのがきっかけ
 
-## 結果
+## 結論
 
 ```bash
 npm i --save react-douter-dom @types/react-router-dom

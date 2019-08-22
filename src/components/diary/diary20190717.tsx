@@ -18,7 +18,7 @@ const Diary20190717: React.FC = () => {
         
         react-router&nbsp;を使っていて、ページ遷移後にスクロール位置が遷移前と同じ場所になっていて困っている人
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/638a25b6e9aa4d6fc39187583a98c579427256a0">→成果</a>
         <br />

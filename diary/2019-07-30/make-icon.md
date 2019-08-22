@@ -6,7 +6,7 @@
 
 モデリングやリギングをこれからしようと思ったのでタグを作らないといけないがそれっぽい正式なアイコンはどこにもなかったので作ることにした
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/9b3a2e1179df4bc54f6e02a020f17946e32ac4c4)
 

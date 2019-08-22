@@ -22,7 +22,7 @@ const Diary20190627: React.FC = () => {
         
         まさか今時&nbsp;hot-loader&nbsp;でも&nbsp;scss&nbsp;が使えないなんて言わないよね？って発想から
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <p className="code bash"><code>
         <span className="code__with-order">npm&nbsp;i&nbsp;--save-dev&nbsp;node-sass</span><br />

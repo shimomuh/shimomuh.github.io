@@ -26,7 +26,7 @@ const Diary20190701: React.FC = () => {
         ちなみに、そもそもなぜ&nbsp;stateless&nbsp;function&nbsp;を採用しているかは&nbsp;<a href="https://www.webprofessional.jp/optimizing-react-performance-stateless-components/">ステートレスなコンポーネントによるReactのパフォーマンス最適化</a>&nbsp;あたりを参照。
         <br />
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         React.FC&nbsp;にうまいこと型宣言してあげる
         <br />

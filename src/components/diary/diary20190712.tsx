@@ -22,7 +22,7 @@ const Diary20190712: React.FC = () => {
         
         タイトルの通り、タグをリンクにしてタグに関する記事をまとめたいなと思ったのでその&nbsp;JSON&nbsp;を生成する仕組みとエンドポイントの見直しを行った
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/b2150ce16dfd0c9132280e29d8bf0e267c5ecf4a">→成果</a>
         <br />

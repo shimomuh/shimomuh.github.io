@@ -16,6 +16,12 @@ const Tag18: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-08-23'>
+            <span className='tag__article--date'>2019-08-23</span>
+            <span className='tag__article--title'>手をモデリングする</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-08-15'>
             <span className='tag__article--date'>2019-08-15</span>
             <span className='tag__article--title'>指の動きを確認してみる</span>

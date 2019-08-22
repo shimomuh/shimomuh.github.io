@@ -14,7 +14,7 @@
 ちなみに、そもそもなぜ stateless function を採用しているかは [ステートレスなコンポーネントによるReactのパフォーマンス最適化](https://www.webprofessional.jp/optimizing-react-performance-stateless-components/) あたりを参照。
 
 
-## 結果
+## 結論
 
 React.FC にうまいこと型宣言してあげる
 

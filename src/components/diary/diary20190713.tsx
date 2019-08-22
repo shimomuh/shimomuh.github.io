@@ -18,7 +18,7 @@ const Diary20190713: React.FC = () => {
         
         json&nbsp;ファイルを出力時に&nbsp;<span className="inline-code">to_json</span>&nbsp;メソッドを使うとインデントや改行がされなくて困ってる人
         <br />
-        <h2>背景</h2>
+        <h2>結論</h2>
         
         <p className="code ruby"><code>
         <span className="code__with-order">require&nbsp;&#39;json&#39;</span><br />

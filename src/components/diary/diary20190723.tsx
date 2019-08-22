@@ -22,7 +22,7 @@ const Diary20190723: React.FC = () => {
         
         昨日の&nbsp;rubocop&nbsp;同様&nbsp;TypeScript&nbsp;にも&nbsp;lint&nbsp;くらい入れようという話
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/4aaf58453bc79eea53ca971eb4a07b5e240fd468">→成果</a>
         <br />

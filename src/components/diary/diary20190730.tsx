@@ -18,7 +18,7 @@ const Diary20190730: React.FC = () => {
         
         モデリングやリギングをこれからしようと思ったのでタグを作らないといけないがそれっぽい正式なアイコンはどこにもなかったので作ることにした
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/shimomuh.github.io/commit/9b3a2e1179df4bc54f6e02a020f17946e32ac4c4">→成果</a>
         <br />

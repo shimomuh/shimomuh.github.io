@@ -18,7 +18,7 @@ const Diary20190815: React.FC = () => {
         
         指の動きを確認したい人
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/model-base/commit/ab9f9e1cb0d827be1506317fc15c9819e57ae4cd">→成果</a>
         <br />

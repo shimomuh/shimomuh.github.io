@@ -12,7 +12,7 @@
 
 あと、スピード重視で rubocop をやめてたけどそろそろ入れたい感が出てきた
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/b0bfa1f4c30137969d1bdc0d22f59b424946258b)
 

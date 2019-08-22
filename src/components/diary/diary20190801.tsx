@@ -22,7 +22,7 @@ const Diary20190801: React.FC = () => {
         
         <a href="https://dskjal.com/blender/the-tips-of-joint.html">関節のボーンとポリゴンフローに関するTIPS</a>&nbsp;という良サイトに出会ったので、なるべくいい感じでオートウェイトを付与していい感じに動くものを作りたい
         <br />
-        <h2>結果</h2>
+        <h2>結論</h2>
         
         <a href="https://github.com/shimomuh/model-base/commit/fbcb8de87a14c2e4489236bee49199485adeb0b4">→成果</a>
         <br />

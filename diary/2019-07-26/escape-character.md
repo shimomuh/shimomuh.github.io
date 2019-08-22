@@ -10,7 +10,7 @@
 
 前回テストを書いたが一部対応ができていなかったのでそれを補足した
 
-## 結果
+## 結論
 
 [→成果](https://github.com/shimomuh/shimomuh.github.io/commit/30d432b7f06c1bd9654671130ebcf166e2bd538b)
 
