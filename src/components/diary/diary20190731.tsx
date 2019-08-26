@@ -30,12 +30,6 @@ const Diary20190731: React.FC = () => {
         </table>
         &nbsp;
         <br />
-        リポジトリは以下
-        <br />
-        <a href="https://github.com/shimomuh/modeling-health-spot-expedition-team">https://github.com/shimomuh/modeling-health-spot-expedition-team</a>
-        <br />
-        &nbsp;
-        <br />
         しかし課題がある
         <br />
         <ul><li>随分前に作ったのでどれが最新かわからない...</li>
