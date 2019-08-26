@@ -18,12 +18,6 @@
 
  
 
-リポジトリは以下
-
-[](https://github.com/shimomuh/modeling-health-spot-expedition-team)
-
- 
-
 しかし課題がある
 
 * 随分前に作ったのでどれが最新かわからない...
