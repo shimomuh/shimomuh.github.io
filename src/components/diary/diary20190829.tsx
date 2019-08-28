@@ -27,8 +27,8 @@ const Diary20190829: React.FC = () => {
         <br />
         <img src="/static/diary/2019-08-29/hair.gif" alt="" />
         <br />
-        &nbsp;
-        <br />
+        <h2>過程</h2>
+        
         ボーンのことは一旦考えずに作ったが、ゆらす想定は前髪とせいぜい左の髪のみ
         <br />
         今回一番時間がかかったのは、どう構築したらよいかわからなかったこと
@@ -38,6 +38,13 @@ const Diary20190829: React.FC = () => {
         イテレーションを早く回して結果としてうまくいかなかったとしてもやり直せる時間を確保する意味でも早く形を作ろうと思った
         <br />
         毛を付け根から生やす方法も検討したが、それだと首筋周りの髪の毛の表現がうまくいかなさそうだったのとポリゴン数が増えすぎそうなので一旦こうした
+        <br />
+        &nbsp;
+        <br />
+        もし髪が特異なものでなければ以下に挙げるような髪の作りをした方がいい気がする
+        <br />
+        <ul><li><a href="https://ch.nicovideo.jp/hiiragik/blomaga/ar293520">Blenderでモデリング（髪１）</a></li>
+        <li><a href="https://dskjal.com/blender/links-of-hair-modeling.html">髪のモデリング方法まとめ</a></li></ul>
       <br /><br />
       <div>
         <Link to='/'>戻る</Link>
