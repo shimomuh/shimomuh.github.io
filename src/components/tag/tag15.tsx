@@ -16,6 +16,12 @@ const Tag15: React.FC = () => {
       </div>
       <ul>
         <li className='tag__article'>
+          <Link to='/diary/2019-08-29'>
+            <span className='tag__article--date'>2019-08-29</span>
+            <span className='tag__article--title'>頭をモデリングし直す</span>
+          </Link>
+        </li>
+        <li className='tag__article'>
           <Link to='/diary/2019-08-27'>
             <span className='tag__article--date'>2019-08-27</span>
             <span className='tag__article--title'>適切なポリゴン数を定義してモデリングし直す</span>
